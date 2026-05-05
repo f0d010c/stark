@@ -1,0 +1,37 @@
+stark
+Copyright 2026 stark contributors
+
+This product includes software developed by the stark contributors
+(https://github.com/f0d010c/stark).
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+----
+
+THIRD-PARTY NOTICES
+
+This project's example applications and reference documentation reference
+trademarks and design systems owned by their respective holders:
+
+- Microsoft Fluent Design System, WinUI, Mica, Acrylic, Segoe UI Variable,
+  Segoe Fluent Icons — © Microsoft Corporation
+- Apple Human Interface Guidelines, SwiftUI, SF Pro, SF Symbols, Liquid Glass —
+  © Apple Inc.
+- Material 3, Material 3 Expressive, Roboto Flex, Material Symbols —
+  © Google LLC
+- Newsreader font — Production Type, licensed via Google Fonts under SIL OFL 1.1
+- Cascadia Code / Cascadia Mono — © Microsoft Corporation, SIL OFL 1.1
+- Tailwind CSS — © Tailwind Labs, MIT
+- Motion (motion.dev) — © Framer / Motion contributors, MIT
+- Lenis — © Darkroom, MIT
+- React — © Meta, MIT
+- Vite — © Yuxi (Evan) You, MIT
+- Tauri — © Tauri Programme within The Commons Conservancy, MIT/Apache-2.0
+- Electron — © OpenJS Foundation, MIT
+
+References to these systems are for design education and interoperability;
+no affiliation or endorsement is implied.

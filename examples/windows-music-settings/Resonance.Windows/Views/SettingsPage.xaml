@@ -24,7 +24,7 @@
                 </StackPanel>
 
                 <!-- Profile -->
-                <tk:SettingsCard Header="Elena Park"
+                <tk:SettingsCard Header="A. Hayes"
                                  Description="Family · 4 members"
                                  IsClickEnabled="True">
                     <tk:SettingsCard.HeaderIcon>

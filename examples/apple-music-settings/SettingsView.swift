@@ -111,7 +111,7 @@ struct SettingsView: View {
 
     private var profileSection: some View {
         Section {
-            ProfileRow(name: "Elena Park", subtitle: "Family · 4 members")
+            ProfileRow(name: "A. Hayes", subtitle: "Family · 4 members")
                 .listRowBackground(Color.clear)
                 .listRowInsets(EdgeInsets(top: 4, leading: 16, bottom: 16, trailing: 16))
         }
