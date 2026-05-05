@@ -1,0 +1,488 @@
+/*
+  iOS 26 Settings — Liquid Glass mockup (HTML/CSS approximation for Windows preview)
+
+  Fidelity tradeoffs vs real SwiftUI on iOS 26:
+  - Real Liquid Glass refraction (light bending through material) is impossible in CSS.
+    Approximated with backdrop-filter blur + saturate + transparency layering.
+  - SF Pro is Apple-licensed; using -apple-system stack which falls back to
+    Segoe UI Variable / Inter Tight on Windows. Type metrics close, not identical.
+  - SF Symbols are Apple-licensed; replaced with custom SVGs matching SF Symbol
+    geometry (1.5–2.4 stroke, rounded caps).
+  - Spring physics replaced with cubic-bezier and linear() approximations.
+  - Mesh gradient via SVG radial gradients (cheap), not WWDC25 MeshGradient API.
+
+  This approximation gets ~85% there visually. The real thing on hardware is
+  better. To see the real thing, run SettingsView.swift in Xcode 26 on macOS.
+*/
+
+:root {
+  /* SF system colors — accurate values from Apple HIG */
+  --sys-red:    rgb(255 59 48);
+  --sys-orange: rgb(255 149 0);
+  --sys-yellow: rgb(255 204 0);
+  --sys-green:  rgb(52 199 89);
+  --sys-mint:   rgb(0 199 190);
+  --sys-teal:   rgb(48 176 199);
+  --sys-cyan:   rgb(50 173 230);
+  --sys-blue:   rgb(0 122 255);
+  --sys-indigo: rgb(88 86 214);
+  --sys-purple: rgb(175 82 222);
+  --sys-pink:   rgb(255 45 85);
+  --sys-brown:  rgb(162 132 94);
+
+  /* Light mode label colors */
+  --label-primary:    rgba(0, 0, 0, 1);
+  --label-secondary:  rgba(60, 60, 67, 0.60);
+  --label-tertiary:   rgba(60, 60, 67, 0.30);
+  --label-quaternary: rgba(60, 60, 67, 0.18);
+
+  /* Backgrounds */
+  --bg-system:        rgb(242, 242, 247);
+  --bg-system-grouped: rgb(242, 242, 247);
+  --bg-secondary:     rgb(255, 255, 255);
+  --bg-tertiary:      rgba(255, 255, 255, 0.78);
+
+  /* Glass — backdrop-filter values */
+  --glass-blur:       blur(28px) saturate(180%);
+  --glass-bg:         rgba(255, 255, 255, 0.55);
+  --glass-border:     rgba(255, 255, 255, 0.45);
+  --glass-shadow:     0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 8px 32px rgba(0, 0, 0, 0.08);
+
+  /* Type — SF Pro fallback chain */
+  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+                 "Inter Tight", "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  --font-mono:   "SF Mono", ui-monospace, "Cascadia Mono", Menlo, monospace;
+
+  /* Spring approximations */
+  --spring: linear(
+    0, 0.0099, 0.0397, 0.089, 0.1574 5.41%, 0.3454 11.16%, 0.4542, 0.5532, 0.6426,
+    0.7228, 0.7944, 0.8579 27.44%, 0.9143, 0.9622 33.75%, 0.9818, 0.9978 39.6%,
+    1.0095 42.66%, 1.0204 47.93%, 1.0238, 1.0252 55.07%, 1.0244 57.76%, 1.0192 64.56%,
+    1.0092 73.61%, 1.0014 81.46%, 0.9981 91.89%, 1
+  );
+  --duration-default: 400ms;
+}
+
+/* Dark mode */
+:root[data-theme="dark"] {
+  --label-primary:    rgba(255, 255, 255, 1);
+  --label-secondary:  rgba(235, 235, 245, 0.60);
+  --label-tertiary:   rgba(235, 235, 245, 0.30);
+  --label-quaternary: rgba(235, 235, 245, 0.18);
+
+  --bg-system:         rgb(0, 0, 0);
+  --bg-system-grouped: rgb(0, 0, 0);
+  --bg-secondary:      rgb(28, 28, 30);
+  --bg-tertiary:       rgba(44, 44, 46, 0.78);
+
+  --glass-bg:     rgba(28, 28, 30, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1a1a1d;
+  color: var(--label-primary);
+  font-family: var(--font-system);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(120, 80, 200, 0.18), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(80, 180, 200, 0.14), transparent 55%),
+    #0a0a0d;
+  padding: 32px 16px;
+}
+
+/* iPhone frame */
+.device {
+  width: 400px;
+  height: 880px;
+  border-radius: 56px;
+  background: var(--bg-system-grouped);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.04) inset,
+    0 0 0 8px #1c1c1e,
+    0 0 0 9px rgba(255, 255, 255, 0.06),
+    0 30px 80px rgba(0, 0, 0, 0.6);
+  color: var(--label-primary);
+}
+
+/* Mesh */
+.mesh {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Status bar */
+.status-bar {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px 4px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--font-system);
+  color: var(--label-primary);
+}
+.status-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Toolbar with large title — Liquid Glass on iOS 26 */
+.toolbar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 8px 20px 8px 16px;
+  margin: 4px 12px 0;
+  border-radius: 28px;
+}
+.large-title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0;
+}
+.account-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: none;
+  background: var(--glass-bg);
+  color: var(--label-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform var(--duration-default) var(--spring), background 200ms ease;
+}
+.account-btn:active { transform: scale(0.92); }
+
+/* Search pill — Liquid Glass on iOS 26 */
+.search-pill {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 16px 8px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: var(--label-secondary);
+}
+.search-pill input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--label-primary);
+  font: inherit;
+  font-size: 15px;
+}
+.search-pill input::placeholder { color: var(--label-secondary); }
+
+/* Main content */
+.content {
+  position: relative;
+  z-index: 2;
+  height: calc(100% - 200px);
+  overflow-y: auto;
+  padding: 4px 16px 100px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.content::-webkit-scrollbar { display: none; }
+
+/* Profile card — small Liquid Glass */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  margin: 8px 0 24px;
+  cursor: pointer;
+  transition: transform var(--duration-default) var(--spring);
+}
+.profile:active { transform: scale(0.985); }
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--sys-teal), var(--sys-blue));
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+.profile-text { flex: 1; min-width: 0; }
+.profile-name { font-size: 19px; font-weight: 600; letter-spacing: -0.01em; }
+.profile-sub  { font-size: 14px; color: var(--label-secondary); margin-top: 2px; }
+.chevron      { color: var(--label-tertiary); flex-shrink: 0; }
+
+/* Section headers — uppercased, tracked */
+.section-header {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--label-secondary);
+  margin: 24px 4px 6px;
+}
+
+/* Card — grouped list */
+.card {
+  background: var(--bg-secondary);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+:root[data-theme="dark"] .card { background: var(--bg-secondary); }
+
+/* Row */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  min-height: 44px;
+  border-bottom: 0.5px solid var(--label-quaternary);
+  font-size: 17px;
+  color: var(--label-primary);
+}
+.row:last-child { border-bottom: none; }
+.row-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.row-title { font-size: 17px; line-height: 22px; }
+.row-sub   { font-size: 13px; color: var(--label-secondary); line-height: 17px; }
+.row-detail {
+  font-size: 17px;
+  color: var(--label-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%;
+}
+.row-detail.mono { font-family: var(--font-mono); font-size: 15px; font-feature-settings: "tnum"; }
+
+.chevron-sm { color: var(--label-tertiary); }
+
+.row.destructive .row-title { color: var(--sys-red); }
+.row.destructive { justify-content: center; }
+
+/* Icon badge */
+.badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--badge), color-mix(in oklab, var(--badge), black 14%));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset;
+}
+
+/* Toggle switch */
+.toggle {
+  position: relative;
+  width: 51px;
+  height: 31px;
+  border-radius: 999px;
+  background: rgb(120, 120, 128, 0.16);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background var(--duration-default) var(--spring);
+}
+.toggle.on { background: var(--sys-green); }
+.toggle .thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 27px;
+  height: 27px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), 0 3px 1px rgba(0, 0, 0, 0.06);
+  transition: left var(--duration-default) var(--spring), width var(--duration-default) var(--spring);
+}
+.toggle.on .thumb { left: 22px; }
+
+/* Slider row */
+.slider-row { flex-direction: column; align-items: stretch; gap: 12px; padding-top: 12px; padding-bottom: 14px; }
+.slider-head { display: flex; align-items: center; gap: 12px; }
+.slider-head .row-title { flex: 1; }
+.slider {
+  position: relative;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+.slider-track {
+  width: 100%;
+  height: 4px;
+  background: var(--label-quaternary);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.slider-fill {
+  height: 100%;
+  background: var(--sys-pink);
+  border-radius: 999px;
+}
+.slider-thumb {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%);
+  top: 50%;
+  margin-top: -11px;
+}
+.slider-labels {
+  display: none;
+}
+
+/* Footnotes */
+.footnote {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--label-secondary);
+  margin: 8px 4px 0;
+  padding: 0 12px;
+}
+.footnote.tertiary {
+  font-size: 11px;
+  color: var(--label-tertiary);
+  margin-top: 24px;
+}
+
+.bottom-spacer { height: 40px; }
+
+/* Now Playing pill — strong Liquid Glass */
+.now-playing {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 28px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+.np-art {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--sys-purple), var(--sys-pink));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(255, 45, 85, 0.35);
+  flex-shrink: 0;
+}
+.np-text { flex: 1; min-width: 0; }
+.np-title { font-size: 14px; font-weight: 600; line-height: 18px; letter-spacing: -0.005em; }
+.np-artist { font-size: 11px; color: var(--label-secondary); line-height: 14px; }
+.np-play {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  color: var(--label-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 200ms var(--spring);
+}
+.np-play:active { transform: scale(0.92); }
+
+/* Home indicator */
+.home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--label-primary);
+  opacity: 0.6;
+  z-index: 6;
+}
+
+/* Liquid Glass — backdrop-filter approximation */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 0.5px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Theme toggle (outside the device) */
+.theme-toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

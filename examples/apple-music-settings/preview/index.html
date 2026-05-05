@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Resonance — Settings (iOS 26 Liquid Glass mockup)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" />
+</head>
+<body>
+  <div class="device">
+    <!-- Mesh gradient background — what Liquid Glass refracts -->
+    <svg class="mesh" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="g1" cx="20%" cy="10%" r="50%">
+          <stop offset="0%" stop-color="rgb(175 82 222 / 0.35)" />
+          <stop offset="100%" stop-color="rgb(175 82 222 / 0)" />
+        </radialGradient>
+        <radialGradient id="g2" cx="80%" cy="20%" r="60%">
+          <stop offset="0%" stop-color="rgb(48 176 199 / 0.28)" />
+          <stop offset="100%" stop-color="rgb(48 176 199 / 0)" />
+        </radialGradient>
+        <radialGradient id="g3" cx="50%" cy="60%" r="65%">
+          <stop offset="0%" stop-color="rgb(255 45 85 / 0.20)" />
+          <stop offset="100%" stop-color="rgb(255 45 85 / 0)" />
+        </radialGradient>
+        <radialGradient id="g4" cx="10%" cy="90%" r="55%">
+          <stop offset="0%" stop-color="rgb(88 86 214 / 0.22)" />
+          <stop offset="100%" stop-color="rgb(88 86 214 / 0)" />
+        </radialGradient>
+        <radialGradient id="g5" cx="90%" cy="80%" r="50%">
+          <stop offset="0%" stop-color="rgb(255 149 0 / 0.18)" />
+          <stop offset="100%" stop-color="rgb(255 149 0 / 0)" />
+        </radialGradient>
+      </defs>
+      <rect width="400" height="800" fill="url(#g1)" />
+      <rect width="400" height="800" fill="url(#g2)" />
+      <rect width="400" height="800" fill="url(#g3)" />
+      <rect width="400" height="800" fill="url(#g4)" />
+      <rect width="400" height="800" fill="url(#g5)" />
+    </svg>
+
+    <!-- Status bar -->
+    <div class="status-bar" aria-hidden="true">
+      <span class="time">10:24</span>
+      <span class="status-icons">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><path d="M1 11h2V8H1v3zm4 0h2V6H5v5zm4 0h2V3H9v8zm4 0h2V1h-2v10z"/></svg>
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 3.5C5.6 3.5 3.4 4.4 1.7 6L0 4.3A11 11 0 0 1 16 4.3L14.3 6A8.6 8.6 0 0 0 8 3.5zm0 4A4.6 4.6 0 0 0 4.5 9L3 7.4A6.6 6.6 0 0 1 13 7.4L11.5 9A4.6 4.6 0 0 0 8 7.5zM8 11.5L9.8 9.7a2.5 2.5 0 0 0-3.6 0L8 11.5z"/></svg>
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1"><rect x="1" y="1" width="20" height="10" rx="2.5"/><rect x="3" y="3" width="14" height="6" rx="1" fill="currentColor"/><path d="M22 4v4" stroke-linecap="round" stroke-width="1.5"/></svg>
+      </span>
+    </div>
+
+    <!-- Toolbar / nav bar -->
+    <header class="toolbar glass">
+      <h1 class="large-title">Settings</h1>
+      <button class="account-btn glass" aria-label="Account">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.5"/><path d="M5 19a8 8 0 0 1 14 0"/></svg>
+      </button>
+    </header>
+
+    <!-- Search pill -->
+    <div class="search-pill glass" role="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" placeholder="Search settings" />
+    </div>
+
+    <!-- Scroll content -->
+    <main class="content">
+
+      <!-- Profile -->
+      <section class="profile glass">
+        <div class="avatar">EP</div>
+        <div class="profile-text">
+          <div class="profile-name">Elena Park</div>
+          <div class="profile-sub">Family · 4 members</div>
+        </div>
+        <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </section>
+
+      <!-- Audio -->
+      <h2 class="section-header">Audio</h2>
+      <section class="card">
+        <div class="row">
+          <div class="badge" style="--badge:rgb(175 82 222);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round"><path d="M2 12h2l3-9 5 18 3-9h7"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">Streaming</span></div>
+          <span class="row-detail">Lossless</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+        <div class="row">
+          <div class="badge" style="--badge:rgb(48 176 199);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><circle cx="4" cy="12" r="2"/><circle cx="12" cy="10" r="2"/><circle cx="20" cy="14" r="2"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">EQ</span></div>
+          <span class="row-detail">Flat</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+        <div class="row">
+          <div class="badge" style="--badge:rgb(0 122 255);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="white"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </div>
+          <div class="row-text">
+            <span class="row-title">Sound Check</span>
+            <span class="row-sub">Normalize loudness across tracks</span>
+          </div>
+          <label class="toggle on" aria-label="Sound Check"><span class="thumb"></span></label>
+        </div>
+        <div class="row">
+          <div class="badge" style="--badge:rgb(88 86 214);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0.5"><path d="M12 1.5c-3 0-5.5 2.4-5.5 5.4v6.4c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6V6.9c0-1.3 1-2.4 2.3-2.4 1.3 0 2.4 1 2.4 2.4v6.4c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6V6.9c0-3-2.5-5.4-5.6-5.4z"/><circle cx="8" cy="20" r="2.5"/><circle cx="16" cy="20" r="2.5"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">Dolby Atmos</span></div>
+          <span class="row-detail">Automatic</span>
+          <svg class="chevron-sm" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </section>
+      <p class="footnote">Lossless requires a wired connection or a compatible Bluetooth codec. Hi-Res requires an external DAC.</p>
+
+      <!-- Downloads -->
+      <h2 class="section-header">Downloads &amp; Data</h2>
+      <section class="card">
+        <div class="row">
+          <div class="badge" style="--badge:rgb(52 199 89);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l4 4 4-4"/><path d="M12 8v8"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">Download Quality</span></div>
+          <span class="row-detail">High</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+        <div class="row">
+          <div class="badge" style="--badge:rgb(255 149 0);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round"><path d="M2 12a10 10 0 0 1 20 0"/><path d="M5 12a7 7 0 0 1 14 0"/><path d="M8 12a4 4 0 0 1 8 0"/><circle cx="12" cy="12" r="1.5" fill="white"/></svg>
+          </div>
+          <div class="row-text">
+            <span class="row-title">Cellular Streaming</span>
+            <span class="row-sub">Use mobile data for streaming</span>
+          </div>
+          <label class="toggle off" aria-label="Cellular Streaming"><span class="thumb"></span></label>
+        </div>
+      </section>
+
+      <!-- Playback -->
+      <h2 class="section-header">Playback</h2>
+      <section class="card">
+        <div class="row slider-row">
+          <div class="slider-head">
+            <div class="badge" style="--badge:rgb(255 45 85);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+            </div>
+            <span class="row-title">Crossfade</span>
+            <span class="row-detail mono">6s</span>
+          </div>
+          <div class="slider">
+            <div class="slider-track"><div class="slider-fill" style="width:50%"></div></div>
+            <div class="slider-thumb" style="left:50%"></div>
+            <div class="slider-labels"><span>0</span><span>12</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="badge" style="--badge:rgb(255 204 0);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M12 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 14.4 6.8 17.1l1-5.8L3.5 7.2l5.9-.9z"/></svg>
+          </div>
+          <div class="row-text">
+            <span class="row-title">Animated Album Art</span>
+            <span class="row-sub">Subtle motion on the now-playing screen</span>
+          </div>
+          <label class="toggle on" aria-label="Animated Album Art"><span class="thumb"></span></label>
+        </div>
+        <div class="row">
+          <div class="badge" style="--badge:rgb(0 199 190);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">Haptics</span></div>
+          <label class="toggle on" aria-label="Haptics"><span class="thumb"></span></label>
+        </div>
+      </section>
+
+      <!-- Lyrics -->
+      <h2 class="section-header">Lyrics</h2>
+      <section class="card">
+        <div class="row">
+          <div class="badge" style="--badge:rgb(50 173 230);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">Translate Lyrics</span></div>
+          <label class="toggle off" aria-label="Translate Lyrics"><span class="thumb"></span></label>
+        </div>
+      </section>
+
+      <!-- Feedback -->
+      <h2 class="section-header">Feedback</h2>
+      <section class="card">
+        <div class="row">
+          <div class="badge" style="--badge:rgb(0 122 255);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">Send Feedback</span></div>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+        <div class="row">
+          <div class="badge" style="--badge:rgb(255 59 48);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M12 8v4"/><path d="M12 15.5h.01"/></svg>
+          </div>
+          <div class="row-text"><span class="row-title">Report a Concern</span></div>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="card">
+        <div class="row">
+          <span class="row-title">Version</span>
+          <span class="row-detail mono">4.2.0 (1872)</span>
+        </div>
+        <div class="row destructive">
+          <span class="row-title">Sign Out</span>
+        </div>
+      </section>
+      <p class="footnote tertiary">
+        Resonance · Made in Berlin<br>
+        © 2026 Resonance Audio Labs
+      </p>
+
+      <div class="bottom-spacer"></div>
+    </main>
+
+    <!-- Now Playing pill (Liquid Glass) -->
+    <div class="now-playing glass" role="region" aria-label="Now playing">
+      <div class="np-art" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M9 17V5l11-2v12"/><circle cx="6" cy="17" r="3"/><circle cx="17" cy="15" r="3"/></svg>
+      </div>
+      <div class="np-text">
+        <div class="np-title">Apricot Princess</div>
+        <div class="np-artist">Rex Orange County</div>
+      </div>
+      <button class="np-play glass" aria-label="Pause">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+      </button>
+    </div>
+
+    <!-- Home indicator -->
+    <div class="home-indicator" aria-hidden="true"></div>
+  </div>
+
+  <!-- Tag in corner: theme toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  </button>
+
+  <script>
+    // Toggle activates dark mode + spring-y haptic-style scale on play button
+    const t = document.getElementById('themeToggle');
+    t.addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', cur === 'light' ? 'dark' : 'light');
+    });
+
+    // Toggle switches respond on click
+    document.querySelectorAll('.toggle').forEach(el => {
+      el.addEventListener('click', () => el.classList.toggle('on') | el.classList.toggle('off'));
+    });
+  </script>
+</body>
+</html>

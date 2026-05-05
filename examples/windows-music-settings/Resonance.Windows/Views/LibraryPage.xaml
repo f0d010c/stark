@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Resonance.Views.LibraryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Resonance"
+    xmlns:m="using:Resonance.Models"
+    Background="Transparent">
+
+    <Page.Resources>
+        <local:HexToColorConverter x:Key="HexColor" />
+    </Page.Resources>
+
+    <ScrollViewer Padding="64,32,64,140" VerticalScrollBarVisibility="Auto">
+        <StackPanel Spacing="32" HorizontalAlignment="Stretch" MaxWidth="1280">
+
+            <!-- Editorial header -->
+            <StackPanel Spacing="6">
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <Rectangle Width="32" Height="2" Fill="{ThemeResource AccentTextFillColorPrimaryBrush}" VerticalAlignment="Center" />
+                    <TextBlock Text="THE LIBRARY"
+                               FontFamily="{ThemeResource ResonanceMonoFont}"
+                               FontSize="11"
+                               FontWeight="SemiBold"
+                               CharacterSpacing="300"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                </StackPanel>
+                <TextBlock Text="What you've been listening to"
+                           FontFamily="{ThemeResource ResonanceDisplayFont}"
+                           FontSize="56"
+                           FontWeight="Bold"
+                           LineHeight="60" />
+                <TextBlock Text="Albums, EPs and singles in your collection"
+                           FontFamily="{ThemeResource ResonanceDisplayFont}"
+                           FontStyle="Italic"
+                           FontSize="18"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           Margin="0,4,0,0" />
+            </StackPanel>
+
+            <!-- Featured (first 3) — magazine row, larger -->
+            <StackPanel Spacing="14">
+                <TextBlock Text="FEATURED"
+                           FontFamily="{ThemeResource ResonanceMonoFont}"
+                           FontSize="11"
+                           FontWeight="SemiBold"
+                           CharacterSpacing="300"
+                           Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                <ItemsRepeater ItemsSource="{x:Bind ViewModel.Featured, Mode=OneWay}">
+                    <ItemsRepeater.Layout>
+                        <UniformGridLayout MinItemWidth="380" MinItemHeight="380"
+                                           ItemsStretch="Fill"
+                                           MinColumnSpacing="20" MinRowSpacing="20" />
+                    </ItemsRepeater.Layout>
+                    <ItemsRepeater.ItemTemplate>
+                        <DataTemplate x:DataType="m:Album">
+                            <Button Background="Transparent" BorderThickness="0" Padding="0" CornerRadius="14"
+                                    HorizontalContentAlignment="Stretch"
+                                    VerticalContentAlignment="Stretch"
+                                    Click="Album_Click" Tag="{x:Bind}">
+                                <Grid>
+                                    <Border CornerRadius="14">
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                                <GradientStop Offset="0" Color="{x:Bind ArtGradientFromHex, Converter={StaticResource HexColor}}" />
+                                                <GradientStop Offset="1" Color="{x:Bind ArtGradientToHex,   Converter={StaticResource HexColor}}" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                    <Border CornerRadius="14">
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Offset="0" Color="#33FFFFFF" />
+                                                <GradientStop Offset="0.5" Color="Transparent" />
+                                                <GradientStop Offset="1" Color="#55000000" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="24" Spacing="2">
+                                        <TextBlock Text="{x:Bind Title}"
+                                                   FontFamily="{ThemeResource ResonanceDisplayFont}"
+                                                   FontSize="28"
+                                                   FontWeight="Bold"
+                                                   Foreground="White"
+                                                   TextWrapping="Wrap"
+                                                   MaxLines="2"
+                                                   TextTrimming="CharacterEllipsis" />
+                                        <TextBlock Text="{x:Bind Artist}"
+                                                   FontSize="13"
+                                                   Foreground="White"
+                                                   Opacity="0.85" />
+                                    </StackPanel>
+                                </Grid>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsRepeater.ItemTemplate>
+                </ItemsRepeater>
+            </StackPanel>
+
+            <!-- All Albums — uniform grid, smaller -->
+            <StackPanel Spacing="14">
+                <TextBlock Text="ALL ALBUMS"
+                           FontFamily="{ThemeResource ResonanceMonoFont}"
+                           FontSize="11"
+                           FontWeight="SemiBold"
+                           CharacterSpacing="300"
+                           Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+
+                <ItemsRepeater ItemsSource="{x:Bind ViewModel.Rest, Mode=OneWay}">
+                    <ItemsRepeater.Layout>
+                        <UniformGridLayout MinItemWidth="220" MinItemHeight="280"
+                                           ItemsStretch="Fill"
+                                           MinColumnSpacing="20" MinRowSpacing="28" />
+                    </ItemsRepeater.Layout>
+                    <ItemsRepeater.ItemTemplate>
+                        <DataTemplate x:DataType="m:Album">
+                            <Button Background="Transparent" BorderThickness="0" Padding="0"
+                                    HorizontalContentAlignment="Stretch"
+                                    VerticalContentAlignment="Stretch"
+                                    Click="Album_Click" Tag="{x:Bind}">
+                                <StackPanel Spacing="10">
+                                    <Border CornerRadius="12" Height="200">
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                                <GradientStop Offset="0" Color="{x:Bind ArtGradientFromHex, Converter={StaticResource HexColor}}" />
+                                                <GradientStop Offset="1" Color="{x:Bind ArtGradientToHex,   Converter={StaticResource HexColor}}" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                    <StackPanel Spacing="2">
+                                        <TextBlock Text="{x:Bind Title}"
+                                                   FontFamily="{ThemeResource ResonanceDisplayFont}"
+                                                   FontSize="17"
+                                                   FontWeight="SemiBold"
+                                                   TextTrimming="CharacterEllipsis"
+                                                   MaxLines="1" />
+                                        <TextBlock Text="{x:Bind Artist}"
+                                                   FontSize="12"
+                                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                                   TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsRepeater.ItemTemplate>
+                </ItemsRepeater>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

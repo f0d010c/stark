@@ -1,0 +1,24 @@
+{
+  "name": "stark",
+  "version": "0.1.0",
+  "description": "Anti-slop UI generator for web, Windows, Apple, Android, and cross-platform (Tauri 2, Electron, Compose Multiplatform, React Native, Flutter). Asks which track first — never defaults. Ships distinctive, branded designs — not template clones.",
+  "author": {
+    "name": "stark",
+    "email": "noreply@example.com"
+  },
+  "homepage": "https://github.com/USER/stark",
+  "repository": "https://github.com/USER/stark",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "ui",
+    "frontend",
+    "swiftui",
+    "winui",
+    "compose",
+    "tauri",
+    "electron",
+    "tailwind",
+    "anti-slop"
+  ]
+}

@@ -1,0 +1,37 @@
+# Node
+node_modules/
+dist/
+.vite/
+*.log
+
+# Rust / Tauri
+target/
+*.rs.bk
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Electron
+release/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
+
+# Build artifacts
+*.exe
+*.dll
+*.pdb
