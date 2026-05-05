@@ -8,8 +8,8 @@
     {
       "name": "stark",
       "source": {
-        "source": "github",
-        "repo": "f0d010c/stark",
+        "source": "git",
+        "url": "https://github.com/f0d010c/stark.git",
         "ref": "main"
       },
       "description": "Anti-slop multi-platform UI generator. Asks the user which track first (system-like native, branded native, Tauri 2, Electron, RN, Flutter), then ships distinctive design — not template clones. Web (React/Tailwind v4 + Motion), Windows (WinUI 3 + Mica), Apple (SwiftUI 7 + Liquid Glass), Android (Compose + M3 Expressive). Per-platform anti-slop ban lists.",
