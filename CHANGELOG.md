@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 - 2026-05-13 - cinematic landing system
+
+- Added a cinematic landing system for campaign pages, editorial scroll stories, product proof pages, and immersive brand pages.
+- Added key-art versus page-design guidance so agents do not stop at one good hero image while the rest of the page falls apart.
+- Expanded reference extraction for high-craft landing pages: first viewport composition, asset system, typography, section rhythm, motion choreography, and restraint.
+- Updated web-design guidance and smoke prompts for cinematic campaign pages, GSAP-style motion, section choreography, and landing-page audits.
+
 ## 0.4.9 - 2026-05-13 - interaction decision system
 
 - Added an interaction-techniques reference for choosing CSS transitions, Motion, GSAP ScrollTrigger, native scroll CSS, Lenis, command palettes, split panes, timelines, and no-motion by product surface.

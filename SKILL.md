@@ -42,6 +42,7 @@ After UX routing and before implementation, read:
 - `references/ui-patterns/reference-analysis.md`
 - `references/ui-patterns/motion-budget.md`
 - `references/ui-patterns/interaction-techniques.md`
+- `references/ui-patterns/cinematic-landing-system.md`
 
 Produce a compact UI decision brief when building or redesigning a screen, app, website, dashboard, editor, checkout, or agent run UI. Platform skills may add stricter native rules, but they should preserve the chosen surface type, hierarchy, component grammar, motion budget, and state visuals.
 
@@ -54,6 +55,7 @@ Produce a compact UI decision brief when building or redesigning a screen, app, 
 - For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
 - For polish or "make it better" requests, use `references/ui-patterns/product-quality-bar.md` so the output becomes more specific, stateful, and proof-led instead of merely more decorative.
 - For animation, scrolling, transitions, command palettes, split panes, or rich interaction, use `references/ui-patterns/interaction-techniques.md` to choose CSS, Motion, GSAP, native scroll CSS, Lenis, or no animation by product surface.
+- For cinematic, campaign, editorial, launch, or high-craft landing pages, use `references/ui-patterns/cinematic-landing-system.md` to separate key art from page design, define typography and section rhythm, and choose motion after the visual system is clear.
 - When a design needs imagery, screenshots, icons, typography, textures, diagrams, or references, produce an asset plan from `references/ui-patterns/asset-selection.md` before implementation. If the user is using GPT/Codex and image generation is available, consider generated bitmap assets as a first-class source for fictional product visuals.
 - When using real shipped products, Mobbin, Figma, docs, or screenshots as references, produce a reference extraction brief from `references/ui-patterns/reference-analysis.md`. Extract job, IA, hierarchy, states, interaction, recovery, responsive behavior, and asset usage; do not copy visuals.
 - Prefer concrete UI decisions over generic "modern clean" styling.

@@ -51,6 +51,14 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Use Stark to design a cinematic campaign landing page with strong key art, page rhythm, and GSAP-style motion.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Audit this landing page: the hero image is good but the typography, section rhythm, and art direction fall apart after the first viewport.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }
