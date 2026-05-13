@@ -26,6 +26,6 @@ Then read the matching SKILL.md from `skills/`:
 - `cross-platform` -> `skills/cross-platform-design/SKILL.md`
 - `auto` -> `skills/design-router/SKILL.md`
 
-Follow that SKILL.md's full process. Do not skip the upfront decisions. Ask product job, track, or direction before any code when unclear. If UX applies, produce the UX decision brief first and preserve it through platform implementation. State the chosen route at the top of the response. Then implement.
+Follow that SKILL.md's full process. Do not skip the upfront decisions. Ask product job, track, or direction before any code when unclear. If UX applies, produce the UX decision brief first and preserve it through platform implementation. For build/redesign work, also produce the UI decision brief from `references/ui-patterns/ui-decision-brief.md`. State the chosen route at the top of the response. Then implement.
 
 If the user did not specify enough context (audience, tone, constraints), ask one clarifying question before generating. Do not assume defaults silently.

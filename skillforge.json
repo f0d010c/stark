@@ -27,6 +27,10 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Design a dense web app SaaS dashboard that does not use marketing-page spacing.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }

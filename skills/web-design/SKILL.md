@@ -1,13 +1,28 @@
 ---
 name: web-design
-description: Use when the user asks for a webpage, landing page, marketing site, editorial site, brand site, web app, dashboard, hero section, React, Next, Astro, SvelteKit, Solid, Qwik, Tailwind, HTML, CSS, JS, JSX, TSX, Svelte, Vue, or Astro deliverable. Builds Awwwards-tier web frontends with strong direction, motion, layout, copy, and anti-slop discipline. ALWAYS ask which aesthetic direction first. SKIP when the target is a native desktop/mobile app.
+description: Use when the user asks for a web app, webpage, landing page, marketing site, editorial site, brand site, SaaS dashboard, admin dashboard, React dashboard, hero section, React, Next, Astro, SvelteKit, Solid, Qwik, Tailwind, HTML, CSS, JS, JSX, TSX, Svelte, Vue, or Astro deliverable. Builds web frontends with the right surface type, visual direction, hierarchy, motion, layout, copy, and anti-slop discipline. ALWAYS choose surface type and ask which aesthetic direction first. SKIP when the target is a native desktop/mobile app.
 ---
 
 # web-design — pick the direction first, then execute precisely
 
 Goal: every output indistinguishable from an Awwwards SOTD. The competitor (Anthropic's `frontend-design`) is web-only and stops at "use bold typography." This skill goes deeper: explicit direction commitment, full pattern library, copy voice guide, motion technique inventory, anti-slop discipline.
 
-## Step 0 (MANDATORY) — Ask the user which direction
+## Step 0 (MANDATORY) — Choose surface type, then direction
+
+Before aesthetic direction, classify the surface using `../../references/ui-patterns/surface-taxonomy.md`:
+
+- Marketing page
+- SaaS dashboard
+- Editor/canvas
+- Checkout/upgrade
+- Agent/tool run
+- Mobile task flow
+
+Then write the `UI decision brief` from `../../references/ui-patterns/ui-decision-brief.md`. For dashboards, editors, checkouts, and agent-run UIs, preserve the UX decision brief if one exists and bias toward usable density over Awwwards spectacle.
+
+Do not force an expressive landing-page composition onto a repeated-use web app. For operational surfaces, read `../../references/ui-patterns/visual-hierarchy.md`, `../../references/ui-patterns/motion-budget.md`, and `../../references/ui-patterns/ui-audit-rubric.md` before coding.
+
+## Step 0a (MANDATORY) — Ask the user which direction
 
 Six distinct aesthetic directions exist. Each has its own typography, palette, motion language, copy voice, layout grammar, reference apps, ban list. **Pick before any code.** Never blend directions — that produces the AI-slop middle.
 
@@ -31,7 +46,9 @@ If the brief gives strong signal (e.g. "watch maker / luxury minimal" → 1; "AI
 
 Once picked, **load the matching direction reference** from `../../references/web-direction-{name}.md`. Each contains: typography scale, palette, layout grid, motion moves, copy voice, reference apps, direction-specific ban list.
 
-## Step 0b — Stack questions (after direction picked)
+For operational dashboards, admin tools, and editors, ask direction in a restrained way: "systematic / editorial / industrial / branded product-led" is enough. Do not ask for Awwwards direction if it would harm repeated use.
+
+## Step 0b — Stack questions (after surface and direction picked)
 
 Ask in one batch:
 - **Framework**: Next 15 (apps + marketing), Astro 5 (content/editorial), SvelteKit 2 (craft), Solid, Qwik, plain Vite + React?
@@ -109,6 +126,7 @@ Every web output, regardless of direction:
 - **Real visual content** — generate SVG / CSS art, never `<img src="placeholder.png">` or `via.placeholder.com`.
 - **Accessibility baseline** — semantic HTML, focus-visible rings, WCAG AA contrast, `prefers-reduced-motion` respected.
 - **Performance discipline** — lazy-load below-fold, no layout thrashing in scroll motion, font-display: swap.
+- **Surface-fit baseline** — marketing pages may be spacious and expressive; dashboards, editors, checkouts, and agent-run UIs must preserve task density, stable controls, and state visibility.
 
 ## Step 3 — Deploy 2-4 signature motion moments
 
@@ -156,15 +174,16 @@ Within direction-aware design, certain combos are wrong:
 Ask before delivering output:
 
 1. Did I pick a real direction + commit to it?
-2. Did I avoid every item on `web-bans.md`?
-3. Real custom typeface (not Inter / Space Grotesk)?
-4. Real copy (not lorem / "Built for modern teams")?
-5. Real visual content (no `<img placeholder>`)?
-6. 2-4 signature motion moments deployed?
-7. Direction-specific reference apps fit-check passed?
-8. Accessibility baseline (semantic HTML, focus rings, AA contrast, reduced-motion)?
-9. Layout breaks SaaS template (hero + 3-cols-features + CTA + footer)?
-10. Dark mode (if applicable) has warmth/coolness, not just inversion?
+2. Did I choose the right surface type and density?
+3. Did I avoid every item on `web-bans.md`?
+4. Real custom typeface (not Inter / Space Grotesk)?
+5. Real copy (not lorem / "Built for modern teams")?
+6. Real visual content (no `<img placeholder>`)?
+7. Motion budget matches the product type?
+8. Direction-specific reference apps fit-check passed?
+9. Accessibility baseline (semantic HTML, focus rings, AA contrast, reduced-motion)?
+10. Layout breaks the wrong template for this surface type?
+11. Dark mode (if applicable) has warmth/coolness, not just inversion?
 
 If any "no" — restart that choice, don't ship near-misses.
 

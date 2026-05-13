@@ -23,6 +23,7 @@ Steps:
 
 2. **Load UX checks first when the artifact includes a workflow, form, dashboard, onboarding, checkout, settings, or multi-step task**:
    - UX -> `skills/ux-design/SKILL.md` audit checklist
+   - UI -> `references/ui-patterns/ui-audit-rubric.md`
 
 3. **Load the matching ban list**:
    - web → `references/web-bans.md`

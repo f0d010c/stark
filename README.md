@@ -15,6 +15,7 @@ That is wrong for native apps, and it is boring on the web.
 - UX maps product flows, states, IA, forms, onboarding, dashboards, and repeated-use ergonomics before pixels.
 - UX produces a compact decision brief that platform skills must preserve during implementation.
 - Contextual UX briefs cover agent runs, operational dashboards, activation onboarding, checkout/upgrade, and editor/canvas tools.
+- UI produces a visual decision brief for surface type, hierarchy, density, component grammar, motion budget, and state visuals.
 - Web asks for an aesthetic direction first.
 - Windows asks whether the app should be system-like WinUI, branded WinUI, Tauri, or Electron.
 - Apple asks whether the app should be strict SwiftUI, branded SwiftUI, React Native, Flutter, or desktop web shell.
@@ -78,6 +79,8 @@ stark/
   skills/
     design-router/               UX and platform dispatcher
     ux-design/                   flows, states, IA, forms, onboarding, dashboards
+  references/ui-patterns/         surface taxonomy, visual hierarchy, motion budget, UI audit rubric
+  references/ux-patterns/         contextual product-flow briefs
     web-design/                  6 web aesthetic directions
     windows-design/              WinUI / branded WinUI / Tauri / Electron
     apple-design/                SwiftUI / RN / Flutter / desktop shells

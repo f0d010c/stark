@@ -56,6 +56,8 @@ Once routed, the UX or platform SKILL.md takes over. State what you picked and w
 
 If UX ran first, carry its `UX decision brief` into the platform skill and preserve the job, state coverage, action hierarchy, and recovery path.
 
+For any build/redesign request, also carry a `UI decision brief` from `../../references/ui-patterns/ui-decision-brief.md` into the platform skill. This keeps visual hierarchy, density, component grammar, and motion budget explicit.
+
 ## Anti-patterns this skill exists to prevent
 
 - Generating React/Tailwind when user wants a Windows app

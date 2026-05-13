@@ -36,6 +36,17 @@ If the user has already given enough signal in the brief (e.g. "I want a system 
 
 For tracks 3 and 4, the web design rules from `web-design` SKILL apply — same anti-slop ban list, same typography curation, same aesthetic direction discipline.
 
+## Step 1c — UI decision brief
+
+Before code, read:
+
+- `../../references/ui-patterns/surface-taxonomy.md`
+- `../../references/ui-patterns/ui-decision-brief.md`
+- `../../references/ui-patterns/visual-hierarchy.md`
+- `../../references/ui-patterns/motion-budget.md`
+
+Write the UI decision brief and adapt it to the selected Windows track. Windows utilities and admin tools should favor operational density, stable navigation, SettingsCard/NavigationView idioms, and low motion. Branded consumer apps may use richer content surfaces, but native chrome, Mica/Acrylic rules, Segoe UI Variable, and Fluent icons still apply.
+
 ## Step 2a — Branded vs system-like (only if track 1 or 2 picked)
 
 Track 1 = system-like. Track 2 = branded. The user already picked. Skip to step 2.
@@ -99,6 +110,8 @@ Reject all of these:
 - Bottom tab bars (Android idiom)
 - Custom scrollbars that override `ScrollViewer` (breaks dynamic thinning)
 - FontAwesome / Material Symbols icons (use Segoe Fluent Icons)
+- Marketing-page spacing in productivity/admin tools
+- Decorative cards replacing SettingsCard, table/list, or master-detail surfaces
 
 ## Step 7 — Reference apps to emulate
 

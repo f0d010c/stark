@@ -39,6 +39,17 @@ For tracks 3, 4, 5: web/cross-platform anti-slop rules apply. Read the web desig
 
 State the chosen aesthetic direction and track in one sentence at top of response, then proceed.
 
+## Step 0c — UI decision brief
+
+Before code, read:
+
+- `../../references/ui-patterns/surface-taxonomy.md`
+- `../../references/ui-patterns/ui-decision-brief.md`
+- `../../references/ui-patterns/visual-hierarchy.md`
+- `../../references/ui-patterns/motion-budget.md`
+
+Write the UI decision brief and adapt it to the chosen Apple platform. iPhone task flows need thumb reach and progressive disclosure; iPad/Mac productivity surfaces need NavigationSplitView, inspector, keyboard flow, and stable density; media/consumer apps may use branded surfaces while preserving HIG controls, SF typography, SF Symbols, Dynamic Type, and safe areas.
+
 ## Step 1 — Liquid Glass first (only if track 1 or 2)
 
 Apple's unified design language across iOS 26, iPadOS 26, macOS 26 Tahoe, watchOS 26, tvOS 26, visionOS 26. Treat as default.
@@ -116,6 +127,8 @@ If user insists on cross-platform, route to `cross-platform-design` and warn tha
 - Ignoring `.safeAreaInset` — content collides with home indicator
 - Hard-coded points instead of `Font.TextStyle` (breaks Dynamic Type)
 - Custom scroll indicators — use `ScrollIndicators(.hidden)` only when justified
+- Web-style dashboards squeezed into iPhone screens
+- Decorative cards where grouped Form, List, inspector, or split view is the platform idiom
 
 ## Step 7 — Reference apps that nail HIG
 

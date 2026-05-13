@@ -37,6 +37,7 @@ Most skills ask one upfront question before code:
 - UX asks for the product job and user mode when unclear.
 - UX produces a compact decision brief before platform implementation.
 - UX can load contextual briefs for agent runs, operational dashboards, onboarding, checkout, and editor/canvas products.
+- UI produces a compact visual decision brief before code.
 - Web asks for an aesthetic direction.
 - Windows asks for a track: system WinUI, branded WinUI, Tauri, or Electron.
 - Apple asks for a track: SwiftUI, branded SwiftUI, React Native, Flutter, or desktop shell.

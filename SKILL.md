@@ -27,12 +27,24 @@ For design translation requests, also check `commands/stark-translate.md`.
 For platform detection helpers, use `scripts/detect_platform.py`.
 For design-token export helpers, use `scripts/token_export.py`.
 
+## UI decision layer
+
+After UX routing and before implementation, read:
+
+- `references/ui-patterns/surface-taxonomy.md`
+- `references/ui-patterns/ui-decision-brief.md`
+- `references/ui-patterns/visual-hierarchy.md`
+- `references/ui-patterns/motion-budget.md`
+
+Produce a compact UI decision brief when building or redesigning a screen, app, website, dashboard, editor, checkout, or agent run UI. Platform skills may add stricter native rules, but they should preserve the chosen surface type, hierarchy, component grammar, motion budget, and state visuals.
+
 ## Behavior
 
 - Ask a short clarifying question when the platform, product job, visual direction, or native vs cross-platform target is unclear.
 - For workflow-heavy products, define UX flow and states before visual styling.
 - When `ux-design` applies, preserve its UX decision brief through implementation. Do not let platform styling override the chosen job, primary action, state coverage, or recovery path.
 - For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
+- For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
 - Prefer concrete UI decisions over generic "modern clean" styling.
 - Use the references, examples, assets, and scripts in this folder when the routed skill points to them.
 - Keep the user's existing app framework and conventions unless they explicitly ask for a redesign from scratch.

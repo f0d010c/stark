@@ -7,6 +7,19 @@ description: Use when the user wants one codebase across web, iOS, Android, Wind
 
 Goal: ship one codebase that respects each platform's HIG/Material/Fluent — not a Flutter app that looks like Flutter on every OS.
 
+## Step 0 — Preserve UX and UI decisions
+
+If Stark produced a UX decision brief or UI decision brief, keep both as the source of truth. Translate them per platform instead of pixel-cloning.
+
+Read:
+
+- `../../references/ui-patterns/surface-taxonomy.md`
+- `../../references/ui-patterns/ui-decision-brief.md`
+- `../../references/ui-patterns/visual-hierarchy.md`
+- `../../references/ui-patterns/motion-budget.md`
+
+The shared product should preserve job, state coverage, action hierarchy, and visual hierarchy. Navigation, controls, typography, icons, and motion must become platform-specific.
+
 ## Step 1 — Pick the right framework for the design intent
 
 | User priority | Recommended stack |
@@ -91,6 +104,8 @@ If the user is shipping to one canonical platform first (almost always the case)
 - Cupertino widgets unmodified on Android — same in reverse
 - Ignoring per-platform navigation idioms (always-bottom-tabs, always-hamburger)
 - One typeface across all platforms — each OS has a system face
+- One motion language across all platforms when native motion differs
+- One density level across mobile, tablet, desktop, and web
 
 ## Step 6 — Reference cross-platform apps that translate well
 

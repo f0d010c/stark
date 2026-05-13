@@ -39,6 +39,17 @@ For tracks 3 and 4: web/cross-platform anti-slop rules apply. Read web reference
 
 State the chosen aesthetic direction and track in one sentence at top of response.
 
+## Step 0c — UI decision brief
+
+Before code, read:
+
+- `../../references/ui-patterns/surface-taxonomy.md`
+- `../../references/ui-patterns/ui-decision-brief.md`
+- `../../references/ui-patterns/visual-hierarchy.md`
+- `../../references/ui-patterns/motion-budget.md`
+
+Write the UI decision brief and adapt it to the chosen Android track. Compact screens need thumb-reachable primary actions, sheets, edge-to-edge, and adaptive navigation; tablets/foldables need list-detail or supporting panes; operational tools should stay dense and scannable while preserving Material 3 Expressive motion, dynamic color, and predictive back.
+
 ## Step 1 — Material 3 Expressive default (only if track 1 or 2)
 
 Launched at I/O 2025. Default for Pixel 10 / Android 16 QPR1. Generated UI must adopt:
@@ -108,6 +119,8 @@ Android 16 (API 36) deprecated `windowOptOutEdgeToEdgeEnforcement`. Every screen
 - Inter / SF Pro on Android — Roboto Flex / Google Sans / Material default
 - Centered FAB layouts where docked FAB pattern is canonical
 - Standard Material 3 baseline 2023 — must be M3 Expressive
+- Web-style desktop dashboards squeezed into mobile Compose
+- Decorative motion that hides progress, state, or navigation changes
 
 ## Step 7 — Reference apps that nail M3 Expressive
 
