@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.7 - 2026-05-13 - translation routing and token export fixes
+
+- Routed UI translation prompts to platform/cross-platform design instead of design-token export.
+- Added Compose `TextStyle` and `Typography` export for DTCG typography tokens.
+- Preserved SwiftUI typography line-height tokens as companion `CGFloat` constants.
+
 ## 0.4.6 - 2026-05-13 - marketplace review fixes
 
 - Matched the plugin manifest category to the marketplace category.
