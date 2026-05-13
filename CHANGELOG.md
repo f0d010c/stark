@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5 - 2026-05-13 - security text cleanup
+
+- Removed stale `examples/` references from `SECURITY.md` after the proof projects moved to screenshots.
+
 ## 0.4.4 - 2026-05-13 - screenshot proof gallery
 
 - Removed full generated example projects from the repo to keep Stark focused as a plugin.
