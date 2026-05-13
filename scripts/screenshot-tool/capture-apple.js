@@ -24,6 +24,13 @@ const shots = [
   { name: '04-iphone-pro-max', vp: { width: 430, height: 932 },  full: true  }, // iPhone 16 Pro Max
 ];
 
+async function settle(page) {
+  await page.waitForLoadState('domcontentloaded');
+  await page.waitForLoadState('networkidle').catch(() => {});
+  await page.waitForSelector('.device', { state: 'visible', timeout: 10000 }).catch(() => {});
+  await page.waitForFunction(() => document.fonts?.status === 'loaded', null, { timeout: 10000 }).catch(() => {});
+}
+
 (async () => {
   if (!fs.existsSync(OUT)) fs.mkdirSync(OUT, { recursive: true });
   const browser = await chromium.launch();
@@ -41,7 +48,7 @@ const shots = [
     const page = await ctx.newPage();
     console.log('->', s.name, FILE_URL);
     await page.goto(FILE_URL, { waitUntil: 'networkidle', timeout: 60000 });
-    await page.waitForTimeout(1500);
+    await settle(page);
     await page.addStyleTag({
       content: `
         ::-webkit-scrollbar { display: none !important; }

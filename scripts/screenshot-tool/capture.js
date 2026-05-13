@@ -21,6 +21,12 @@ const shots = [
   { name: '10-docs-mobile',         url: '/docs',                  vp: { width: 390,  height: 844 },  full: true,  mobile: true },
 ];
 
+async function settle(page) {
+  await page.waitForLoadState('domcontentloaded');
+  await page.waitForLoadState('networkidle').catch(() => {});
+  await page.waitForFunction(() => document.fonts?.status === 'loaded', null, { timeout: 10000 }).catch(() => {});
+}
+
 (async () => {
   if (!fs.existsSync(OUT)) fs.mkdirSync(OUT, { recursive: true });
   const browser = await chromium.launch();
@@ -45,7 +51,7 @@ const shots = [
       console.log('  retry domcontentloaded:', e.message);
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
     }
-    await page.waitForTimeout(1200);
+    await settle(page);
     // Hide scrollbars and freeze animations for clean shots
     await page.addStyleTag({
       content: `

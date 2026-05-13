@@ -24,6 +24,14 @@
     "anti-slop"
   ],
   "skills": "./skills/",
+  "include": [
+    "./agents/",
+    "./assets/",
+    "./commands/",
+    "./examples/",
+    "./references/",
+    "./scripts/"
+  ],
   "interface": {
     "displayName": "stark",
     "shortDescription": "Multi-platform UI/UX design skills for AI coding agents.",
