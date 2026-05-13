@@ -43,6 +43,14 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Use Stark to choose whether this React product page should use CSS transitions, Motion, GSAP ScrollTrigger, Lenis, or no animation.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Audit this dashboard for over-animation and wrong scrolling choices.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }

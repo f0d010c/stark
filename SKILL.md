@@ -1,6 +1,6 @@
 ---
 name: stark
-description: Use when the user mentions stark, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, asset planning, image generation for UI, visual references, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, asset-selection, and design-token skills before generic frontend implementation.
+description: Use when the user mentions stark, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, asset planning, image generation for UI, visual references, animation, motion, scrolling, interaction techniques, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, asset-selection, interaction, and design-token skills before generic frontend implementation.
 ---
 
 # stark
@@ -41,6 +41,7 @@ After UX routing and before implementation, read:
 - `references/ui-patterns/asset-selection.md`
 - `references/ui-patterns/reference-analysis.md`
 - `references/ui-patterns/motion-budget.md`
+- `references/ui-patterns/interaction-techniques.md`
 
 Produce a compact UI decision brief when building or redesigning a screen, app, website, dashboard, editor, checkout, or agent run UI. Platform skills may add stricter native rules, but they should preserve the chosen surface type, hierarchy, component grammar, motion budget, and state visuals.
 
@@ -52,6 +53,7 @@ Produce a compact UI decision brief when building or redesigning a screen, app, 
 - For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
 - For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
 - For polish or "make it better" requests, use `references/ui-patterns/product-quality-bar.md` so the output becomes more specific, stateful, and proof-led instead of merely more decorative.
+- For animation, scrolling, transitions, command palettes, split panes, or rich interaction, use `references/ui-patterns/interaction-techniques.md` to choose CSS, Motion, GSAP, native scroll CSS, Lenis, or no animation by product surface.
 - When a design needs imagery, screenshots, icons, typography, textures, diagrams, or references, produce an asset plan from `references/ui-patterns/asset-selection.md` before implementation. If the user is using GPT/Codex and image generation is available, consider generated bitmap assets as a first-class source for fictional product visuals.
 - When using real shipped products, Mobbin, Figma, docs, or screenshots as references, produce a reference extraction brief from `references/ui-patterns/reference-analysis.md`. Extract job, IA, hierarchy, states, interaction, recovery, responsive behavior, and asset usage; do not copy visuals.
 - Prefer concrete UI decisions over generic "modern clean" styling.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.9 - 2026-05-13 - interaction decision system
+
+- Added an interaction-techniques reference for choosing CSS transitions, Motion, GSAP ScrollTrigger, native scroll CSS, Lenis, command palettes, split panes, timelines, and no-motion by product surface.
+- Expanded the motion budget into none/subtle/functional/signature/expressive levels with library fit and required interaction-decision output.
+- Updated web-design guidance to require interaction budgets, reduced-motion behavior, and rejected technique choices before adding heavy motion or scroll effects.
+- Added smoke prompts for technique selection and over-animation audits.
+
 ## 0.4.8 - 2026-05-13 - proof-led product quality pass
 
 - Added a product quality bar for polish work: specific job, proof surface, complete states, scan speed, and memorable restraint.
