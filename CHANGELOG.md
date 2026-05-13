@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.4.3 - 2026-05-13 - lean marketplace bundle
+
+- Trimmed the Codex plugin include list to runtime resources only.
+- Kept proof examples source-repo-only so marketplace installs stay smaller.
+- Moved the Playwright screenshot helper to local-only tooling by ignoring `scripts/screenshot-tool/`.
+- Clarified README examples wording so bundled plugin installs do not imply demo projects are included.
+
+## 0.4.2 - 2026-05-13 - packaging helper hardening
+
+- Added manifest include metadata for marketplace mirrors.
+- Guarded token alias resolution against circular references.
+- Preserved whole-token references during export.
+- Switched generated SwiftUI and Compose token names to platform-friendly camelCase.
+- Replaced fixed waits in local screenshot helpers with state-based waits.
+
 ## 0.4.1 - 2026-05-13 - neutral plugin naming
 
 - Renamed the Codex plugin manifest from `stark-codex` to `stark` so marketplace installs match the repo and multi-agent branding.

@@ -1,5 +1,5 @@
 ---
-name: stark-codex
+name: stark
 description: Use when the user mentions stark, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, asset planning, image generation for UI, visual references, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, asset-selection, and design-token skills before generic frontend implementation.
 ---
 

@@ -41,9 +41,8 @@ Thumbs.db
 # Local-only docs
 .github/ANNOUNCE_REDDIT.md
 
-# Screenshot tool deps
-scripts/screenshot-tool/node_modules/
-scripts/screenshot-tool/package-lock.json
+# Local-only Playwright visual QA helper
+scripts/screenshot-tool/
 
 # Local visual QA artifacts
 screenshots/
