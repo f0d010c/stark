@@ -110,6 +110,19 @@ stark/
 
 Each direction has its own typography, palette, layout grammar, motion language, copy voice, reference apps, and ban list.
 
+## Examples
+
+The `examples/` folder includes generated proof projects that exercise Stark's guidance:
+
+| Example | Surface | What it demonstrates |
+|---|---|---|
+| `operator-console` | Vite/React marketing site | Industrial devtool landing page with believable local-agent product proof |
+| `builddesk` | Electron desktop app | Daily indie-builder command center with project sidebar, attention queue, and inspector |
+| `apple-music-settings` | Apple settings surface | Apple-platform settings translation and preview |
+| `windows-music-settings` | Windows settings surface | Fluent/WinUI-style settings translation and preview |
+
+Each new example should keep its Stark UX/UI/asset decision notes in its own README so future changes can be judged against the original design intent.
+
 ## Native Tracks
 
 `stark` does not silently turn every app into a website.

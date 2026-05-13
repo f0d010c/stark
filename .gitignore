@@ -44,3 +44,9 @@ Thumbs.db
 # Screenshot tool deps
 scripts/screenshot-tool/node_modules/
 scripts/screenshot-tool/package-lock.json
+
+# Local visual QA artifacts
+screenshots/
+screenshots-*/
+**/screenshots/
+**/screenshots-*/
