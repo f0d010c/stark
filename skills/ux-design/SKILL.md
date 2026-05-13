@@ -9,14 +9,16 @@ Use this skill when the product has to be understandable and usable, not just at
 
 ## Step 1 - Identify the job and user mode
 
-Before designing screens, state:
+Before designing screens, state the smallest useful context:
 
 - Primary job: what the user is trying to finish.
 - User mode: first-time, returning, power user, admin, buyer, creator, operator, or support.
 - Frequency: one-time, occasional, daily, or high-volume repeated use.
 - Risk: low-risk browse, reversible edit, money/data/security impact, or destructive action.
 
-If any of these are unclear and materially affect the flow, ask one short question.
+If any of these are unclear and materially affect the flow, ask one short question. If the answer is easy to infer from the request, infer it and continue.
+
+Do not interrogate the user with a product-strategy questionnaire before helping. The skill should make useful assumptions, name them briefly, and move.
 
 ## Step 2 - Map the flow
 
@@ -30,6 +32,26 @@ Write the minimum useful path:
 6. Recovery path when something fails
 
 Prefer fewer screens when the user is trying to finish one job. Prefer separate steps when the user is making risky, costly, or hard-to-reverse decisions.
+
+## Step 2.5 - Produce the UX decision brief
+
+Before visual design or code, write a compact brief. Keep it short enough to pass into another skill:
+
+```md
+UX decision brief
+- Job: ...
+- User mode: ...
+- Frequency/risk: ...
+- Pattern: ...
+- Primary action: ...
+- Secondary actions: ...
+- Core path: entry -> action -> feedback -> success
+- Recovery path: ...
+- Required states: empty, loading, partial, error, permission, success, long-running
+- Handoff constraints: ...
+```
+
+This brief is the contract. The platform skill may change visual treatment, but it must not erase the chosen job, action hierarchy, state coverage, or recovery path.
 
 ## Step 3 - Design the states
 
@@ -60,6 +82,45 @@ Apply these rules:
 
 For high-frequency tools, optimize scan speed, keyboard flow, saved filters, bulk actions, and stable layout. For consumer onboarding, optimize motivation, trust, and the shortest path to first value.
 
+## Step 4.5 - Match the product type
+
+Use the product type to decide what "good UX" means:
+
+| Product type | Optimize for | Avoid |
+|---|---|---|
+| SaaS dashboard | fast scanning, saved filters, drilldowns, clear priority | marketing-page spacing, decorative cards, hidden filters |
+| CRM/admin/internal tool | repeat speed, bulk actions, auditability, permissions | oversized empty space, playful copy, modal chains |
+| Creative/editor tool | canvas focus, tool discoverability, undo/redo, stable panels | layout shifts, buried controls, destructive defaults |
+| Marketplace/ecommerce | trust, comparison, price/shipping clarity, recovery | surprise costs, forced account creation, vague stock states |
+| Onboarding/setup | first value, motivation, resumability, skip paths | long forms before value, fake progress, no return path |
+| AI agent/tool run | plan preview, progress, artifacts, retry, stop/resume | invisible work, ambiguous completion, no trace of outputs |
+
+If the request sounds like a real product people will use repeatedly, bias toward operational density and predictable navigation. If it is a one-off marketing page, bias toward clarity, brand memory, and conversion path.
+
+## Step 4.6 - Load a contextual pattern brief
+
+If the product type clearly matches one of these contexts, read the matching brief before choosing the final UX pattern:
+
+| Context | Read |
+|---|---|
+| Agent/tool run, background automation, long-running export/import | `../../references/ux-patterns/ai-agent-run.md` |
+| SaaS dashboard, CRM, admin panel, internal tool, support queue | `../../references/ux-patterns/operational-dashboard.md` |
+| First-run setup, trial activation, import/setup flow | `../../references/ux-patterns/activation-onboarding.md` |
+| Checkout, paywall, pricing, upgrade, plan comparison | `../../references/ux-patterns/checkout-upgrade.md` |
+| Editor, builder, canvas, creative tool, IDE-like surface | `../../references/ux-patterns/editor-canvas.md` |
+
+Use a brief only when the context fits. If no brief fits, proceed from the product type table and the user's actual constraints.
+
+The brief should influence the UX decision brief, especially:
+
+- Pattern
+- Primary and secondary actions
+- Required states
+- Recovery path
+- Handoff constraints
+
+Do not copy a referenced app or blindly apply a pattern because it is common. A shipped screen is evidence that a real product team used a decision, not proof that it is best for every product.
+
 ## Step 5 - Choose the UX pattern
 
 Pick one pattern and name it before visual design:
@@ -76,6 +137,8 @@ Pick one pattern and name it before visual design:
 | Collaboration | Activity timeline + comments + ownership |
 | AI/tool execution | Plan preview + progress + artifacts + retry |
 
+If two patterns fit, pick the one that reduces the riskiest failure mode. For example, choose a wizard over a single dense form when errors are costly, but choose command surface + saved views for repeated internal operations.
+
 ## Step 6 - Hand off to UI
 
 After the UX shape is clear, route to the platform skill:
@@ -87,6 +150,8 @@ After the UX shape is clear, route to the platform skill:
 - Cross-platform translation: `../cross-platform-design/SKILL.md`
 
 Pass the UX decisions into that skill as constraints. Do not let visual direction erase task flow, state coverage, or platform idioms.
+
+When a contextual pattern brief was used, include its name in the handoff constraints so the platform skill knows which product behavior must survive visual design.
 
 ## UX audit checklist
 

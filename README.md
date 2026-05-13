@@ -13,6 +13,8 @@ That is wrong for native apps, and it is boring on the web.
 `stark` pushes Codex toward the right product and design idiom before code:
 
 - UX maps product flows, states, IA, forms, onboarding, dashboards, and repeated-use ergonomics before pixels.
+- UX produces a compact decision brief that platform skills must preserve during implementation.
+- Contextual UX briefs cover agent runs, operational dashboards, activation onboarding, checkout/upgrade, and editor/canvas tools.
 - Web asks for an aesthetic direction first.
 - Windows asks whether the app should be system-like WinUI, branded WinUI, Tauri, or Electron.
 - Apple asks whether the app should be strict SwiftUI, branded SwiftUI, React Native, Flutter, or desktop web shell.

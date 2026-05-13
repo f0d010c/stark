@@ -38,9 +38,9 @@ Steps:
    | 88 | `font-family: 'Inter'` (banned default) | high | Replace with a curated pair from `assets/font-pairs.md` |
 
 5. **Categorize** violations:
-   - **High** — definitive AI slop tells
-   - **Medium** — generic patterns that hurt distinctiveness
-   - **Low** — currency issues (using v3 patterns when v4 exists, etc.)
+   - **High** — blocked primary job, missing recovery path, unsafe/destructive action, broken platform idiom, or definitive AI slop tell
+   - **Medium** — missing state, weak action hierarchy, generic pattern that hurts distinctiveness, or repeated-use friction
+   - **Low** — unclear copy, mild scan-speed issue, or currency issue (using older patterns when newer ones exist)
 
 6. **Recommend a fix path**: one paragraph, concrete steps, no hedging.
 

@@ -31,6 +31,8 @@ For design-token export helpers, use `scripts/token_export.py`.
 
 - Ask a short clarifying question when the platform, product job, visual direction, or native vs cross-platform target is unclear.
 - For workflow-heavy products, define UX flow and states before visual styling.
+- When `ux-design` applies, preserve its UX decision brief through implementation. Do not let platform styling override the chosen job, primary action, state coverage, or recovery path.
+- For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
 - Prefer concrete UI decisions over generic "modern clean" styling.
 - Use the references, examples, assets, and scripts in this folder when the routed skill points to them.
 - Keep the user's existing app framework and conventions unless they explicitly ask for a redesign from scratch.

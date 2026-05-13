@@ -13,7 +13,8 @@ Route to `ux-design` before platform visuals when the request includes:
 
 - "UX", "user journey", "flow", "wireframe", "information architecture", "IA", "usability"
 - onboarding, signup, checkout, paywall, forms, settings, permissions, dashboard workflow, admin workflow
-- empty/loading/error states, long-running task progress, retry/resume, bulk actions
+- CRM, admin panel, internal tool, SaaS dashboard, marketplace, editor/canvas tool, setup wizard, command palette, data table
+- empty/loading/error states, long-running task progress, retry/resume, bulk actions, saved filters, audit trails
 - making an app easier to use, less confusing, better for daily use, or better for conversion/retention
 
 If the request is both UX and platform-specific, read `ux-design` first, then the matching platform skill.
@@ -24,6 +25,7 @@ Scan for explicit signals (in priority order):
 
 | Signal in request | Route to |
 |---|---|
+| "onboarding", "checkout", "signup", "form flow", "empty state", "loading state", "error state", "admin workflow", "CRM", "internal tool", "SaaS dashboard", "user journey" | `ux-design` first, then platform skill |
 | `.tsx` `.jsx` `.html` `.svelte` `.vue`, "Tailwind", "Next.js", "Astro", "shadcn", "landing page", "marketing site", "dashboard in React" | `web-design` |
 | `.xaml` `.cs` (with `WinUI`/`UWP`/`WPF`), "Windows app", "Fluent", "Mica", "WinUI", "Win11", "Microsoft Store app", "PowerToys-style" | `windows-design` |
 | `.swift` `.swiftui`, "SwiftUI", "iOS app", "iPadOS", "macOS", "Liquid Glass", "HIG", "SF Symbols", "App Store", "Tahoe" | `apple-design` |
@@ -51,6 +53,8 @@ Same product ≠ same UI. A Settings screen on iOS uses grouped Form, on Android
 ## Step 4 — Hand off
 
 Once routed, the UX or platform SKILL.md takes over. State what you picked and why in one sentence, then proceed.
+
+If UX ran first, carry its `UX decision brief` into the platform skill and preserve the job, state coverage, action hierarchy, and recovery path.
 
 ## Anti-patterns this skill exists to prevent
 

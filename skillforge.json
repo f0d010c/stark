@@ -19,6 +19,14 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Design a CRM workflow for sales reps who need saved filters and bulk actions.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Plan a long-running AI agent run UI with progress, artifacts, retry, and stop controls.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }
