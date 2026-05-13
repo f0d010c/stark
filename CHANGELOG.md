@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.4 - 2026-05-13 - screenshot proof gallery
+
+- Removed full generated example projects from the repo to keep Stark focused as a plugin.
+- Added organized screenshot proof assets under `assets/screenshots/<project>/`.
+- Updated README examples section into a screenshot gallery.
+- Captured fresh desktop and mobile screenshots for `operator-console` and `builddesk`.
+
 ## 0.4.3 - 2026-05-13 - lean marketplace bundle
 
 - Trimmed the Codex plugin include list to runtime resources only.
@@ -36,8 +43,7 @@
   - `apple-design`: 5 tracks (SwiftUI strict / SwiftUI branded / RN / Flutter / Tauri+Electron desktop)
   - `android-design`: 5 tracks (Compose strict / Compose branded / RN / Flutter / Compose Multiplatform)
 - Added `references/branded-fluent.md` — full method for native chrome + bespoke identity (custom accent override, embedded display fonts, hero atmospheres, custom card chrome, custom NavigationView selection indicator, ConnectedAnimation, magazine layouts)
-- Added `examples/windows-music-settings/Resonance.Web/` — same React UI shipped via **both Tauri 2 and Electron** as proof of "non-native branded" track
-- Added `examples/windows-music-settings/Resonance.Windows/` — same product shipped via WinUI 3 (system-like + branded variants) showing axis differences
+- Added generated Windows proof projects for React/Tauri/Electron and WinUI 3 (later replaced by screenshot-only proof assets in 0.4.4).
 
 ## 0.1.0 — 2026-05-04 — initial release
 

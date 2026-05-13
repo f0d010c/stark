@@ -49,3 +49,7 @@ screenshots/
 screenshots-*/
 **/screenshots/
 **/screenshots-*/
+
+# Keep curated proof screenshots in the repo.
+!assets/screenshots/
+!assets/screenshots/**
