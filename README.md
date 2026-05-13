@@ -1,9 +1,9 @@
 # stark
 
-Anti-slop UI/UX design plugin for Codex.
-It routes UI and UX requests to focused skills, asks the right product-flow / platform / track / direction questions first, then helps Codex ship usable interfaces instead of template clones.
+Anti-slop UI/UX design plugin for AI coding agents.
+It routes UI and UX requests to focused skills, asks the right product-flow / platform / track / direction questions first, then helps agents ship usable interfaces instead of template clones.
 
-The original Claude Code plugin manifest is still included for compatibility, but this copy is converted for Codex with `.codex-plugin/plugin.json`.
+This repo ships both Claude Code and Codex plugin manifests so the same Stark skillset can work across more than one agent environment.
 
 ## Why this exists
 

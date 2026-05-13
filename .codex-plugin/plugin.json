@@ -1,7 +1,7 @@
 {
   "name": "stark-codex",
   "version": "0.3.0",
-  "description": "Anti-slop UI/UX design plugin for Codex. Routes product flows, web, Windows, Apple, Android, cross-platform, and token requests to opinionated design skills that ask for UX, platform, track, and direction before code.",
+  "description": "Anti-slop UI/UX design plugin for AI coding agents. Routes product flows, web, Windows, Apple, Android, cross-platform, and token requests to opinionated design skills that ask for UX, platform, track, and direction before code.",
   "author": {
     "name": "stark contributors",
     "url": "https://github.com/f0d010c/stark"

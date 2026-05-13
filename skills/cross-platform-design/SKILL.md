@@ -1,6 +1,6 @@
 ---
 name: cross-platform-design
-description: Build the same UI across multiple platforms using Compose Multiplatform 1.8+, Tauri 2 (Rust + WebView2/WKWebView), React Native (New Architecture, Fabric, Hermes), Flutter, .NET MAUI, Avalonia 11, or Uno Platform — translating each surface into the host platform's native idiom rather than pixel-cloning. Use when the user wants one codebase across web + iOS + Android + Windows + Mac, asks for "the same app on all platforms", or names any cross-platform framework explicitly. SKIP when only one platform is targeted — route to that platform's skill.
+description: Use when the user wants one codebase across web, iOS, Android, Windows, and Mac, asks for the same app on all platforms, or names Compose Multiplatform, Tauri 2, React Native, Flutter, .NET MAUI, Avalonia, or Uno Platform. Builds cross-platform UI by translating each surface into the host platform's native idiom rather than pixel-cloning. SKIP when only one platform is targeted.
 ---
 
 # cross-platform-design — translate idiom, not pixels

@@ -1,6 +1,6 @@
 ---
 name: design-tokens
-description: Generate, audit, and translate design tokens between platforms in W3C DTCG format. Source-of-truth tokens compile to Tailwind v4 @theme, Compose Material3 ColorScheme + Typography, SwiftUI Color/Font extensions, and WinUI ResourceDictionary. Use when the user asks for design tokens, "translate these tokens", "export tokens", "make a Compose color scheme from this Figma palette", or wants to share a single token source across web + native. SKIP when no token work is involved.
+description: Use when the user asks for design tokens, translate these tokens, export tokens, make a Compose color scheme from a Figma palette, audit tokens, or share a single token source across web and native. Generates, audits, and translates W3C DTCG tokens to Tailwind v4 @theme, Compose Material3 ColorScheme and Typography, SwiftUI Color/Font extensions, and WinUI ResourceDictionary. SKIP when no token work is involved.
 ---
 
 # design-tokens — single source, every platform

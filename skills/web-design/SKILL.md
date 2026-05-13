@@ -1,6 +1,6 @@
 ---
 name: web-design
-description: Build Awwwards-tier web frontends — landing pages, marketing sites, editorial, type foundries, brand sites, web apps, dashboards. Targets React 19 + Next 15, Astro 5, SvelteKit 2, Solid, Qwik with Tailwind v4, Motion (motion.dev), GSAP, Lenis, Radix/Ark, View Transitions API, scroll-driven animations, custom cursors, magnetic interactions, parallax layers, View Timeline API. Use when the user asks for a webpage, landing page, marketing site, editorial, web app, dashboard, hero section, or any HTML/CSS/JS/JSX/TSX/Svelte/Vue/Astro deliverable. ALWAYS ask the user which aesthetic direction first — never default. SKIP when the target is a native desktop/mobile app.
+description: Use when the user asks for a webpage, landing page, marketing site, editorial site, brand site, web app, dashboard, hero section, React, Next, Astro, SvelteKit, Solid, Qwik, Tailwind, HTML, CSS, JS, JSX, TSX, Svelte, Vue, or Astro deliverable. Builds Awwwards-tier web frontends with strong direction, motion, layout, copy, and anti-slop discipline. ALWAYS ask which aesthetic direction first. SKIP when the target is a native desktop/mobile app.
 ---
 
 # web-design — pick the direction first, then execute precisely

@@ -1,6 +1,6 @@
 ---
 name: windows-design
-description: Build Windows 11/12 desktop apps across all four common stacks — system-like WinUI 3, branded WinUI 3 (Fluent + custom identity), Tauri 2 (small bespoke web), and Electron (heavy bespoke web). Use when the user asks for a Windows app, Win11 UI, XAML, Fluent design, WinUI, WPF, PowerToys-style tool, Microsoft Store app, music/photo/creative app, or any desktop deliverable on Windows. ALWAYS ask the user which track first — do not default. SKIP when the user explicitly wants only Apple, Android, or web-in-browser.
+description: Use when the user asks for a Windows app, Win11 UI, XAML, Fluent design, WinUI, WPF, PowerToys-style tool, Microsoft Store app, music/photo/creative app, Tauri desktop, Electron desktop, or any Windows desktop deliverable. Builds Windows 11/12 apps across system-like WinUI 3, branded WinUI 3, Tauri 2, and Electron. ALWAYS ask which track first. SKIP when the user explicitly wants only Apple, Android, or web-in-browser.
 ---
 
 # windows-design — pick the track first

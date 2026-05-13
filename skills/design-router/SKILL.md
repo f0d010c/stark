@@ -1,6 +1,6 @@
 ---
 name: design-router
-description: 'Detects whether a UI/design request needs UX flow work, platform UI work, or both, then routes to ux-design, web, Windows, iOS, macOS, Android, cross-platform, or design-token skills. Use when the user asks to build, design, mock up, scaffold, audit, or improve any interface, flow, screen, page, component, or app and the target platform or product flow is ambiguous. TRIGGER on: "build a screen", "design a page", "make this UI", "improve the UX", "checkout flow", "onboarding", "dashboard workflow", "create an app interface", "mockup", "prototype", "scaffold a frontend". SKIP when the request explicitly names one platform and no UX flow work is implied.'
+description: 'Use when the user asks to build, design, mock up, scaffold, audit, or improve any interface, flow, screen, page, component, app, UX, onboarding, checkout, dashboard workflow, or product flow and the target platform or flow is ambiguous. Routes to ux-design, web, Windows, Apple, Android, cross-platform, or design-token skills. SKIP when the request explicitly names one platform and no UX flow work is implied.'
 ---
 
 # design-router — platform dispatch

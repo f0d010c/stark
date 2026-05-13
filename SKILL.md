@@ -1,9 +1,9 @@
 ---
 name: stark-codex
-description: Use when the user mentions stark, stark-codex, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, or non-generic app/website design. Routes Codex to UX, web, Windows, Apple, Android, cross-platform, and design-token skills before generic frontend implementation.
+description: Use when the user mentions stark, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, and design-token skills before generic frontend implementation.
 ---
 
-# stark-codex
+# stark
 
 Use this skill when the user asks for UI/UX design help, product-flow help, polished frontend/app UI, design audits, translating one platform's design language to another, or avoiding generic AI-looking interfaces.
 
