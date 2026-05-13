@@ -25,6 +25,7 @@ Before producing code, decide the route:
 For design audits, also check `commands/stark-audit.md`.
 For design translation requests, also check `commands/stark-translate.md`.
 For asset planning, also check `commands/stark-assets.md`.
+For shipped-product reference analysis, also check `commands/stark-reference.md`.
 For platform detection helpers, use `scripts/detect_platform.py`.
 For design-token export helpers, use `scripts/token_export.py`.
 
@@ -37,6 +38,7 @@ After UX routing and before implementation, read:
 - `references/ui-patterns/visual-hierarchy.md`
 - `references/ui-patterns/responsive-containment.md`
 - `references/ui-patterns/asset-selection.md`
+- `references/ui-patterns/reference-analysis.md`
 - `references/ui-patterns/motion-budget.md`
 
 Produce a compact UI decision brief when building or redesigning a screen, app, website, dashboard, editor, checkout, or agent run UI. Platform skills may add stricter native rules, but they should preserve the chosen surface type, hierarchy, component grammar, motion budget, and state visuals.
@@ -49,6 +51,7 @@ Produce a compact UI decision brief when building or redesigning a screen, app, 
 - For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
 - For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
 - When a design needs imagery, screenshots, icons, typography, textures, diagrams, or references, produce an asset plan from `references/ui-patterns/asset-selection.md` before implementation. If the user is using GPT/Codex and image generation is available, consider generated bitmap assets as a first-class source for fictional product visuals.
+- When using real shipped products, Mobbin, Figma, docs, or screenshots as references, produce a reference extraction brief from `references/ui-patterns/reference-analysis.md`. Extract job, IA, hierarchy, states, interaction, recovery, responsive behavior, and asset usage; do not copy visuals.
 - Prefer concrete UI decisions over generic "modern clean" styling.
 - Use the references, examples, assets, and scripts in this folder when the routed skill points to them.
 - Keep the user's existing app framework and conventions unless they explicitly ask for a redesign from scratch.

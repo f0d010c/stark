@@ -16,6 +16,7 @@ UI decision brief
 - Motion budget: none / subtle / signature / expressive, plus reduced-motion behavior
 - Responsive containment: nav, table/list, toolbar, inspector, and long-label behavior
 - Asset plan: icons, screenshots, generated UI mock, imagegen, typography, references, attribution
+- Reference extraction: shipped references used, structural lessons, rejected visual/copy elements
 - Assets: real product media, generated illustration, icons, screenshots, data visualizations, none
 - State visuals: empty, loading, error, permission, success, long-running
 - Bans: ...

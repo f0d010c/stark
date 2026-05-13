@@ -116,6 +116,30 @@ Mega wordmark fills viewport width. Lusion / Studio Freight signature closer.
 
 Pin viewport, content advances frame-by-frame as scroll progresses. See `web-patterns/scroll-pinned-section.md`.
 
+## 11. Product proof workbench
+
+Hero or first app section centered on a believable product surface: annotated UI preview, command palette, timeline replay, inspector pane, or trust matrix. Use for developer tools, AI products, security products, and workflow automation.
+
+Keep the product proof inspectable: real labels, stateful rows, visible errors, permissions, or run steps. Avoid dark blurred screenshots and generic dashboards.
+
+## 12. Docs + console split
+
+Docs or API reference layout with a stable left nav, readable content column, sticky right rail, and an optional live console/code sample pane. Use for SDKs, CLIs, plugin docs, and platform products.
+
+On mobile, collapse nav to a sheet and keep code samples copyable without horizontal layout breakage.
+
+## 13. Trust and permissions surface
+
+Matrix, comparison, or settings layout that makes risk legible: actor, scope, action, approval state, audit trail, and recovery path. Use for auth, admin, enterprise, marketplace, and plugin-install flows.
+
+Prefer dense but calm tables over decorative cards. Show empty, warning, denied, inherited, and pending states.
+
+## 14. Interactive comparison
+
+Before/after slider, pricing comparison table, or state gallery that helps users compare tradeoffs directly. Use when the decision is not obvious from prose alone.
+
+Keep comparison axes stable. Do not move labels, totals, or primary actions between states.
+
 ## Avoid these layouts
 
 - Hero + 3-column features + CTA + footer (universal SaaS)
@@ -123,6 +147,7 @@ Pin viewport, content advances frame-by-frame as scroll progresses. See `web-pat
 - Equal-span uniform grids
 - Sidebar nav on marketing site (use top nav unless app)
 - Sticky table-of-contents (unless docs)
+- Marketing pages pretending to be apps without product proof
 
 ## Composition rules
 

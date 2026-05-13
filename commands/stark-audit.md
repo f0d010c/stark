@@ -25,6 +25,7 @@ Steps:
    - UX -> `skills/ux-design/SKILL.md` audit checklist
    - UI -> `references/ui-patterns/ui-audit-rubric.md`
    - Assets -> `references/ui-patterns/asset-selection.md` when the artifact uses images, screenshots, icons, generated visuals, external references, or brand assets
+   - References -> `references/ui-patterns/reference-analysis.md` when the artifact claims to use a real product, Mobbin, Figma, or screenshot reference
 
 3. **Load the matching ban list**:
    - web → `references/web-bans.md`

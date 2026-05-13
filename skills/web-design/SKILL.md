@@ -24,6 +24,8 @@ Do not force an expressive landing-page composition onto a repeated-use web app.
 
 When the site needs imagery, proof visuals, icons, screenshots, typography, or references, also read `../../references/ui-patterns/asset-selection.md` and include an asset plan before code. If the user is using GPT/Codex and image generation is available, generated bitmap assets are allowed for fictional product visuals, editorial hero imagery, textures, and empty states when they support the product job.
 
+When using shipped products, Mobbin/Figma screens, docs, or screenshots as references, read `../../references/ui-patterns/reference-analysis.md` and produce a reference extraction brief. Borrow structure, interaction, state, and responsive decisions; never copy visual identity.
+
 ## Step 0a (MANDATORY) — Ask the user which direction
 
 Six distinct aesthetic directions exist. Each has its own typography, palette, motion language, copy voice, layout grammar, reference apps, ban list. **Pick before any code.** Never blend directions — that produces the AI-slop middle.
@@ -128,6 +130,7 @@ Every web output, regardless of direction:
 - **Real semantic copy** — no "Lorem ipsum", no "Built for modern teams", no "10x faster". Read `../../references/web-copy-voice.md`.
 - **Real visual content** — generate SVG / CSS art, never `<img src="placeholder.png">` or `via.placeholder.com`.
 - **Asset plan** — decide icons, screenshots, references, generated images, typography, and attribution before adding assets.
+- **Reference extraction** — if using real product references, extract job, IA, hierarchy, state coverage, interaction, recovery, responsive behavior, and asset use; do not copy visuals.
 - **Accessibility baseline** — semantic HTML, focus-visible rings, WCAG AA contrast, `prefers-reduced-motion` respected.
 - **Performance discipline** — lazy-load below-fold, no layout thrashing in scroll motion, font-display: swap.
 - **Surface-fit baseline** — marketing pages may be spacious and expressive; dashboards, editors, checkouts, and agent-run UIs must preserve task density, stable controls, and state visibility.
@@ -212,6 +215,7 @@ Default to fitting alongside one of these. Read `../../references/awwwards-ceili
 
 - `../../references/design-philosophy.md` — core thesis
 - `../../references/web-patterns/*.md` — copy-paste pattern library
+- `../../references/ui-patterns/reference-analysis.md` — structure extraction from shipped references
 - `../../references/web-direction-*.md` — per-direction full implementation
 - `../../references/web-fonts.md` — type pairings
 - `../../references/web-bans.md` — anti-slop list

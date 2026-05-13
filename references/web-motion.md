@@ -36,6 +36,16 @@ Each has dedicated reference at `web-patterns/<name>.md`. Don't deploy all on on
 | Symbol / glyph cycling | editorial, industrial-mono | `web-patterns/symbol-cycling-hover.md` |
 | Connected animation (`layoutId`) | active-bento, editorial gallery→detail | `web-patterns/connected-animation.md` |
 | Mesh gradient atmosphere | glow-grain (signature), type-as-hero, active-bento | `web-patterns/mesh-gradient.md` |
+| Command palette | app shells, docs, devtools | `web-patterns/command-palette.md` |
+| Inspector split pane | devtools, editors, audit tools | `web-patterns/inspector-split-pane.md` |
+| Annotated product proof | SaaS, AI tools, security products | `web-patterns/annotated-product-proof.md` |
+| Before/after slider | migrations, optimization, design systems | `web-patterns/before-after-slider.md` |
+| Timeline / run replay | agents, CI, deploys, automations | `web-patterns/timeline-run-replay.md` |
+| Permission / trust matrix | security, admin, enterprise settings | `web-patterns/permission-trust-matrix.md` |
+| Empty state gallery | dashboards, onboarding, data apps | `web-patterns/empty-state-gallery.md` |
+| Pricing comparison table | SaaS, developer tools, marketplaces | `web-patterns/pricing-comparison-table.md` |
+| Docs / API reference layout | SDKs, CLIs, platform products | `web-patterns/docs-api-reference-layout.md` |
+| Keyboard shortcut overlay | editors, command surfaces, power tools | `web-patterns/keyboard-shortcut-overlay.md` |
 
 ## When to deploy how many
 
@@ -51,6 +61,7 @@ Each has dedicated reference at `web-patterns/<name>.md`. Don't deploy all on on
 - **Glow + grain**: page-load curtain + mesh drift + scroll-driven glow shift + magnetic CTAs
 - **Industrial mono**: typewriter intro + log marquee + monospace tickers + glyph cycle hover
 - **Active bento**: layoutId connected + tile-expand hover + scroll-snap + custom cursor "VIEW"
+- **Product proof**: annotated product preview + command palette + timeline/run replay + trust matrix
 
 ## Default page-load reveal sequence (editorial)
 

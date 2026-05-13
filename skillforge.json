@@ -35,6 +35,10 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Use Stark reference analysis to study real shipped command palettes before designing mine.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }

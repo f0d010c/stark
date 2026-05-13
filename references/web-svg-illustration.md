@@ -103,7 +103,7 @@ For backgrounds:
 ## When you absolutely need an image
 
 If the user provides actual product photos or insists on imagery:
-- Use placeholder service ONLY for prototype: `https://picsum.photos/[w]/[h]?random=N`
+- Use user-provided, licensed, generated, or code-rendered imagery that supports the product job.
 - Add `loading="lazy"` always
 - Use `<picture>` w/ multiple sources for art-direction
 - ALT text mandatory

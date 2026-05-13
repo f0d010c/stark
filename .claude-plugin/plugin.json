@@ -1,6 +1,6 @@
 {
   "name": "stark",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "Anti-slop UI/UX generator for web, Windows, Apple, Android, and cross-platform. Adds UX flow and state design before visual polish. Asks which track first and never defaults silently.",
   "author": {
     "name": "stark"

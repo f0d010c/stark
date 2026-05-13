@@ -12,7 +12,7 @@
         "ref": "main"
       },
       "description": "Anti-slop multi-platform UI/UX generator. Adds UX flow and state design before visual polish, asks the user which platform or track first, and ships distinctive design rather than template clones.",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "tags": ["design", "ui", "ux", "multi-platform", "anti-slop", "branded-fluent"]
     }
   ]

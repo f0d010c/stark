@@ -55,7 +55,7 @@ Generated images must still fit the product job. Do not use imagegen to hide wea
 
 ## Real-world UI references
 
-For flows such as onboarding, settings, permissions, checkout, dashboards, empty states, and mobile navigation, inspect 3-5 proven references when available. Extract:
+For flows such as onboarding, settings, permissions, checkout, dashboards, empty states, and mobile navigation, inspect 3-5 proven references when available. Read `reference-analysis.md` and extract:
 
 - information architecture
 - hierarchy

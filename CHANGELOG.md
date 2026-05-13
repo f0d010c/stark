@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 - 2026-05-13 - shipped-reference analysis + product patterns
+
+- Added `references/ui-patterns/reference-analysis.md`, a framework for learning from shipped UI/UX references without copying visuals, copy, brand identity, or proprietary screens.
+- Added `commands/stark-reference.md` so Codex/agents can explicitly produce a reference extraction brief before designing from Mobbin, Figma, screenshots, docs, or shipped products.
+- Added web product patterns for command palettes, inspector split panes, annotated product proof, before/after sliders, timeline/run replay, permission/trust matrices, empty state galleries, pricing comparison tables, docs/API references, and keyboard shortcut overlays.
+- Wired reference extraction into the Stark root skill, web-design skill, UI decision brief, UX references, asset planning, audit command, layout catalog, and smoke examples.
+- Tightened asset guidance to prefer user-provided, licensed, generated, or code-rendered imagery over placeholder services.
+
 ## 0.2.0 — 2026-05-05 — branded fluent + multi-track skills
 
 - Renamed: `idiom-design` → `stark`
