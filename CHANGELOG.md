@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1 - 2026-05-13 - neutral plugin naming
+
+- Renamed the Codex plugin manifest from `stark-codex` to `stark` so marketplace installs match the repo and multi-agent branding.
+- Removed Codex-specific wording from the Codex manifest summary while keeping Codex compatibility.
+
 ## 0.4.0 - 2026-05-13 - shipped-reference analysis + product patterns
 
 - Added `references/ui-patterns/reference-analysis.md`, a framework for learning from shipped UI/UX references without copying visuals, copy, brand identity, or proprietary screens.
