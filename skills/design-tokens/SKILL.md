@@ -48,7 +48,7 @@ Example:
 | Windows (WinUI 3) | `<ResourceDictionary>` with `<Color>`, `<SolidColorBrush>`, `<x:Double>` |
 | Flutter | `ThemeData(colorScheme: ColorScheme(...))` |
 
-Use `scripts/token_export.py` for the translation — never hand-translate. Tokens drift fast.
+Use `../../scripts/token_export.py` for the translation — never hand-translate. Tokens drift fast.
 
 ## Step 3 — When you should NOT generate tokens
 
@@ -80,7 +80,7 @@ When asked to audit a token set:
 
 ## Step 6 — Reference token bundles
 
-Shipped in `assets/tokens/`:
+Shipped in `../../assets/tokens/`:
 - `fluent-2.json` — Microsoft Fluent 2 reference
 - `material3-expressive.json` — M3E reference (M3E adds wave/morph tokens vs M3)
 - `apple-system.json` — iOS/macOS semantic system colors

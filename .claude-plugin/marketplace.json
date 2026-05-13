@@ -1,8 +1,7 @@
 {
   "name": "stark",
   "owner": {
-    "name": "stark",
-    "email": "noreply@example.com"
+    "name": "stark"
   },
   "plugins": [
     {
@@ -12,9 +11,9 @@
         "repo": "f0d010c/stark",
         "ref": "main"
       },
-      "description": "Anti-slop multi-platform UI generator. Asks the user which track first (system-like native, branded native, Tauri 2, Electron, RN, Flutter), then ships distinctive design — not template clones. Web (React/Tailwind v4 + Motion), Windows (WinUI 3 + Mica), Apple (SwiftUI 7 + Liquid Glass), Android (Compose + M3 Expressive). Per-platform anti-slop ban lists.",
-      "version": "0.2.0",
-      "tags": ["design", "ui", "multi-platform", "anti-slop", "branded-fluent"]
+      "description": "Anti-slop multi-platform UI/UX generator. Adds UX flow and state design before visual polish, asks the user which platform or track first, and ships distinctive design rather than template clones.",
+      "version": "0.3.0",
+      "tags": ["design", "ui", "ux", "multi-platform", "anti-slop", "branded-fluent"]
     }
   ]
 }

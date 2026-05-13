@@ -29,7 +29,7 @@ Six distinct aesthetic directions exist. Each has its own typography, palette, m
 
 If the brief gives strong signal (e.g. "watch maker / luxury minimal" → 1; "AI dev tool, terminal vibe" → 5; "Awwwards SOTY ambition with massive type" → 3), state your pick + reasoning in one sentence. If ambiguous, ask.
 
-Once picked, **load the matching direction reference** from `references/web-direction-{name}.md`. Each contains: typography scale, palette, layout grid, motion moves, copy voice, reference apps, direction-specific ban list.
+Once picked, **load the matching direction reference** from `../../references/web-direction-{name}.md`. Each contains: typography scale, palette, layout grid, motion moves, copy voice, reference apps, direction-specific ban list.
 
 ## Step 0b — Stack questions (after direction picked)
 
@@ -45,7 +45,7 @@ State stack pick at top of response in one sentence.
 
 The model has access to all of these. **Don't deploy all of them on every site** — over-motion is its own tell. Awwwards SOTY sites typically have 2-4 signature motion moments + restrained baseline.
 
-Read `references/web-patterns/*.md` for full implementation. List below:
+Read `../../references/web-patterns/*.md` for full implementation. List below:
 
 ### Motion / Interaction
 - **Letter-stagger reveal** — hero text drops in word-by-word w/ spring physics
@@ -95,17 +95,17 @@ Read `references/web-patterns/*.md` for full implementation. List below:
 
 ### Asset generation (no images)
 - **CSS-rendered illustration** — gradients + shapes for hero visuals
-- **SVG illustration** — geometric, abstract, layered (see `references/web-svg-illustration.md`)
+- **SVG illustration** — geometric, abstract, layered (see `../../references/web-svg-illustration.md`)
 - **Generated text glyphs** — large characters as image substitute
 - **Mesh gradient as hero** — full-bleed atmospheric backdrop
-- Read `references/web-svg-illustration.md` for full asset-generation strategies
+- Read `../../references/web-svg-illustration.md` for full asset-generation strategies
 
 ## Step 2 — Always do these (non-negotiable baseline)
 
 Every web output, regardless of direction:
 
-- **Real custom typography** — never Inter / Space Groteske / Roboto / system-ui as primary face. Pick from `references/web-fonts.md`.
-- **Real semantic copy** — no "Lorem ipsum", no "Built for modern teams", no "10x faster". Read `references/web-copy-voice.md`.
+- **Real custom typography** — never Inter / Space Groteske / Roboto / system-ui as primary face. Pick from `../../references/web-fonts.md`.
+- **Real semantic copy** — no "Lorem ipsum", no "Built for modern teams", no "10x faster". Read `../../references/web-copy-voice.md`.
 - **Real visual content** — generate SVG / CSS art, never `<img src="placeholder.png">` or `via.placeholder.com`.
 - **Accessibility baseline** — semantic HTML, focus-visible rings, WCAG AA contrast, `prefers-reduced-motion` respected.
 - **Performance discipline** — lazy-load below-fold, no layout thrashing in scroll motion, font-display: swap.
@@ -125,7 +125,7 @@ Don't deploy all 17 techniques. Pick 2-4 that reinforce the direction.
 
 ## Step 4 — Anti-slop ban list (always enforced)
 
-Read `references/web-bans.md` for full list. Top tells of AI-generated UI:
+Read `../../references/web-bans.md` for full list. Top tells of AI-generated UI:
 
 - `from-purple-500 to-pink-500` gradients (top tell)
 - Inter / Space Grotesk as primary face
@@ -170,7 +170,7 @@ If any "no" — restart that choice, don't ship near-misses.
 
 ## Step 7 — Quality bar reference points
 
-Default to fitting alongside one of these. Read `references/awwwards-ceiling.md` for direction-grouped refs.
+Default to fitting alongside one of these. Read `../../references/awwwards-ceiling.md` for direction-grouped refs.
 
 - linear.app — fast, dark, precision
 - stripe.com / stripe.com/sessions — gradient mastery
@@ -185,13 +185,13 @@ Default to fitting alongside one of these. Read `references/awwwards-ceiling.md`
 
 ## Read also
 
-- `references/design-philosophy.md` — core thesis
-- `references/web-patterns/*.md` — copy-paste pattern library
-- `references/web-direction-*.md` — per-direction full implementation
-- `references/web-fonts.md` — type pairings
-- `references/web-bans.md` — anti-slop list
-- `references/web-motion.md` — motion library docs
-- `references/web-copy-voice.md` — editorial copy patterns
-- `references/web-svg-illustration.md` — no-image asset generation
-- `references/web-layouts.md` — layout pattern catalog
-- `references/awwwards-ceiling.md` — quality bar refs grouped by direction
+- `../../references/design-philosophy.md` — core thesis
+- `../../references/web-patterns/*.md` — copy-paste pattern library
+- `../../references/web-direction-*.md` — per-direction full implementation
+- `../../references/web-fonts.md` — type pairings
+- `../../references/web-bans.md` — anti-slop list
+- `../../references/web-motion.md` — motion library docs
+- `../../references/web-copy-voice.md` — editorial copy patterns
+- `../../references/web-svg-illustration.md` — no-image asset generation
+- `../../references/web-layouts.md` — layout pattern catalog
+- `../../references/awwwards-ceiling.md` — quality bar refs grouped by direction

@@ -103,5 +103,5 @@ If the user is shipping to one canonical platform first (almost always the case)
 
 When generating cross-platform output, ship tokens once and translate:
 - Use the **DTCG W3C token format** as the source of truth
-- See `scripts/token_export.py` to translate one token JSON into Tailwind theme + Compose Material3 ColorScheme + SwiftUI Color extension + Fluent ResourceDictionary
-- See `assets/tokens/` for per-platform reference token bundles
+- See `../../scripts/token_export.py` to translate one token JSON into Tailwind theme + Compose Material3 ColorScheme + SwiftUI Color extension + Fluent ResourceDictionary
+- See `../../assets/tokens/` for per-platform reference token bundles

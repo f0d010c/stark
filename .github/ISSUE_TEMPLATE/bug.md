@@ -15,16 +15,16 @@ labels: bug
 ## To reproduce
 
 ```
-1. Install stark via /plugin install ...
-2. Run /stark <args> ...
+1. Install stark as a Codex plugin
+2. Ask Codex to use stark for <brief>
 3. Observe ...
 ```
 
 ## Environment
 
-- Claude Code version:
+- Codex version / surface:
 - OS:
-- stark version (`/plugin list`):
+- stark version:
 - Skill that misbehaved:
 
 ## Output / screenshot

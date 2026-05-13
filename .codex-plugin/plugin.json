@@ -1,0 +1,49 @@
+{
+  "name": "stark-codex",
+  "version": "0.3.0",
+  "description": "Anti-slop UI/UX design plugin for Codex. Routes product flows, web, Windows, Apple, Android, cross-platform, and token requests to opinionated design skills that ask for UX, platform, track, and direction before code.",
+  "author": {
+    "name": "stark contributors",
+    "url": "https://github.com/f0d010c/stark"
+  },
+  "homepage": "https://github.com/f0d010c/stark",
+  "repository": "https://github.com/f0d010c/stark",
+  "license": "Apache-2.0",
+  "keywords": [
+    "codex",
+    "design",
+    "ui",
+    "ux",
+    "frontend",
+    "swiftui",
+    "winui",
+    "compose",
+    "tauri",
+    "electron",
+    "tailwind",
+    "anti-slop"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "stark",
+    "shortDescription": "Opinionated multi-platform UI/UX design skills for Codex.",
+    "longDescription": "stark helps Codex avoid generic AI UI output by asking for the right product flow, platform, native/cross-platform track, and web aesthetic direction before generating code. It includes UX, web, Windows, Apple, Android, cross-platform design, and design-token skills, plus references, examples, and scripts.",
+    "developerName": "stark contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Design",
+      "UX",
+      "Code Generation",
+      "Audit",
+      "Reference"
+    ],
+    "websiteURL": "https://github.com/f0d010c/stark",
+    "defaultPrompt": [
+      "Design a non-generic landing page.",
+      "Improve the onboarding UX for this app.",
+      "Audit this UI for AI slop.",
+      "Translate this screen to Windows."
+    ],
+    "brandColor": "#111111"
+  }
+}

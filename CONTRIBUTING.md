@@ -4,6 +4,11 @@
 
 `stark` is opinionated. PRs that broaden defaults, add "AI-friendly" softening, or default to web aesthetics on native platforms will be rejected. The plugin's purpose is to refuse the AI-slop middle.
 
+This repository is dual-compatible:
+
+- Codex uses `.codex-plugin/plugin.json` plus `skills/*/SKILL.md`.
+- Claude Code compatibility is retained through `.claude-plugin/` and `commands/`.
+
 PRs welcome for:
 
 - Updated currency (e.g. when iOS 27 / Material 3.5 / Tailwind v5 ship, refresh references)
@@ -67,7 +72,7 @@ Required:
 python -c "
 import json, os, re, sys
 errors = []
-for path in ['.claude-plugin/plugin.json', '.claude-plugin/marketplace.json']:
+for path in ['.codex-plugin/plugin.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json']:
     json.load(open(path))
 for root, dirs, files in os.walk('skills'):
     for f in files:
@@ -76,6 +81,10 @@ for root, dirs, files in os.walk('skills'):
             assert re.match(r'---\s*\n.*?\n---', content, re.DOTALL), f'{f} missing frontmatter'
 print('ok')
 "
+
+# Codex plugin readiness
+npx codex-skillforge lint . --format text
+npx codex-skillforge smoke .
 ```
 
 Run example builds (Win11 only):

@@ -5,6 +5,11 @@ argument-hint: "[from-platform] [to-platform] <file or description>"
 
 # /stark-translate
 
+Legacy Claude Code command.
+In Codex, ask:
+
+> Translate this Apple UI to Windows using stark.
+
 Translate UI from `$1` (source platform) to `$2` (target platform), preserving product semantics but using the target platform's idiom.
 
 Source/target must each be one of: `web`, `windows`, `apple`, `android`.

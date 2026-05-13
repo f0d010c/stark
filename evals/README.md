@@ -8,9 +8,10 @@ Trigger and quality evals for the plugin's skills.
 
 ## Methodology
 
-Following Anthropic's `skill-creator` methodology (https://github.com/anthropics/skills/tree/main/skills/skill-creator):
+Use these prompts to test whether Codex routes to the intended `stark` skill.
+The method mirrors skill-trigger evals from other agent ecosystems:
 
-1. **Run each prompt 5×** in a fresh Claude Code session with this plugin installed.
+1. **Run each prompt 5x** in a fresh Codex session with this plugin installed.
 2. For each run, record which skill (if any) triggered.
 3. Calculate per-prompt **trigger rate** = (correct triggers) / 5.
 4. Calculate per-prompt **stddev** across runs.
@@ -37,3 +38,9 @@ The 10 `should_trigger: false` prompts (5 train + 5 validation) are critical. Th
 - Variance (stddev) per prompt: <0.2
 
 If validation < train by more than 10 points, suspect overfitting on description keywords.
+
+For a quick static check, run:
+
+```bash
+npx agent-skillforge smoke .
+```

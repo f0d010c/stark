@@ -1,8 +1,10 @@
 # Node
 node_modules/
 dist/
+tmp-pack/
 .vite/
 *.log
+*.binlog
 
 # Rust / Tauri
 target/
@@ -35,3 +37,10 @@ Thumbs.db
 *.exe
 *.dll
 *.pdb
+
+# Local-only docs
+.github/ANNOUNCE_REDDIT.md
+
+# Screenshot tool deps
+scripts/screenshot-tool/node_modules/
+scripts/screenshot-tool/package-lock.json

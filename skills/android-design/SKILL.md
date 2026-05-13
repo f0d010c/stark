@@ -29,11 +29,11 @@ If brief gives strong signal (e.g. "Pixel-style camera" → 1; "cross-platform w
 
 | Track | Reference docs | Default stack |
 |---|---|---|
-| 1. System-like Compose | `references/material3-expressive.md` | Compose BOM 2026.04 + Material3 1.4 + adaptive layouts strict |
+| 1. System-like Compose | `../../references/material3-expressive.md` | Compose BOM 2026.04 + Material3 1.4 + adaptive layouts strict |
 | 2. Branded Compose | Same as 1 | Same as 1 + custom display font + hero atmospheres + bespoke surfaces |
-| 3. React Native | `references/web-fonts.md` + cross-platform docs | RN 0.78+ New Arch + Expo Router |
+| 3. React Native | `../../references/web-fonts.md` + cross-platform docs | RN 0.78+ New Arch + Expo Router |
 | 4. Flutter | None for native fidelity | Flutter 3+ stable |
-| 5. Compose Multiplatform | `references/material3-expressive.md` | CMP 1.8 stable + shared Compose |
+| 5. Compose Multiplatform | `../../references/material3-expressive.md` | CMP 1.8 stable + shared Compose |
 
 For tracks 3 and 4: web/cross-platform anti-slop rules apply. Read web references.
 
@@ -56,7 +56,7 @@ Launched at I/O 2025. Default for Pixel 10 / Android 16 QPR1. Generated UI must 
 - **Tonal elevation** — surface tone shifts, never `Modifier.shadow()` for elevation
 - **Dynamic color (Material You)** — `dynamicColorScheme()` from wallpaper on Android 12+
 
-Read `references/material3-expressive.md` for the M3E adoption checklist.
+Read `../../references/material3-expressive.md` for the M3E adoption checklist.
 
 ## Step 2 — Compose currency (BOM 2026.04.01)
 
@@ -138,4 +138,4 @@ Android 16 (API 36) deprecated `windowOptOutEdgeToEdgeEnforcement`. Every screen
 - Material Symbols: https://fonts.google.com/icons
 - M3E component catalog: https://github.com/meticha/material-3-expressive-catalog
 
-Token JSON: see `assets/tokens/material3-expressive.json`
+Token JSON: see `../../assets/tokens/material3-expressive.json`

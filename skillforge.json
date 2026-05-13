@@ -1,0 +1,31 @@
+{
+  "name": "stark",
+  "type": "plugin",
+  "examples": [
+    {
+      "prompt": "Design a landing page for a developer tool that should not look like generic AI SaaS.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Make a Win11 app shell with NavigationView and Mica.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Audit this React hero section for AI design slop.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Improve the onboarding UX and define empty/loading/error states.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Help me understand quicksort.",
+      "shouldTrigger": false
+    }
+  ],
+  "checks": {
+    "maxSkillMdLines": 650,
+    "requireOpenAiYaml": false,
+    "allowScripts": true
+  }
+}

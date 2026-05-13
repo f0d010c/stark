@@ -29,9 +29,9 @@ If the user has already given enough signal in the brief (e.g. "I want a system 
 
 | Track | Reference docs | Default stack |
 |---|---|---|
-| 1. System-like WinUI 3 | `references/fluent-design.md` | WinUI 3 + WinAppSDK 1.8 + CommunityToolkit.Mvvm + SettingsControls |
-| 2. Branded WinUI 3 | `references/fluent-design.md` + `references/branded-fluent.md` | Same as 1 + custom accent override + embedded display font + bespoke surfaces |
-| 3. Tauri 2 + Web | `references/web-fonts.md` + `references/web-motion.md` + `references/web-bans.md` + `references/awwwards-ceiling.md` | React 19 + Tailwind v4 + Motion (motion.dev) + Tauri 2 shell |
+| 1. System-like WinUI 3 | `../../references/fluent-design.md` | WinUI 3 + WinAppSDK 1.8 + CommunityToolkit.Mvvm + SettingsControls |
+| 2. Branded WinUI 3 | `../../references/fluent-design.md` + `../../references/branded-fluent.md` | Same as 1 + custom accent override + embedded display font + bespoke surfaces |
+| 3. Tauri 2 + Web | `../../references/web-fonts.md` + `../../references/web-motion.md` + `../../references/web-bans.md` + `../../references/awwwards-ceiling.md` | React 19 + Tailwind v4 + Motion (motion.dev) + Tauri 2 shell |
 | 4. Electron + Web | Same as 3 | React 19 + Tailwind v4 + Motion + Electron shell + electron-builder |
 
 For tracks 3 and 4, the web design rules from `web-design` SKILL apply — same anti-slop ban list, same typography curation, same aesthetic direction discipline.
@@ -40,7 +40,7 @@ For tracks 3 and 4, the web design rules from `web-design` SKILL apply — same 
 
 Track 1 = system-like. Track 2 = branded. The user already picked. Skip to step 2.
 
-For reference: branded means native chrome + bespoke content surface. Read `references/branded-fluent.md`.
+For reference: branded means native chrome + bespoke content surface. Read `../../references/branded-fluent.md`.
 
 ## Step 2 — WinUI 3 idioms
 
@@ -112,12 +112,12 @@ Reject all of these:
 
 ## Step 8 — Tokens & assets
 
-- Token JSON (DTCG): see `assets/tokens/fluent-2.json` shipped with this plugin
+- Token JSON (DTCG): see `../../assets/tokens/fluent-2.json` shipped with this plugin
 - Fluent 2: https://fluent2.microsoft.design
 - Win design downloads (Figma + icons + Segoe): https://learn.microsoft.com/windows/apps/design/downloads
 - WinUI source: https://github.com/microsoft/microsoft-ui-xaml
 
-Read `references/fluent-design.md` for deep token + spacing reference.
+Read `../../references/fluent-design.md` for deep token + spacing reference.
 
 ## Step 9 — Fidelity tradeoffs to communicate
 

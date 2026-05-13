@@ -29,11 +29,11 @@ If brief gives a strong signal (e.g. "iOS App Store launch" → 1 or 2; "cross-p
 
 | Track | Reference docs | Default stack |
 |---|---|---|
-| 1. System-like SwiftUI | `references/apple-hig.md` + `references/liquid-glass.md` | SwiftUI 7 + Xcode 26 + iOS 26 SDK strict |
+| 1. System-like SwiftUI | `../../references/apple-hig.md` + `../../references/liquid-glass.md` | SwiftUI 7 + Xcode 26 + iOS 26 SDK strict |
 | 2. Branded SwiftUI | Same as 1 | Same as 1 + custom display font + hero atmospheres + bespoke surfaces |
-| 3. React Native | `references/web-fonts.md` + cross-platform docs | RN 0.78+ New Arch + Expo Router + react-native-screens |
+| 3. React Native | `../../references/web-fonts.md` + cross-platform docs | RN 0.78+ New Arch + Expo Router + react-native-screens |
 | 4. Flutter Cupertino | None for native fidelity (will feel imported) | Flutter 3+ stable |
-| 5. Tauri 2 / Electron (macOS) | `references/web-fonts.md` + `references/web-motion.md` + `references/web-bans.md` + `references/awwwards-ceiling.md` | React 19 + Tailwind v4 + Motion |
+| 5. Tauri 2 / Electron (macOS) | `../../references/web-fonts.md` + `../../references/web-motion.md` + `../../references/web-bans.md` + `../../references/awwwards-ceiling.md` | React 19 + Tailwind v4 + Motion |
 
 For tracks 3, 4, 5: web/cross-platform anti-slop rules apply. Read the web design references.
 
@@ -52,7 +52,7 @@ Apply via:
 
 Lineage to remember: Aqua → iOS 7 blur → Dynamic Island → visionOS → Liquid Glass. The aesthetic is "digital meta-material" — light bends through it.
 
-Read `references/liquid-glass.md` for full Liquid Glass adoption checklist.
+Read `../../references/liquid-glass.md` for full Liquid Glass adoption checklist.
 
 ## Step 2 — SwiftUI 7 modern APIs (Swift 6.2 / Xcode 26)
 
@@ -75,7 +75,7 @@ Always prefer:
 - **SF Symbols 7** is the only icon system. ~6,900 glyphs, 9 weights × 3 scales. Use `Image(systemName:)`.
 - **Accessibility**: `.accessibilityLabel/Hint/Value`, `.accessibilityElement(children:.combine)`, traits like `.isButton`, `.isHeader`. Mandatory.
 
-Read `references/apple-hig.md` for HIG section deep-dive.
+Read `../../references/apple-hig.md` for HIG section deep-dive.
 
 ## Step 4 — macOS specifics (macOS 26 Tahoe)
 
@@ -138,4 +138,4 @@ If user insists on cross-platform, route to `cross-platform-design` and warn tha
 - Icon Composer (WWDC25 session 361) for Liquid Glass app icons
 - System color spec: https://developer.apple.com/design/human-interface-guidelines/color (use `.primary`, `.secondary`, `.tint`, `Color(.systemBackground)` — never raw hex)
 
-Token JSON: see `assets/tokens/apple-system.json`
+Token JSON: see `../../assets/tokens/apple-system.json`

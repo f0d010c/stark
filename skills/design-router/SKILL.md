@@ -1,11 +1,22 @@
 ---
 name: design-router
-description: Detects which platform a UI/design request targets (web, Windows, iOS, macOS, Android, or cross-platform) and routes to the matching platform skill. Use when the user asks to build, design, mock up, scaffold, or improve any interface, screen, page, component, or app and the target platform is ambiguous or multi-target. TRIGGER on: "build a screen", "design a page", "make this UI", "create an app interface", "mockup", "prototype", "scaffold a frontend". SKIP when the request explicitly names one platform — let that platform skill trigger directly.
+description: Detects whether a UI/design request needs UX flow work, platform UI work, or both, then routes to ux-design, web, Windows, iOS, macOS, Android, cross-platform, or design-token skills. Use when the user asks to build, design, mock up, scaffold, audit, or improve any interface, flow, screen, page, component, or app and the target platform or product flow is ambiguous. TRIGGER on: "build a screen", "design a page", "make this UI", "improve the UX", "checkout flow", "onboarding", "dashboard workflow", "create an app interface", "mockup", "prototype", "scaffold a frontend". SKIP when the request explicitly names one platform and no UX flow work is implied.
 ---
 
 # design-router — platform dispatch
 
-This skill is the entry point when a UI request is ambiguous. Goal: pick the right platform skill, do not over-eagerly route to web.
+This skill is the entry point when a UI/UX request is ambiguous. Goal: pick the right UX and platform skill, do not over-eagerly route to web.
+
+## Step 0 - Decide whether UX comes first
+
+Route to `ux-design` before platform visuals when the request includes:
+
+- "UX", "user journey", "flow", "wireframe", "information architecture", "IA", "usability"
+- onboarding, signup, checkout, paywall, forms, settings, permissions, dashboard workflow, admin workflow
+- empty/loading/error states, long-running task progress, retry/resume, bulk actions
+- making an app easier to use, less confusing, better for daily use, or better for conversion/retention
+
+If the request is both UX and platform-specific, read `ux-design` first, then the matching platform skill.
 
 ## Step 1 — Read the request for platform signals
 
@@ -24,7 +35,7 @@ Scan for explicit signals (in priority order):
 
 Ask one question, no more:
 
-> "Which platform is this for? **(1) Web** — React/Tailwind/Astro **(2) Windows** — WinUI 3 / WPF **(3) iOS / macOS** — SwiftUI **(4) Android** — Jetpack Compose **(5) Cross-platform** — Tauri 2, Compose Multiplatform, React Native, Flutter. Or describe the audience and I'll pick."
+> "Which platform is this for? **(1) Web** - React/Tailwind/Astro **(2) Windows** - WinUI 3 / WPF **(3) iOS / macOS** - SwiftUI **(4) Android** - Jetpack Compose **(5) Cross-platform** - Tauri 2, Compose Multiplatform, React Native, Flutter. If this is mainly UX, describe the user flow and I'll start there."
 
 Do not assume web. Web defaults are how the official `frontend-design` skill produces native-looking-wrong code.
 
@@ -39,7 +50,7 @@ Same product ≠ same UI. A Settings screen on iOS uses grouped Form, on Android
 
 ## Step 4 — Hand off
 
-Once routed, that platform's SKILL.md takes over. State what platform you picked and why in one sentence, then proceed.
+Once routed, the UX or platform SKILL.md takes over. State what you picked and why in one sentence, then proceed.
 
 ## Anti-patterns this skill exists to prevent
 
@@ -47,5 +58,6 @@ Once routed, that platform's SKILL.md takes over. State what platform you picked
 - Pasting Inter on iOS where SF Pro belongs
 - Reaching for Tauri/Electron when the user said "Windows app" (those are web-in-window — use WinUI 3 unless web stack is mandated)
 - Defaulting to Material Design on Apple platforms
+- Making a beautiful screen while ignoring empty/error/loading states and repeated-use flow
 
 When uncertain, ask. One clarifying question is cheaper than 800 lines of wrong-platform code.
