@@ -35,6 +35,7 @@ After UX routing and before implementation, read:
 
 - `references/ui-patterns/surface-taxonomy.md`
 - `references/ui-patterns/ui-decision-brief.md`
+- `references/ui-patterns/product-quality-bar.md`
 - `references/ui-patterns/visual-hierarchy.md`
 - `references/ui-patterns/responsive-containment.md`
 - `references/ui-patterns/asset-selection.md`
@@ -50,6 +51,7 @@ Produce a compact UI decision brief when building or redesigning a screen, app, 
 - When `ux-design` applies, preserve its UX decision brief through implementation. Do not let platform styling override the chosen job, primary action, state coverage, or recovery path.
 - For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
 - For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
+- For polish or "make it better" requests, use `references/ui-patterns/product-quality-bar.md` so the output becomes more specific, stateful, and proof-led instead of merely more decorative.
 - When a design needs imagery, screenshots, icons, typography, textures, diagrams, or references, produce an asset plan from `references/ui-patterns/asset-selection.md` before implementation. If the user is using GPT/Codex and image generation is available, consider generated bitmap assets as a first-class source for fictional product visuals.
 - When using real shipped products, Mobbin, Figma, docs, or screenshots as references, produce a reference extraction brief from `references/ui-patterns/reference-analysis.md`. Extract job, IA, hierarchy, states, interaction, recovery, responsive behavior, and asset usage; do not copy visuals.
 - Prefer concrete UI decisions over generic "modern clean" styling.

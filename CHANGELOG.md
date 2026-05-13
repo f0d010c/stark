@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.8 - 2026-05-13 - proof-led product quality pass
+
+- Added a product quality bar for polish work: specific job, proof surface, complete states, scan speed, and memorable restraint.
+- Added a web pattern index so agents choose patterns by surface type and failure mode instead of applying a long checklist.
+- Updated web and UX skills to require proof surfaces and visible non-happy states for stronger demo/product outputs.
+- Removed the old "anti-slop" lead from the README while keeping the practical quality checks.
+
 ## 0.4.7 - 2026-05-13 - translation routing and token export fixes
 
 - Routed UI translation prompts to platform/cross-platform design instead of design-token export.

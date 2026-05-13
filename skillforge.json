@@ -39,6 +39,10 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Make this dashboard feel like a real product with proof surfaces, non-happy states, and faster scan speed.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }
