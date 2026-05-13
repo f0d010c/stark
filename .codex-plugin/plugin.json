@@ -41,8 +41,7 @@
     "defaultPrompt": [
       "Design a non-generic landing page.",
       "Improve the onboarding UX for this app.",
-      "Audit this UI for AI slop.",
-      "Translate this screen to Windows."
+      "Audit this UI for AI slop."
     ],
     "brandColor": "#111111"
   }
