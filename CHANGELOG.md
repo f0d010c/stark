@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.6 - 2026-05-13 - marketplace review fixes
+
+- Matched the plugin manifest category to the marketplace category.
+- Clarified README install and bundle contents wording for mirrored marketplace installs.
+- Fixed `compose-multiplatform` routing so it resolves as cross-platform instead of Android.
+- Converted CSS alpha hex colors to XAML alpha-first colors for WinUI token exports.
+- Preserved typography tokens in SwiftUI exports with generated `Font` helpers.
+
 ## 0.4.5 - 2026-05-13 - security text cleanup
 
 - Removed stale `examples/` references from `SECURITY.md` after the proof projects moved to screenshots.
