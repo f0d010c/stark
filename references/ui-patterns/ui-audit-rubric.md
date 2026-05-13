@@ -6,6 +6,7 @@ Use this before final delivery or when auditing a screen.
 
 - Primary action is unclear or visually buried.
 - Surface type is wrong: marketing composition used for an operations tool, or dense admin UI used for conversion.
+- Dashboard or admin UI has no operational thesis and could belong to any product after replacing labels.
 - Native platform idioms are violated: wrong icons, type, navigation, materials, or controls.
 - Text overlaps, overflows, or cannot fit in controls at common viewport sizes.
 - Page-level horizontal overflow appears on mobile or tablet because a nav, table, toolbar, inspector, or code block is not contained.

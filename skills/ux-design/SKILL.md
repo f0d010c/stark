@@ -88,8 +88,8 @@ Use the product type to decide what "good UX" means:
 
 | Product type | Optimize for | Avoid |
 |---|---|---|
-| SaaS dashboard | fast scanning, saved filters, drilldowns, clear priority | marketing-page spacing, decorative cards, hidden filters |
-| CRM/admin/internal tool | repeat speed, bulk actions, auditability, permissions | oversized empty space, playful copy, modal chains |
+| SaaS dashboard | fast scanning, saved filters, drilldowns, clear priority, visible operational thesis | marketing-page spacing, decorative cards, hidden filters, generic CRM furniture |
+| CRM/admin/internal tool | repeat speed, bulk actions, auditability, permissions, domain-specific task language | oversized empty space, playful copy, modal chains, interchangeable labels |
 | Creative/editor tool | canvas focus, tool discoverability, undo/redo, stable panels | layout shifts, buried controls, destructive defaults |
 | Marketplace/ecommerce | trust, comparison, price/shipping clarity, recovery | surprise costs, forced account creation, vague stock states |
 | Onboarding/setup | first value, motivation, resumability, skip paths | long forms before value, fake progress, no return path |

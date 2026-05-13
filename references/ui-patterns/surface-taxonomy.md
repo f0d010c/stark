@@ -5,7 +5,7 @@ Choose the surface type before visual execution.
 | Surface | UI priority | Best visual grammar | Common failure |
 |---|---|---|---|
 | Marketing page | memory, credibility, conversion | editorial sections, strong hero, real product proof, directed motion | generic SaaS hero + 3 cards |
-| SaaS dashboard | scan speed, comparison, repeated action | tables/lists, saved filters, priority stack, master/detail, contained overflow | decorative cards replacing useful density, page-level horizontal scroll |
+| SaaS dashboard | scan speed, comparison, repeated action | operational thesis, tables/lists, saved filters, priority stack, master/detail, contained overflow | decorative cards replacing useful density, generic CRM furniture, page-level horizontal scroll |
 | Native settings | trust, predictability, accessibility | grouped settings, inline validation, platform controls | over-branded controls that feel non-native |
 | Editor/canvas | artifact focus, tool discovery, reversibility | canvas, toolbars, inspector, command palette, undo/redo | panels fighting the canvas |
 | Mobile task flow | thumb reach, clarity, progressive disclosure | native nav, sheets, sticky action, short forms | web layout squeezed into phone |

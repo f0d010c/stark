@@ -6,6 +6,7 @@ Produce this after the UX decision brief and before implementation. Keep it comp
 UI decision brief
 - Surface type: marketing / dashboard / native settings / editor / mobile flow / checkout / agent run
 - Platform idiom: web / Windows / Apple / Android / cross-platform translation
+- Product thesis: the specific job, risk, queue, artifact, or decision this surface exists for
 - Visual direction: ...
 - Density: sparse / balanced / dense / operational
 - Hierarchy: primary visual, primary action, secondary surfaces
@@ -25,6 +26,7 @@ This brief prevents the common failure where the agent picks decent components b
 
 - Dense work tools need stable layout more than animation.
 - Dense regions need intentional containment: table scroll, priority-column list, sheet/drawer, or breakpoint-specific replacement.
+- Dashboards need a product-specific operational thesis before visual polish; avoid generic CRM/admin furniture with interchangeable labels.
 - Marketing pages need a memorable first viewport and one clear conversion path.
 - Native apps need platform materials, type, icons, spacing, and controls before custom flair.
 - Editor tools need canvas dominance and control stability.
