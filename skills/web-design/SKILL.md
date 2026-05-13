@@ -20,7 +20,7 @@ Before aesthetic direction, classify the surface using `../../references/ui-patt
 
 Then write the `UI decision brief` from `../../references/ui-patterns/ui-decision-brief.md`. For dashboards, editors, checkouts, and agent-run UIs, preserve the UX decision brief if one exists and bias toward usable density over Awwwards spectacle.
 
-Do not force an expressive landing-page composition onto a repeated-use web app. For operational surfaces, read `../../references/ui-patterns/visual-hierarchy.md`, `../../references/ui-patterns/motion-budget.md`, and `../../references/ui-patterns/ui-audit-rubric.md` before coding.
+Do not force an expressive landing-page composition onto a repeated-use web app. For operational surfaces, read `../../references/ui-patterns/visual-hierarchy.md`, `../../references/ui-patterns/responsive-containment.md`, `../../references/ui-patterns/motion-budget.md`, and `../../references/ui-patterns/ui-audit-rubric.md` before coding.
 
 ## Step 0a (MANDATORY) — Ask the user which direction
 
@@ -127,6 +127,7 @@ Every web output, regardless of direction:
 - **Accessibility baseline** — semantic HTML, focus-visible rings, WCAG AA contrast, `prefers-reduced-motion` respected.
 - **Performance discipline** — lazy-load below-fold, no layout thrashing in scroll motion, font-display: swap.
 - **Surface-fit baseline** — marketing pages may be spacious and expressive; dashboards, editors, checkouts, and agent-run UIs must preserve task density, stable controls, and state visibility.
+- **Responsive containment** — nav rows, dense tables, toolbars, inspectors, and long labels must wrap, collapse, or scroll inside their own region; never leave mobile/tablet page-level horizontal overflow.
 
 ## Step 3 — Deploy 2-4 signature motion moments
 
@@ -184,6 +185,7 @@ Ask before delivering output:
 9. Accessibility baseline (semantic HTML, focus rings, AA contrast, reduced-motion)?
 10. Layout breaks the wrong template for this surface type?
 11. Dark mode (if applicable) has warmth/coolness, not just inversion?
+12. Mobile/tablet has no page-level horizontal overflow?
 
 If any "no" — restart that choice, don't ship near-misses.
 

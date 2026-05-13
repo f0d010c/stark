@@ -12,3 +12,5 @@ Good UI decisions are contextual:
 Use these briefs to choose visual density, hierarchy, component grammar, motion budget, type, materials, imagery, and state treatment before writing code.
 
 Do not apply a visual style because it is fashionable. Pick it because it supports the product job, platform, and frequency of use.
+
+For dense products, also decide responsive containment before code: tables, nav rows, toolbars, inspectors, and canvases need bounded scroll, wrapping, or a breakpoint-specific replacement. The page itself should not drift sideways.

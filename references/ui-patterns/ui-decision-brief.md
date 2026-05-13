@@ -13,6 +13,7 @@ UI decision brief
 - Typography: system/native or chosen custom pair, scale, emphasis rule
 - Color/materials: background, surfaces, accent, semantic states
 - Motion budget: none / subtle / signature / expressive, plus reduced-motion behavior
+- Responsive containment: nav, table/list, toolbar, inspector, and long-label behavior
 - Assets: real product media, generated illustration, icons, screenshots, data visualizations, none
 - State visuals: empty, loading, error, permission, success, long-running
 - Bans: ...
@@ -23,6 +24,7 @@ This brief prevents the common failure where the agent picks decent components b
 ## Rules
 
 - Dense work tools need stable layout more than animation.
+- Dense regions need intentional containment: table scroll, priority-column list, sheet/drawer, or breakpoint-specific replacement.
 - Marketing pages need a memorable first viewport and one clear conversion path.
 - Native apps need platform materials, type, icons, spacing, and controls before custom flair.
 - Editor tools need canvas dominance and control stability.

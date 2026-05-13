@@ -28,6 +28,7 @@ If everything is equally styled, nothing is important.
 - Avoid identical section padding across the whole page.
 - Align text, controls, and data to a deliberate grid.
 - Stable dimensions matter for tables, toolbars, boards, cards, and navigation.
+- On narrow screens, preserve the hierarchy by containing dense regions or changing their presentation; do not let the whole page become the scroll container for one oversized element.
 
 ## State hierarchy
 

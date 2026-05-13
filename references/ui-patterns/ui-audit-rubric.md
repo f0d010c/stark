@@ -8,6 +8,7 @@ Use this before final delivery or when auditing a screen.
 - Surface type is wrong: marketing composition used for an operations tool, or dense admin UI used for conversion.
 - Native platform idioms are violated: wrong icons, type, navigation, materials, or controls.
 - Text overlaps, overflows, or cannot fit in controls at common viewport sizes.
+- Page-level horizontal overflow appears on mobile or tablet because a nav, table, toolbar, inspector, or code block is not contained.
 - Loading/error/permission/success visuals are missing for a real workflow.
 - Visual asset is fake, placeholder, blurred beyond usefulness, or unrelated.
 
@@ -15,6 +16,7 @@ Use this before final delivery or when auditing a screen.
 
 - Too many competing accents or hierarchy levels.
 - Repeated cards where tables/lists/panes are needed.
+- Dense tables or filter rows use accidental page overflow instead of a bounded scroll region or responsive replacement.
 - Motion is decorative and slows repeated use.
 - Component spacing is one-note and makes scanning harder.
 - Empty state explains features instead of the next action.

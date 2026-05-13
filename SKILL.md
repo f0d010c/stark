@@ -34,6 +34,7 @@ After UX routing and before implementation, read:
 - `references/ui-patterns/surface-taxonomy.md`
 - `references/ui-patterns/ui-decision-brief.md`
 - `references/ui-patterns/visual-hierarchy.md`
+- `references/ui-patterns/responsive-containment.md`
 - `references/ui-patterns/motion-budget.md`
 
 Produce a compact UI decision brief when building or redesigning a screen, app, website, dashboard, editor, checkout, or agent run UI. Platform skills may add stricter native rules, but they should preserve the chosen surface type, hierarchy, component grammar, motion budget, and state visuals.
