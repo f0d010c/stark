@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 - 2026-05-14 - creative direction and web implementation tracks
+
+- Added creative-direction guidance so agents turn "make it creative" into a concrete world, visual metaphor, material language, repeated motif, forbidden defaults, one tasteful risk, and restraints.
+- Added web implementation tracks for static HTML/CSS/JS, Vite React, Next, Astro, and existing-stack decisions.
+- Made React a first-class option for advanced interactive sites, product demos, dashboards, command palettes, inspectors, and complex animated pages without making it the default.
+- Added dependency safety guidance for npm supply-chain risk, pinned versions, lockfiles, audits, lifecycle scripts, and avoiding decorative dependency chains.
+- Updated root and web skills, UI decision brief, smoke prompts, and README to require creative and implementation-track decisions before code.
+
 ## 0.5.0 - 2026-05-13 - cinematic landing system
 
 - Added a cinematic landing system for campaign pages, editorial scroll stories, product proof pages, and immersive brand pages.

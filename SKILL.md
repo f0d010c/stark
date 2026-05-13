@@ -35,6 +35,7 @@ After UX routing and before implementation, read:
 
 - `references/ui-patterns/surface-taxonomy.md`
 - `references/ui-patterns/ui-decision-brief.md`
+- `references/ui-patterns/creative-direction.md`
 - `references/ui-patterns/product-quality-bar.md`
 - `references/ui-patterns/visual-hierarchy.md`
 - `references/ui-patterns/responsive-containment.md`
@@ -43,6 +44,7 @@ After UX routing and before implementation, read:
 - `references/ui-patterns/motion-budget.md`
 - `references/ui-patterns/interaction-techniques.md`
 - `references/ui-patterns/cinematic-landing-system.md`
+- `references/ui-patterns/web-implementation-tracks.md`
 
 Produce a compact UI decision brief when building or redesigning a screen, app, website, dashboard, editor, checkout, or agent run UI. Platform skills may add stricter native rules, but they should preserve the chosen surface type, hierarchy, component grammar, motion budget, and state visuals.
 
@@ -53,9 +55,11 @@ Produce a compact UI decision brief when building or redesigning a screen, app, 
 - When `ux-design` applies, preserve its UX decision brief through implementation. Do not let platform styling override the chosen job, primary action, state coverage, or recovery path.
 - For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
 - For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
+- For polished, memorable, original, high-craft, campaign, or "best-looking" design requests, use `references/ui-patterns/creative-direction.md` before visual styling. Require a concrete world, metaphor, material language, repeated motif, forbidden defaults, and one tasteful risk.
 - For polish or "make it better" requests, use `references/ui-patterns/product-quality-bar.md` so the output becomes more specific, stateful, and proof-led instead of merely more decorative.
 - For animation, scrolling, transitions, command palettes, split panes, or rich interaction, use `references/ui-patterns/interaction-techniques.md` to choose CSS, Motion, GSAP, native scroll CSS, Lenis, or no animation by product surface.
 - For cinematic, campaign, editorial, launch, or high-craft landing pages, use `references/ui-patterns/cinematic-landing-system.md` to separate key art from page design, define typography and section rhythm, and choose motion after the visual system is clear.
+- For web implementation, use `references/ui-patterns/web-implementation-tracks.md` before choosing static HTML, Vite React, Next, Astro, or another stack. React is first-class for stateful and advanced interactive work, but it is not the default for simple static pages.
 - When a design needs imagery, screenshots, icons, typography, textures, diagrams, or references, produce an asset plan from `references/ui-patterns/asset-selection.md` before implementation. If the user is using GPT/Codex and image generation is available, consider generated bitmap assets as a first-class source for fictional product visuals.
 - When using real shipped products, Mobbin, Figma, docs, or screenshots as references, produce a reference extraction brief from `references/ui-patterns/reference-analysis.md`. Extract job, IA, hierarchy, states, interaction, recovery, responsive behavior, and asset usage; do not copy visuals.
 - Prefer concrete UI decisions over generic "modern clean" styling.

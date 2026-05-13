@@ -59,6 +59,14 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Use Stark to create a creative direction brief before building a memorable React landing page with one tasteful risk.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Choose whether this interactive product demo should be static HTML, Vite React, Next, or Astro before implementing it.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }
