@@ -24,6 +24,7 @@ Steps:
 2. **Load UX checks first when the artifact includes a workflow, form, dashboard, onboarding, checkout, settings, or multi-step task**:
    - UX -> `skills/ux-design/SKILL.md` audit checklist
    - UI -> `references/ui-patterns/ui-audit-rubric.md`
+   - Assets -> `references/ui-patterns/asset-selection.md` when the artifact uses images, screenshots, icons, generated visuals, external references, or brand assets
 
 3. **Load the matching ban list**:
    - web → `references/web-bans.md`
@@ -40,7 +41,7 @@ Steps:
 
 5. **Categorize** violations:
    - **High** — blocked primary job, missing recovery path, unsafe/destructive action, broken platform idiom, or definitive AI slop tell
-   - **Medium** — missing state, weak action hierarchy, generic pattern that hurts distinctiveness, or repeated-use friction
+   - **Medium** — missing state, weak action hierarchy, generic pattern that hurts distinctiveness, decorative assets that do not support the job, or repeated-use friction
    - **Low** — unclear copy, mild scan-speed issue, or currency issue (using older patterns when newer ones exist)
 
 6. **Recommend a fix path**: one paragraph, concrete steps, no hedging.

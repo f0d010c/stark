@@ -31,6 +31,10 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Use Stark to plan assets for a Codex landing page, including image generation if available.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }

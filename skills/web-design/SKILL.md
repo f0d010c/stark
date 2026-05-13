@@ -1,6 +1,6 @@
 ---
 name: web-design
-description: Use when the user asks for a web app, webpage, landing page, marketing site, editorial site, brand site, SaaS dashboard, admin dashboard, React dashboard, hero section, React, Next, Astro, SvelteKit, Solid, Qwik, Tailwind, HTML, CSS, JS, JSX, TSX, Svelte, Vue, or Astro deliverable. Builds web frontends with the right surface type, visual direction, hierarchy, motion, layout, copy, and anti-slop discipline. ALWAYS choose surface type and ask which aesthetic direction first. SKIP when the target is a native desktop/mobile app.
+description: Use when the user asks for a web app, webpage, landing page, marketing site, editorial site, brand site, SaaS dashboard, admin dashboard, React dashboard, hero section, React, Next, Astro, SvelteKit, Solid, Qwik, Tailwind, HTML, CSS, JS, JSX, TSX, Svelte, Vue, Astro deliverable, web visual asset plan, image generation for a site, or UI reference planning. Builds web frontends with the right surface type, visual direction, hierarchy, motion, layout, copy, assets, and anti-slop discipline. ALWAYS choose surface type and ask which aesthetic direction first. SKIP when the target is a native desktop/mobile app.
 ---
 
 # web-design — pick the direction first, then execute precisely
@@ -21,6 +21,8 @@ Before aesthetic direction, classify the surface using `../../references/ui-patt
 Then write the `UI decision brief` from `../../references/ui-patterns/ui-decision-brief.md`. For dashboards, editors, checkouts, and agent-run UIs, preserve the UX decision brief if one exists and bias toward usable density over Awwwards spectacle.
 
 Do not force an expressive landing-page composition onto a repeated-use web app. For operational surfaces, read `../../references/ui-patterns/visual-hierarchy.md`, `../../references/ui-patterns/responsive-containment.md`, `../../references/ui-patterns/motion-budget.md`, and `../../references/ui-patterns/ui-audit-rubric.md` before coding.
+
+When the site needs imagery, proof visuals, icons, screenshots, typography, or references, also read `../../references/ui-patterns/asset-selection.md` and include an asset plan before code. If the user is using GPT/Codex and image generation is available, generated bitmap assets are allowed for fictional product visuals, editorial hero imagery, textures, and empty states when they support the product job.
 
 ## Step 0a (MANDATORY) — Ask the user which direction
 
@@ -110,9 +112,10 @@ Read `../../references/web-patterns/*.md` for full implementation. List below:
 - **Mesh gradient atmospheres** — multi-stop radial gradients layered
 - **Mix-blend-mode** — `mix-blend-mode: difference` / `multiply` for dramatic interaction
 
-### Asset generation (no images)
+### Asset generation
 - **CSS-rendered illustration** — gradients + shapes for hero visuals
 - **SVG illustration** — geometric, abstract, layered (see `../../references/web-svg-illustration.md`)
+- **Generated bitmap image** — use GPT/Codex image generation when available for specific hero imagery, product concept art, textures, realistic scenes, or empty-state illustrations
 - **Generated text glyphs** — large characters as image substitute
 - **Mesh gradient as hero** — full-bleed atmospheric backdrop
 - Read `../../references/web-svg-illustration.md` for full asset-generation strategies
@@ -124,6 +127,7 @@ Every web output, regardless of direction:
 - **Real custom typography** — never Inter / Space Groteske / Roboto / system-ui as primary face. Pick from `../../references/web-fonts.md`.
 - **Real semantic copy** — no "Lorem ipsum", no "Built for modern teams", no "10x faster". Read `../../references/web-copy-voice.md`.
 - **Real visual content** — generate SVG / CSS art, never `<img src="placeholder.png">` or `via.placeholder.com`.
+- **Asset plan** — decide icons, screenshots, references, generated images, typography, and attribution before adding assets.
 - **Accessibility baseline** — semantic HTML, focus-visible rings, WCAG AA contrast, `prefers-reduced-motion` respected.
 - **Performance discipline** — lazy-load below-fold, no layout thrashing in scroll motion, font-display: swap.
 - **Surface-fit baseline** — marketing pages may be spacious and expressive; dashboards, editors, checkouts, and agent-run UIs must preserve task density, stable controls, and state visibility.

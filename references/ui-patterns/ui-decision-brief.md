@@ -15,6 +15,7 @@ UI decision brief
 - Color/materials: background, surfaces, accent, semantic states
 - Motion budget: none / subtle / signature / expressive, plus reduced-motion behavior
 - Responsive containment: nav, table/list, toolbar, inspector, and long-label behavior
+- Asset plan: icons, screenshots, generated UI mock, imagegen, typography, references, attribution
 - Assets: real product media, generated illustration, icons, screenshots, data visualizations, none
 - State visuals: empty, loading, error, permission, success, long-running
 - Bans: ...
@@ -27,6 +28,7 @@ This brief prevents the common failure where the agent picks decent components b
 - Dense work tools need stable layout more than animation.
 - Dense regions need intentional containment: table scroll, priority-column list, sheet/drawer, or breakpoint-specific replacement.
 - Dashboards need a product-specific operational thesis before visual polish; avoid generic CRM/admin furniture with interchangeable labels.
+- Assets must prove the product job or strengthen the visual direction; reject decorative filler.
 - Marketing pages need a memorable first viewport and one clear conversion path.
 - Native apps need platform materials, type, icons, spacing, and controls before custom flair.
 - Editor tools need canvas dominance and control stability.

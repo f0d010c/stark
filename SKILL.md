@@ -1,6 +1,6 @@
 ---
 name: stark-codex
-description: Use when the user mentions stark, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, and design-token skills before generic frontend implementation.
+description: Use when the user mentions stark, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, asset planning, image generation for UI, visual references, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, asset-selection, and design-token skills before generic frontend implementation.
 ---
 
 # stark
@@ -24,6 +24,7 @@ Before producing code, decide the route:
 
 For design audits, also check `commands/stark-audit.md`.
 For design translation requests, also check `commands/stark-translate.md`.
+For asset planning, also check `commands/stark-assets.md`.
 For platform detection helpers, use `scripts/detect_platform.py`.
 For design-token export helpers, use `scripts/token_export.py`.
 
@@ -35,6 +36,7 @@ After UX routing and before implementation, read:
 - `references/ui-patterns/ui-decision-brief.md`
 - `references/ui-patterns/visual-hierarchy.md`
 - `references/ui-patterns/responsive-containment.md`
+- `references/ui-patterns/asset-selection.md`
 - `references/ui-patterns/motion-budget.md`
 
 Produce a compact UI decision brief when building or redesigning a screen, app, website, dashboard, editor, checkout, or agent run UI. Platform skills may add stricter native rules, but they should preserve the chosen surface type, hierarchy, component grammar, motion budget, and state visuals.
@@ -46,6 +48,7 @@ Produce a compact UI decision brief when building or redesigning a screen, app, 
 - When `ux-design` applies, preserve its UX decision brief through implementation. Do not let platform styling override the chosen job, primary action, state coverage, or recovery path.
 - For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
 - For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
+- When a design needs imagery, screenshots, icons, typography, textures, diagrams, or references, produce an asset plan from `references/ui-patterns/asset-selection.md` before implementation. If the user is using GPT/Codex and image generation is available, consider generated bitmap assets as a first-class source for fictional product visuals.
 - Prefer concrete UI decisions over generic "modern clean" styling.
 - Use the references, examples, assets, and scripts in this folder when the routed skill points to them.
 - Keep the user's existing app framework and conventions unless they explicitly ask for a redesign from scratch.
