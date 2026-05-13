@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.9 - 2026-05-13 - frontend technique roadmap
+
+- Added a frontend technique roadmap for learning layout, CSS interaction, Motion, GSAP ScrollTrigger, native scroll-driven animation, smooth scroll, and pattern vocabulary.
+- Added a frontend technique selector so Stark picks animation and scrolling techniques by surface type instead of trend.
+- Updated web design guidance to choose CSS transitions, Motion, GSAP, Lenis, and scroll effects only when they fit the product job.
+
 ## 0.4.8 - 2026-05-13 - proof-led product quality pass
 
 - Added a product quality bar for polish work: specific job, proof surface, complete states, scan speed, and memorable restraint.

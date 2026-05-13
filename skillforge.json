@@ -43,6 +43,10 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Choose the right scrolling and animation techniques for this product page without overdoing it.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Help me understand quicksort.",
       "shouldTrigger": false
     }
