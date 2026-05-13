@@ -1,5 +1,10 @@
 # stark
 
+[![Release](https://img.shields.io/github/v/release/f0d010c/stark?label=release)](https://github.com/f0d010c/stark/releases)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+[![Platforms](https://img.shields.io/badge/platforms-Web%20%7C%20Windows%20%7C%20Apple%20%7C%20Android-111111)](README.md)
+[![Made for Agents](https://img.shields.io/badge/made%20for-AI%20coding%20agents-0a7cff)](README.md)
+
 Anti-slop UI/UX design plugin for AI coding agents.
 It routes UI and UX requests to focused skills, asks the right product-flow / platform / track / direction questions first, then helps agents ship usable interfaces instead of template clones.
 
