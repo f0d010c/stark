@@ -5,6 +5,8 @@ tmp-pack/
 .vite/
 *.log
 *.binlog
+__pycache__/
+*.py[cod]
 
 # Rust / Tauri
 target/

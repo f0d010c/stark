@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Python helper tests
+        run: python -m unittest discover -s tests
+      - name: SkillForge lint
+        run: npx agent-skillforge lint . --format text --strict --profile marketplace
+      - name: SkillForge smoke
+        run: npx agent-skillforge smoke .
+      - name: Token export smoke
+        shell: bash
+        run: |
+          tmp="$(mktemp -d)"
+          python scripts/token_export.py --input assets/tokens/material3-expressive.json --target compose --output "$tmp/Theme.kt"
+          python scripts/token_export.py --input assets/tokens/awwwards-editorial.json --target tailwind --output "$tmp/theme.css"
+          python scripts/token_export.py --input assets/tokens/awwwards-editorial.json --target swiftui --output "$tmp/DesignSystem.swift"
+          python scripts/token_export.py --input assets/tokens/fluent-2.json --target winui --output "$tmp/Resources.xaml"
+          grep -q "val colorScheme: ColorScheme = lightColorScheme(" "$tmp/Theme.kt"
+          grep -q -- "--color-ink:" "$tmp/theme.css"
+          ! grep -q -- "--color-color-" "$tmp/theme.css"
