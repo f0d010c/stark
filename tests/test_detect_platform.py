@@ -11,6 +11,10 @@ class DetectPlatformTests(unittest.TestCase):
         self.assertEqual(detect("Build an iOS app dashboard"), "apple")
         self.assertEqual(detect("Build an Android app dashboard"), "android")
         self.assertEqual(detect("Make a Win11 dashboard with Mica"), "windows")
+        self.assertEqual(detect("Build a Windows app"), "windows")
+
+    def test_translation_with_plain_windows_routes_cross_platform(self) -> None:
+        self.assertEqual(detect("Translate this iOS settings screen into a Windows app"), "cross-platform")
 
     def test_explicit_multi_platform_routes_cross_platform(self) -> None:
         self.assertEqual(detect("Build the same app for iOS and Android"), "cross-platform")

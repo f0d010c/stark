@@ -2,6 +2,7 @@ import unittest
 
 from scripts.token_export import (
     export_compose,
+    export_swiftui,
     export_tailwind,
     flatten,
     resolve,
@@ -113,6 +114,25 @@ class TokenExportTests(unittest.TestCase):
         self.assertIn("onPrimary = colorOnPrimary", kotlin)
         self.assertIn("lineHeight = 45.6.sp", kotlin)
         self.assertIn("displayLarge = typographyDisplayLarge", kotlin)
+
+    def test_swiftui_scales_unitless_line_height_constants(self) -> None:
+        flat = flatten({
+            "typography": {
+                "display": {
+                    "$value": {
+                        "fontFamily": "Editorial",
+                        "fontSize": "48px",
+                        "lineHeight": 0.95,
+                        "fontWeight": 400,
+                    },
+                    "$type": "typography",
+                }
+            }
+        })
+
+        swift = export_swiftui(flat)
+
+        self.assertIn("static let typographyDisplayLineHeight: CGFloat = 45.6", swift)
 
 
 if __name__ == "__main__":

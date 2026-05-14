@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.3 - 2026-05-14 - Windows detection and SwiftUI line-height fixes
+
+- Added plain `Windows` / `Windows app` detection so fallback routing handles common Windows prompts.
+- Fixed SwiftUI unitless line-height multipliers so generated `CGFloat` constants scale against font size.
+- Added regression tests for plain Windows translation routing and SwiftUI unitless line-height export.
+
 ## 0.6.2 - 2026-05-14 - helper tests and review contract
 
 - Added Python unit tests for platform detection and token export behavior.
