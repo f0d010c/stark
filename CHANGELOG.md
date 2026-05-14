@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.1 - 2026-05-14 - routing and token export review fixes
+
+- Fixed DTCG token flattening so group-level `$type` metadata is inherited by child tokens.
+- Fixed token reference resolution inside composite dictionary/list values.
+- Fixed Tailwind export names so grouped tokens emit `--color-brand-primary` instead of `--color-color-brand-primary`.
+- Added Compose `ColorScheme` output alongside loose color vals and typography.
+- Fixed unitless Compose line-height multipliers so they scale against font size.
+- Reordered router signals so translation and token requests win before platform implementation rows.
+- Improved platform detection for plain iOS requests and single-platform dashboard prompts.
+- Removed the unsupported Flutter token-export row and cleaned up review wording around creative direction and Vite + React.
+
 ## 0.6.0 - 2026-05-14 - creative direction and web implementation tracks
 
 - Added creative-direction guidance so agents turn "make it creative" into a concrete world, visual metaphor, material language, repeated motif, forbidden defaults, one tasteful risk, and restraints.
