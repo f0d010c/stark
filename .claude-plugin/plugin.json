@@ -1,7 +1,7 @@
 {
   "name": "stark",
-  "version": "0.4.1",
-  "description": "Anti-slop UI/UX generator for web, Windows, Apple, Android, and cross-platform. Adds UX flow and state design before visual polish. Asks which track first and never defaults silently.",
+  "version": "0.7.0",
+  "description": "UI/UX design plugin for AI coding agents. Routes product flows, web, Windows, Apple, Android, cross-platform, and token requests to focused design skills before code.",
   "author": {
     "name": "stark"
   },

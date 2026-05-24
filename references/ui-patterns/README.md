@@ -8,8 +8,16 @@ Good UI decisions are contextual:
 - A marketing page should be memorable, directed, and conversion-aware.
 - A native settings screen should feel boring in the right way.
 - An editor should protect the canvas and make controls discoverable.
+- A desktop app should choose a real app archetype before reaching for the same sidebar, cards, and settings shell.
+- An original app/page should choose a subject-specific concept, composition archetype, one weird move, and restraints before styling.
 
 Use these briefs to choose visual density, hierarchy, component grammar, motion budget, type, materials, imagery, and state treatment before writing code.
+
+For Windows, macOS, Tauri, Electron, Avalonia, Uno, and other desktop work, read `desktop-app-archetypes.md` before platform components. Choose the app shape first: command center, library, workbench, monitoring cockpit, tray/menu-bar utility, media/consumer, document/knowledge, or setup/preferences.
+
+For original, distinctive, creative, memorable, high-craft, or non-generic work, read `originality-engine.md` before `creative-direction.md`. Choose the concept seed and composition first; then choose typography, materials, motion, and platform components.
+
+Use `design-recipes.md` to turn product categories into concrete starting instincts, and use `anti-default-contrasts.md` whenever the layout becomes sidebar/cards/table, centered hero/three cards, chat/spinner/output, or another familiar generated skeleton.
 
 Do not apply a visual style because it is fashionable. Pick it because it supports the product job, platform, and frequency of use.
 

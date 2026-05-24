@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stark Originality Preview</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400..800&display=swap");
+
+    :root {
+      --paper: #f2eee5;
+      --ink: #15130f;
+      --muted: #706a5f;
+      --rule: #c9c0b0;
+      --ember: #c84f31;
+      --green: #74a77a;
+      --blue: #477b8e;
+      --violet: #74629b;
+      --dark: #111313;
+      --dark-2: #1b1d1b;
+      --cream: #f7f1e6;
+      --mono: "IBM Plex Mono", "Cascadia Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --sans: "Bricolage Grotesque", "Segoe UI Variable", "Aptos", system-ui, sans-serif;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #0d0d0b;
+      color: var(--ink);
+      font-family: var(--sans);
+      letter-spacing: 0;
+      font-variation-settings: "wdth" 92;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      padding: 26px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 64px 64px,
+        radial-gradient(circle at 18% 0%, rgba(200,79,49,.24), transparent 34%),
+        radial-gradient(circle at 90% 18%, rgba(71,123,142,.2), transparent 30%),
+        #0d0d0b;
+    }
+
+    .index {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      max-width: 1500px;
+      margin: 0 auto 20px;
+      color: var(--cream);
+    }
+
+    .index h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 62px);
+      font-weight: 720;
+      line-height: .9;
+      font-variation-settings: "opsz" 64, "wght" 720;
+    }
+
+    .index p {
+      max-width: 680px;
+      margin: 0;
+      color: #c8c0b5;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .tabs {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-width: 1500px;
+      margin: 0 auto 18px;
+      padding: 10px;
+      background: rgba(13,13,11,.84);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(18px);
+    }
+
+    .tabs a {
+      color: #e8dfd2;
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+
+    .design {
+      max-width: 1500px;
+      margin: 0 auto 44px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: var(--paper);
+      box-shadow: 0 24px 80px rgba(0,0,0,.34);
+      overflow: hidden;
+    }
+
+    .design-note {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      padding: 18px 22px;
+      background: #171612;
+      color: #eee7dc;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .design-note strong {
+      display: block;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #f8c8ac;
+      margin-bottom: 6px;
+    }
+
+    .design-note p {
+      margin: 0;
+      color: #cfc4b5;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .window {
+      min-height: 780px;
+      background: var(--paper);
+    }
+
+    .titlebar {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px;
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255,255,255,.45);
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .traffic {
+      display: flex;
+      gap: 7px;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,.22);
+    }
+
+    .dot.red { background: #d86951; }
+    .dot.yellow { background: #d9b85a; }
+    .dot.green { background: #74a77a; }
+
+    .button {
+      border: 1px solid currentColor;
+      background: transparent;
+      color: inherit;
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 8px 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 8px;
+      border: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+      background: rgba(255,255,255,.34);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* File sync */
+    .sync-shell {
+      display: grid;
+      grid-template-columns: 220px 1fr 330px;
+      grid-template-rows: 78px 1fr 140px;
+      min-height: 736px;
+    }
+
+    .sync-status {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.1fr .8fr .8fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--rule);
+      background: #ece5d7;
+    }
+
+    .sync-status h2,
+    .music-stage h2,
+    .agent-header h2,
+    .trace-hero h2 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.05;
+      font-weight: 760;
+      font-variation-settings: "wdth" 88, "wght" 760;
+    }
+
+    .metric-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .045em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .metric-value {
+      font-size: 17px;
+      font-weight: 760;
+    }
+
+    .roots {
+      padding: 16px;
+      border-right: 1px solid var(--rule);
+      background: #e6dfd1;
+    }
+
+    .root-item {
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(21,19,15,.12);
+    }
+
+    .root-item b {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .root-item span {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .lanes {
+      padding: 18px;
+      background:
+        linear-gradient(90deg, rgba(21,19,15,.04) 1px, transparent 1px) 0 0 / 48px 48px,
+        #f5efe4;
+    }
+
+    .lane {
+      display: grid;
+      grid-template-columns: 96px 1fr 92px 92px;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 12px;
+      border: 1px solid var(--rule);
+      background: rgba(255,255,255,.72);
+    }
+
+    .lane .stamp {
+      display: inline-flex;
+      justify-content: center;
+      padding: 7px 8px;
+      border: 1px solid currentColor;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .stamp.ok { color: #3e7848; }
+    .stamp.wait { color: #a6682d; }
+    .stamp.blocked { color: #ad392b; transform: rotate(-2deg); }
+
+    .route {
+      position: relative;
+      height: 8px;
+      background: #ddd4c4;
+      overflow: hidden;
+    }
+
+    .route::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--p, 60%);
+      background: var(--blue);
+    }
+
+    .lane b {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .lane small,
+    .event-log small {
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .provenance {
+      padding: 18px;
+      border-left: 1px solid var(--rule);
+      background: #eae2d3;
+    }
+
+    .panel-title {
+      margin: 0 0 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--muted);
+    }
+
+    .path-card {
+      border: 1px solid var(--rule);
+      background: rgba(255,255,255,.55);
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .path-card b { display: block; margin-bottom: 6px; }
+    .path-card code { font-family: var(--mono); font-size: 11px; color: var(--muted); word-break: break-all; }
+
+    .event-log {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding: 14px 18px;
+      border-top: 1px solid var(--rule);
+      background: #191814;
+      color: #eee6d8;
+    }
+
+    .event {
+      border: 1px solid rgba(255,255,255,.14);
+      padding: 12px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .event b { display: block; font-size: 13px; margin-bottom: 5px; }
+
+    /* Music */
+    .music-window {
+      color: #f7eee1;
+      background:
+        radial-gradient(circle at 72% 32%, rgba(194,73,53,.44), transparent 28%),
+        radial-gradient(circle at 92% 80%, rgba(205,147,72,.2), transparent 34%),
+        linear-gradient(135deg, #161314, #0b0c0d 70%);
+    }
+
+    .music-shell {
+      display: grid;
+      grid-template-columns: 210px 1fr 350px;
+      min-height: 736px;
+    }
+
+    .music-nav {
+      padding: 18px;
+      border-right: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+
+    .music-nav a {
+      display: block;
+      color: #d7cab8;
+      text-decoration: none;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .album-wall {
+      padding: 18px;
+    }
+
+    .album-toolbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .album-toolbar h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 720;
+      line-height: .9;
+      font-variation-settings: "opsz" 58, "wght" 720;
+    }
+
+    .albums {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 14px;
+    }
+
+    .album {
+      min-height: 170px;
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+
+    .cover {
+      aspect-ratio: 1;
+      margin-bottom: 10px;
+      background:
+        radial-gradient(circle at 35% 35%, var(--a), transparent 28%),
+        linear-gradient(135deg, var(--b), var(--c));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 12%;
+      border: 1px solid rgba(255,255,255,.38);
+      transform: rotate(12deg);
+    }
+
+    .album b { display: block; font-size: 13px; }
+    .album span { font-family: var(--mono); font-size: 10px; color: #aa9e90; }
+
+    .music-stage {
+      padding: 22px;
+      border-left: 1px solid rgba(255,255,255,.12);
+      background: rgba(7,8,8,.62);
+    }
+
+    .stage-art {
+      height: 295px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      background:
+        radial-gradient(circle at 42% 38%, #ed8f62, transparent 20%),
+        radial-gradient(circle at 60% 62%, #2f6574, transparent 30%),
+        linear-gradient(135deg, #521d20, #d39a50);
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-size: 58px;
+      color: rgba(255,255,255,.82);
+      font-variation-settings: "opsz" 72, "wght" 680;
+    }
+
+    .track-row {
+      display: grid;
+      grid-template-columns: 24px 1fr 52px;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      align-items: center;
+    }
+
+    .track-row span,
+    .trace-row span {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: #aa9e90;
+    }
+
+    .warning-strip {
+      margin-top: 16px;
+      border: 1px solid rgba(238,145,94,.55);
+      color: #ffd3ba;
+      padding: 12px;
+      font-size: 13px;
+      background: rgba(200,79,49,.12);
+    }
+
+    /* Agent */
+    .agent-window {
+      background: #111412;
+      color: #e8eadf;
+    }
+
+    .agent-shell {
+      display: grid;
+      grid-template-columns: 250px 1fr 360px;
+      grid-template-rows: 76px 1fr 150px;
+      min-height: 736px;
+    }
+
+    .agent-header {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      background: #171b18;
+    }
+
+    .run-queue,
+    .artifact-panel {
+      padding: 16px;
+      background: #141815;
+    }
+
+    .run-queue { border-right: 1px solid rgba(255,255,255,.12); }
+    .artifact-panel { border-left: 1px solid rgba(255,255,255,.12); }
+
+    .run-item {
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,.1);
+      margin-bottom: 10px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .run-item.active {
+      border-color: rgba(116,167,122,.65);
+      background: rgba(116,167,122,.1);
+    }
+
+    .timeline {
+      padding: 18px 24px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 56px 56px,
+        #101310;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 84px 1fr 96px;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .step-time {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: #8f978b;
+    }
+
+    .step h3 {
+      margin: 0 0 5px;
+      font-size: 15px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #aeb7aa;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .artifact-card {
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 12px;
+      margin-bottom: 12px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .diff {
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.55;
+      color: #c7d8c1;
+      background: #0b0d0b;
+      padding: 12px;
+      overflow: hidden;
+    }
+
+    .terminal {
+      grid-column: 1 / -1;
+      border-top: 1px solid rgba(255,255,255,.12);
+      background: #090b09;
+      padding: 14px 18px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #9fb99a;
+      overflow: hidden;
+    }
+
+    .terminal div { margin-bottom: 6px; }
+    .terminal .err { color: #e48b74; }
+
+    /* Landing */
+    .landing {
+      background: #ebe7dc;
+      min-height: 980px;
+    }
+
+    .landing-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 30px;
+      border-bottom: 1px solid #171612;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .trace-hero {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      min-height: 570px;
+      border-bottom: 1px solid #171612;
+    }
+
+    .hero-copy {
+      padding: 48px 36px;
+      border-right: 1px solid #171612;
+    }
+
+    .hero-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(54px, 7vw, 108px);
+      font-weight: 760;
+      line-height: .84;
+      font-variation-settings: "opsz" 72, "wght" 760;
+      margin-bottom: 24px;
+    }
+
+    .hero-copy p {
+      max-width: 480px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #464036;
+    }
+
+    .trace-board {
+      padding: 28px;
+      background:
+        linear-gradient(90deg, rgba(21,19,15,.08) 1px, transparent 1px) 0 0 / 40px 40px,
+        #f4efe5;
+    }
+
+    .trace-card {
+      border: 2px solid #171612;
+      background: #fcf8ef;
+      box-shadow: 10px 10px 0 #171612;
+    }
+
+    .trace-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px;
+      border-bottom: 1px solid #171612;
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    .trace-row {
+      display: grid;
+      grid-template-columns: 72px 1fr 82px 78px;
+      gap: 12px;
+      padding: 13px 14px;
+      border-bottom: 1px solid rgba(21,19,15,.18);
+      align-items: center;
+    }
+
+    .trace-row.bad {
+      background: rgba(200,79,49,.13);
+    }
+
+    .trace-row.warn {
+      background: rgba(211,154,80,.16);
+    }
+
+    .annotate {
+      margin: 20px 0 0 36px;
+      max-width: 360px;
+      border-left: 2px solid var(--ember);
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .landing-sections {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid #171612;
+    }
+
+    .proof-block {
+      min-height: 230px;
+      padding: 24px;
+      border-right: 1px solid #171612;
+    }
+
+    .proof-block:last-child { border-right: 0; }
+    .proof-block h3 { margin: 0 0 14px; font-size: 22px; }
+    .proof-block p { margin: 0; color: #514a40; line-height: 1.5; }
+
+    .install {
+      padding: 28px 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      background: #171612;
+      color: #f2eee5;
+    }
+
+    .install code {
+      font-family: var(--mono);
+      color: #aee0ae;
+    }
+
+    @media (max-width: 980px) {
+      .design-note,
+      .sync-shell,
+      .music-shell,
+      .agent-shell,
+      .trace-hero,
+      .landing-sections {
+        grid-template-columns: 1fr;
+      }
+
+      .sync-shell,
+      .agent-shell {
+        grid-template-rows: auto;
+      }
+
+      .sync-status,
+      .event-log,
+      .agent-header,
+      .terminal {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+      }
+
+      .roots,
+      .provenance,
+      .music-nav,
+      .music-stage,
+      .run-queue,
+      .artifact-panel,
+      .hero-copy,
+      .proof-block {
+        border: 0;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .albums { grid-template-columns: repeat(2, 1fr); }
+      .lane,
+      .step,
+      .trace-row {
+        grid-template-columns: 1fr;
+      }
+
+      .index {
+        display: block;
+      }
+
+      .index p { margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="index">
+      <h1>Stark originality pressure test</h1>
+      <p>Four generated UI compositions from the new recipe/originality layer. These are not polished product builds; they are renderable design mocks to test whether the guidance escapes the usual generated skeleton.</p>
+    </header>
+
+    <nav class="tabs" aria-label="Design previews">
+      <a href="#sync">File sync</a>
+      <a href="#music">Music app</a>
+      <a href="#agent">Agent app</a>
+      <a href="#trace">Landing page</a>
+    </nav>
+
+    <section id="sync" class="design">
+      <div class="design-note">
+        <div>
+          <strong>Concept seed</strong>
+          <p>Quiet operations room for file movement.</p>
+        </div>
+        <p>Composition: command deck plus transfer lanes. The main object is not storage usage; it is the live movement and recovery state of files.</p>
+      </div>
+      <div class="window">
+        <div class="titlebar">
+          <div class="traffic"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span>STARKSYNC / TRANSFER CONTROL</span>
+          <span>checkpoint 14:32</span>
+        </div>
+        <div class="sync-shell">
+          <div class="sync-status">
+            <div>
+              <span class="metric-label">Sync health</span>
+              <h2>3 lanes active, 1 blocked</h2>
+            </div>
+            <div><span class="metric-label">Last clean checkpoint</span><span class="metric-value">14:18:09</span></div>
+            <div><span class="metric-label">Restorable size</span><span class="metric-value">82.4 GB</span></div>
+            <button class="button primary">Pause traffic</button>
+          </div>
+          <aside class="roots">
+            <h3 class="panel-title">Roots + devices</h3>
+            <div class="root-item"><b>Design Vault</b><span>Mac Studio -> NAS / live</span></div>
+            <div class="root-item"><b>Client Archive</b><span>External SSD / disconnected</span></div>
+            <div class="root-item"><b>Camera Roll</b><span>Phone bridge / queued</span></div>
+            <div class="root-item"><b>Invoices</b><span>Cloud mirror / clean</span></div>
+          </aside>
+          <section class="lanes">
+            <h3 class="panel-title">Transfer lanes</h3>
+            <div class="lane">
+              <span class="stamp ok">landed</span>
+              <div><b>brand-system.sketch</b><small>/Design Vault/UI Kits</small></div>
+              <div class="route" style="--p:100%"></div>
+              <small>21 MB</small>
+            </div>
+            <div class="lane">
+              <span class="stamp wait">holding</span>
+              <div><b>shoot_0427.raw</b><small>/Camera Roll/May Field</small></div>
+              <div class="route" style="--p:64%"></div>
+              <small>624 MB</small>
+            </div>
+            <div class="lane">
+              <span class="stamp blocked">blocked</span>
+              <div><b>contract-final.pdf</b><small>/Client Archive/Acme</small></div>
+              <div class="route" style="--p:38%; background:#dfc7bd"></div>
+              <small>retry</small>
+            </div>
+            <div class="lane">
+              <span class="stamp ok">mirrored</span>
+              <div><b>invoice-1934.xml</b><small>/Invoices/April</small></div>
+              <div class="route" style="--p:100%"></div>
+              <small>42 KB</small>
+            </div>
+          </section>
+          <aside class="provenance">
+            <h3 class="panel-title">Selected file provenance</h3>
+            <div class="path-card"><b>contract-final.pdf</b><code>D:\Client Archive\Acme\Legal\contract-final.pdf</code></div>
+            <div class="path-card"><b>Blocked reason</b><code>External SSD missing. Last seen on USB-C hub 02.</code></div>
+            <button class="button primary">Restore checkpoint</button>
+            <button class="button" style="margin-left:8px">Reveal path</button>
+          </aside>
+          <section class="event-log">
+            <div class="event"><b>14:33 retry queued</b><small>contract-final.pdf waits for device</small></div>
+            <div class="event"><b>14:31 landed</b><small>brand-system.sketch verified</small></div>
+            <div class="event"><b>14:26 skipped</b><small>temp render cache ignored</small></div>
+            <div class="event"><b>14:18 checkpoint</b><small>82.4 GB restorable</small></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="music" class="design">
+      <div class="design-note">
+        <div>
+          <strong>Concept seed</strong>
+          <p>Private listening room and record wall.</p>
+        </div>
+        <p>Composition: library/collection plus object-detail stage. The selected album becomes the visual environment, not a tiny card in a settings shell.</p>
+      </div>
+      <div class="window music-window">
+        <div class="titlebar" style="background:rgba(255,255,255,.06); color:#cfc4b5; border-color:rgba(255,255,255,.12)">
+          <div class="traffic"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span>ROOMTONE</span>
+          <span>lossless / local library</span>
+        </div>
+        <div class="music-shell">
+          <aside class="music-nav">
+            <h3 class="panel-title" style="color:#8e8272">Sources</h3>
+            <a href="#">Library wall</a>
+            <a href="#">Playlists</a>
+            <a href="#">Local folders</a>
+            <a href="#">Radio captures</a>
+            <a href="#">Unavailable</a>
+          </aside>
+          <section class="album-wall">
+            <div class="album-toolbar">
+              <h2>Late room, low lamps.</h2>
+              <span class="pill" style="border-color:rgba(255,255,255,.16); color:#cfc4b5"><span class="status-dot"></span> 18,204 tracks</span>
+            </div>
+            <div class="albums">
+              <div class="album"><div class="cover" style="--a:#f7c58c;--b:#3e1721;--c:#d8714a"></div><b>Amber Static</b><span>Mara Vale</span></div>
+              <div class="album"><div class="cover" style="--a:#b7dbd1;--b:#192629;--c:#457b87"></div><b>Harbor Code</b><span>North Index</span></div>
+              <div class="album"><div class="cover" style="--a:#ecd875;--b:#20190e;--c:#98662f"></div><b>Thirty Floors</b><span>Civic Glass</span></div>
+              <div class="album"><div class="cover" style="--a:#cab6ff;--b:#17131f;--c:#725990"></div><b>Violet Relay</b><span>Olan Park</span></div>
+              <div class="album"><div class="cover" style="--a:#fff4d0;--b:#171717;--c:#686050"></div><b>Kitchen Tape</b><span>The Index</span></div>
+              <div class="album"><div class="cover" style="--a:#ff9f85;--b:#2b1212;--c:#875044"></div><b>Second Window</b><span>Lea Nohr</span></div>
+              <div class="album"><div class="cover" style="--a:#d9efbd;--b:#102018;--c:#506b3f"></div><b>Green Hour</b><span>Soft Estate</span></div>
+              <div class="album"><div class="cover" style="--a:#fafafa;--b:#0d0d0d;--c:#4b4b4b"></div><b>Mono Cut</b><span>Rail Unit</span></div>
+            </div>
+          </section>
+          <aside class="music-stage">
+            <div class="stage-art">A/S</div>
+            <span class="metric-label" style="color:#aa9e90">Now playing</span>
+            <h2>Amber Static</h2>
+            <p style="color:#cfc4b5; line-height:1.5">A warm, taped collection from Mara Vale. Remastered local copy, 24-bit, cached for offline listening.</p>
+            <div class="track-row"><span>01</span><b>Low Lamp</b><span>03:44</span></div>
+            <div class="track-row"><span>02</span><b>Room Tone</b><span>04:12</span></div>
+            <div class="track-row"><span>03</span><b>Static Hands</b><span>--</span></div>
+            <div class="warning-strip">Static Hands is unavailable. Last known path: /Volumes/Archive/Mara Vale/Amber Static/03.flac</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="agent" class="design">
+      <div class="design-note">
+        <div>
+          <strong>Concept seed</strong>
+          <p>Mission control for local coding work.</p>
+        </div>
+        <p>Composition: monitoring cockpit plus timeline wall. Chat is secondary; the run, artifacts, permissions, and recovery path are the product.</p>
+      </div>
+      <div class="window agent-window">
+        <div class="titlebar" style="background:#191d1a; color:#aeb7aa; border-color:rgba(255,255,255,.12)">
+          <div class="traffic"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span>CODEX LOCAL / RUN REPLAY</span>
+          <span>workspace: stark</span>
+        </div>
+        <div class="agent-shell">
+          <header class="agent-header">
+            <div>
+              <span class="metric-label" style="color:#8f978b">Current run</span>
+              <h2>Refactor desktop generation guidance</h2>
+            </div>
+            <span class="pill" style="border-color:rgba(255,255,255,.14); color:#cbd4c6"><span class="status-dot"></span> running</span>
+            <button class="button" style="color:#f4b8a5">Stop</button>
+            <button class="button primary" style="background:#d8e8d1; color:#111412; border-color:#d8e8d1">Approve next</button>
+          </header>
+          <aside class="run-queue">
+            <h3 class="panel-title" style="color:#8f978b">Run queue</h3>
+            <div class="run-item active"><b>Desktop originality pass</b><br><small>tests pending</small></div>
+            <div class="run-item"><b>Token export audit</b><br><small>queued</small></div>
+            <div class="run-item"><b>README examples</b><br><small>paused</small></div>
+          </aside>
+          <section class="timeline">
+            <h3 class="panel-title" style="color:#8f978b">Plan / tool timeline</h3>
+            <div class="step"><span class="step-time">00:00</span><div><h3>Read project shape</h3><p>Loaded skills, references, helper scripts, and tests.</p></div><span class="stamp ok">done</span></div>
+            <div class="step"><span class="step-time">02:14</span><div><h3>Add originality engine</h3><p>Created concept seed, composition archetypes, and anti-default audit.</p></div><span class="stamp ok">done</span></div>
+            <div class="step"><span class="step-time">04:09</span><div><h3>Run tests</h3><p>Python helper tests passed. Marketplace lint is next.</p></div><span class="stamp wait">active</span></div>
+            <div class="step"><span class="step-time">04:44</span><div><h3>Browser QA</h3><p>Waiting for permission to inspect the static preview visually.</p></div><span class="stamp blocked">blocked</span></div>
+          </section>
+          <aside class="artifact-panel">
+            <h3 class="panel-title" style="color:#8f978b">Artifact inspector</h3>
+            <div class="artifact-card"><b>references/ui-patterns/originality-engine.md</b><br><small>new file / 124 lines</small></div>
+            <div class="artifact-card"><b>skills/windows-design/SKILL.md</b><br><small>desktop archetype hook</small></div>
+            <div class="diff">+ Desktop archetype<br>+ Layout sketch<br>- generic shell default<br>+ anti-default rewrite</div>
+          </aside>
+          <section class="terminal">
+            <div>&gt; python -m unittest discover -s tests</div>
+            <div>............. OK</div>
+            <div class="err">&gt; blocked: browser visual QA requires preview open</div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="trace" class="design">
+      <div class="design-note">
+        <div>
+          <strong>Concept seed</strong>
+          <p>Inspection bay for API traffic.</p>
+        </div>
+        <p>Composition: product proof workbench plus trace evidence. The first viewport proves the tool by showing a failed request, not a generic promise.</p>
+      </div>
+      <div class="landing">
+        <nav class="landing-nav">
+          <strong>Tracebay</strong>
+          <span>Docs / Changelog / Pricing</span>
+          <button class="button primary">Install CLI</button>
+        </nav>
+        <section class="trace-hero">
+          <div class="hero-copy">
+            <h2>Find the failing request.</h2>
+            <p>Tracebay turns API traffic into inspectable evidence: scope, latency, payload diffs, retries, and the exact missing permission.</p>
+            <button class="button primary">Run local capture</button>
+          </div>
+          <div class="trace-board">
+            <div class="trace-card">
+              <div class="trace-head"><b>POST /v1/invoices/preview</b><span>capture 14:42:18</span></div>
+              <div class="trace-row"><span>200</span><b>GET /v1/accounts</b><span>82 ms</span><span>cached</span></div>
+              <div class="trace-row warn"><span>429</span><b>GET /v1/events</b><span>941 ms</span><span>retry</span></div>
+              <div class="trace-row bad"><span>401</span><b>POST /v1/invoices/preview</b><span>118 ms</span><span>blocked</span></div>
+              <div class="trace-row"><span>200</span><b>GET /v1/prices</b><span>64 ms</span><span>ok</span></div>
+            </div>
+            <div class="annotate"><b>Missing scope:</b> <code>invoice.write</code>. The request payload is valid, but the token was issued from a read-only integration.</div>
+          </div>
+        </section>
+        <section class="landing-sections">
+          <div class="proof-block"><span class="metric-label">Run replay</span><h3>Every failed request has a timeline.</h3><p>See the call, retry, headers, payload delta, and downstream effect in one inspection path.</p></div>
+          <div class="proof-block"><span class="metric-label">Trust matrix</span><h3>Scopes are concrete.</h3><p>Actor, resource, action, token source, last used, and revoke path stay visible.</p></div>
+          <div class="proof-block"><span class="metric-label">Docs split</span><h3>Fix from the evidence.</h3><p>The relevant API reference opens next to the failing trace, with the missing scope highlighted.</p></div>
+        </section>
+        <section class="install">
+          <strong>Start with one command.</strong>
+          <code>npx tracebay capture --port 8787</code>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

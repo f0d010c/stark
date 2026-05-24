@@ -35,6 +35,10 @@ After UX routing and before implementation, read:
 
 - `references/ui-patterns/surface-taxonomy.md`
 - `references/ui-patterns/ui-decision-brief.md`
+- `references/ui-patterns/desktop-app-archetypes.md`
+- `references/ui-patterns/originality-engine.md`
+- `references/ui-patterns/design-recipes.md`
+- `references/ui-patterns/anti-default-contrasts.md`
 - `references/ui-patterns/creative-direction.md`
 - `references/ui-patterns/product-quality-bar.md`
 - `references/ui-patterns/visual-hierarchy.md`
@@ -55,7 +59,10 @@ Produce a compact UI decision brief when building or redesigning a screen, app, 
 - When `ux-design` applies, preserve its UX decision brief through implementation. Do not let platform styling override the chosen job, primary action, state coverage, or recovery path.
 - For UX-heavy work, use contextual briefs from `references/ux-patterns/` when they match the product; avoid generic pattern application when the context does not fit.
 - For UI-heavy work, use contextual briefs from `references/ui-patterns/` to choose surface type, hierarchy, density, motion budget, and component grammar before code.
-- For polished, memorable, original, high-craft, campaign, or "best-looking" design requests, use `references/ui-patterns/creative-direction.md` before visual styling. Require a concrete world, metaphor, material language, repeated motif, forbidden defaults, and one tasteful risk.
+- For desktop app work, use `references/ui-patterns/desktop-app-archetypes.md` before platform components. Choose command center, library, workbench, monitoring cockpit, tray/menu-bar utility, media/consumer, document/knowledge, or setup/preferences so the app does not collapse into the same sidebar-plus-cards shell.
+- For original, distinctive, memorable, non-generic, creative, polished, high-craft, campaign, or "actually designed" requests, use `references/ui-patterns/originality-engine.md` before visual styling. Require a subject-specific concept seed, composition archetype, one weird move, restraints, specific defaults banned for the brief, and a three-direction fork when useful.
+- For higher-quality generation, use `references/ui-patterns/design-recipes.md` and produce a compact layout sketch before code. If the design drifts toward a familiar generated skeleton, use `references/ui-patterns/anti-default-contrasts.md` and choose a stronger replacement pattern.
+- For polished, memorable, high-craft, campaign, or "best-looking" design requests, use `references/ui-patterns/creative-direction.md` before visual styling. Require a concrete world, metaphor, material language, repeated motif, forbidden defaults, and one tasteful risk.
 - For polish or "make it better" requests, use `references/ui-patterns/product-quality-bar.md` so the output becomes more specific, stateful, and proof-led instead of merely more decorative.
 - For animation, scrolling, transitions, command palettes, split panes, or rich interaction, use `references/ui-patterns/interaction-techniques.md` to choose CSS, Motion, GSAP, native scroll CSS, Lenis, or no animation by product surface.
 - For cinematic, campaign, editorial, launch, or high-craft landing pages, use `references/ui-patterns/cinematic-landing-system.md` to separate key art from page design, define typography and section rhythm, and choose motion after the visual system is clear.

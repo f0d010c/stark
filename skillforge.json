@@ -63,6 +63,22 @@
       "shouldTrigger": true
     },
     {
+      "prompt": "Use Stark to make this desktop app actually original instead of another sidebar and cards shell.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Create a concept seed and three design directions before building this product UI.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Use Stark design recipes to sketch the layout before coding this app.",
+      "shouldTrigger": true
+    },
+    {
+      "prompt": "Replace the generic sidebar/cards/table layout with a stronger product-specific composition.",
+      "shouldTrigger": true
+    },
+    {
       "prompt": "Choose whether this interactive product demo should be static HTML, Vite React, Next, or Astro before implementing it.",
       "shouldTrigger": true
     },

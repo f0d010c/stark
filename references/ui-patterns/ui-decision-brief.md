@@ -7,6 +7,11 @@ UI decision brief
 - Surface type: marketing / dashboard / native settings / editor / mobile flow / checkout / agent run
 - Platform idiom: web / Windows / Apple / Android / cross-platform translation
 - Product thesis: the specific job, risk, queue, artifact, or decision this surface exists for
+- Desktop archetype: command center / library / workbench / monitoring cockpit / tray utility / media consumer / document app / setup preferences, if desktop
+- Originality seed: subject, metaphor, world, main object, layout premise, repeated motif, weird move, restraints
+- Composition archetype: cockpit / map-table / specimen tray / command deck / ledger / timeline wall / studio desk / terminal board / light table / magazine spread / object-detail stage / inspection bay / archive index / instrument panel
+- Layout sketch: compact named regions before code, based on the product job rather than generic cards
+- Typography personality: display, UI/body, mono labels, why it fits, and banned fallback
 - Visual direction: ...
 - Creative direction: see `creative-direction.md` brief, including world, mood, visual metaphor, material language, typography personality, layout grammar, motion voice, repeated motif, forbidden defaults, tasteful risk, and restraints
 - Density: sparse / balanced / dense / operational

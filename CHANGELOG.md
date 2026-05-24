@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.7.0 - 2026-05-24 - originality and desktop design system
+
+- Added desktop app archetypes so Windows, macOS, Tauri, Electron, and cross-platform desktop work choose an app shape before components.
+- Added an originality engine with concept seeds, composition archetypes, three-direction forks, one weird move, restraints, and banned default skeletons.
+- Added design recipes and anti-default contrasts to replace generic sidebar/cards/table and centered-hero patterns with product-specific structures.
+- Added a next-level design roadmap covering reference boards, typography systems, motion libraries, assets, stack blueprints, visual QA, quality evals, and governance.
+- Added quality measurement and reference governance docs so future design improvements stay measurable and runtime guidance stays lean.
+- Updated root, web, Windows, Apple, and cross-platform skills to preserve desktop archetype, originality seed, typography personality, and layout sketch decisions.
+- Added curated design preview artifacts showing the new originality system across desktop app, music app, AI agent UI, and developer landing page directions.
+
 ## 0.6.3 - 2026-05-14 - Windows detection and SwiftUI line-height fixes
 
 - Added plain `Windows` / `Windows app` detection so fallback routing handles common Windows prompts.
