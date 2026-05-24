@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stark v0.7 Dogfood Designs</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@70..125,400..900&family=Chivo+Mono:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&family=Instrument+Serif:ital@0;1&display=swap");
+
+    :root {
+      --ink: #171411;
+      --paper: #f4efe4;
+      --chalk: #fbf7ee;
+      --muted: #736d62;
+      --rule: #d0c5b4;
+      --red: #b74332;
+      --blue: #1e6f86;
+      --green: #637c43;
+      --yellow: #d9aa38;
+      --violet: #5d4b7e;
+      --black: #0e1110;
+      --mono: "Chivo Mono", "Cascadia Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --sans: "Archivo", "Aptos", "Segoe UI Variable", sans-serif;
+      --serif: "Fraunces", "Instrument Serif", Georgia, serif;
+      --display: "Instrument Serif", "Fraunces", Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 72px 72px,
+        radial-gradient(circle at 12% -8%, rgba(183,67,50,.26), transparent 28%),
+        radial-gradient(circle at 80% 6%, rgba(30,111,134,.22), transparent 30%),
+        #10110f;
+      font-family: var(--sans);
+      letter-spacing: 0;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    .shell {
+      max-width: 1540px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(260px, .72fr) minmax(320px, 1fr);
+      gap: 18px;
+      align-items: center;
+      min-height: 92px;
+      color: var(--chalk);
+      margin-bottom: 10px;
+    }
+
+    .kicker,
+    .micro,
+    .label {
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .masthead h1 {
+      margin: 10px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(36px, 4.2vw, 64px);
+      line-height: .88;
+      font-weight: 780;
+      font-variation-settings: "SOFT" 30, "WONK" 1;
+      max-width: 620px;
+    }
+
+    .masthead p {
+      color: #cbc2b4;
+      font-size: 13px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .nav-strip {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(18, 18, 15, .86);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-strip a {
+      color: var(--chalk);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.16);
+      padding: 9px 12px;
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 760;
+      background: rgba(255,255,255,.05);
+    }
+
+    .nav-strip a:hover {
+      color: #10110f;
+      background: var(--chalk);
+    }
+
+    .brief-grid {
+      display: none;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0 0 14px;
+    }
+
+    .brief {
+      min-height: 92px;
+      border: 1px solid rgba(255,255,255,.15);
+      color: #eee6da;
+      background: rgba(255,255,255,.055);
+      padding: 16px;
+    }
+
+    .brief strong {
+      display: block;
+      margin: 6px 0 4px;
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1;
+    }
+
+    .brief p {
+      margin: 0;
+      color: #bbb2a5;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .design {
+      margin: 16px 0 34px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: var(--paper);
+      overflow: clip;
+      box-shadow: 0 28px 80px rgba(0,0,0,.38);
+    }
+
+    .design-head {
+      display: grid;
+      grid-template-columns: minmax(260px, .9fr) minmax(320px, 1.1fr);
+      gap: 16px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--rule);
+      background:
+        linear-gradient(90deg, rgba(23,20,17,.05) 1px, transparent 1px) 0 0 / 24px 24px,
+        var(--chalk);
+    }
+
+    .design-head h2 {
+      margin: 8px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.4vw, 46px);
+      line-height: .95;
+      max-width: 720px;
+    }
+
+    .design-head p {
+      margin: 0;
+      color: #5e574d;
+      line-height: 1.5;
+      font-size: 12px;
+    }
+
+    .brief-line {
+      display: none;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .brief-chip {
+      border: 1px solid var(--rule);
+      background: rgba(255,255,255,.6);
+      padding: 10px;
+      min-height: 58px;
+    }
+
+    .brief-chip span {
+      display: block;
+      color: #81786a;
+      margin-bottom: 5px;
+    }
+
+    .brief-chip b {
+      display: block;
+      line-height: 1.15;
+      font-size: 12px;
+    }
+
+    .app-frame {
+      margin: 14px;
+      border: 2px solid var(--ink);
+      background: #fffaf1;
+      min-height: 600px;
+      position: relative;
+    }
+
+    .frame-top {
+      min-height: 42px;
+      border-bottom: 2px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 12px;
+      background: #e7dfcf;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 700;
+    }
+
+    .window-dots {
+      display: inline-flex;
+      gap: 6px;
+    }
+
+    .window-dots i {
+      width: 11px;
+      height: 11px;
+      border: 1.5px solid var(--ink);
+      background: var(--chalk);
+      display: block;
+      border-radius: 50%;
+    }
+
+    .quality-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .quality-ribbon span {
+      border: 1px solid currentColor;
+      padding: 4px 7px;
+      background: rgba(255,255,255,.45);
+    }
+
+    .scorecard {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--rule);
+      background: #fffaf1;
+    }
+
+    .scorecard div {
+      min-height: 76px;
+      border-right: 1px solid var(--rule);
+      padding: 12px;
+    }
+
+    .scorecard div:last-child { border-right: 0; }
+    .scorecard b {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      font-family: var(--serif);
+    }
+    .scorecard span {
+      display: block;
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #766e62;
+    }
+
+    /* Design 1: Archive Workbench */
+    .archive {
+      background: #eee5d4;
+    }
+
+    .archive .app-body {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr) 320px;
+      min-height: 558px;
+    }
+
+    .archive .rail,
+    .archive .inspector {
+      border-right: 2px solid var(--ink);
+      padding: 14px;
+      background: #d9ceb9;
+    }
+
+    .archive .inspector {
+      border-right: 0;
+      border-left: 2px solid var(--ink);
+      background: #efe7d7;
+    }
+
+    .stack-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .stack-item {
+      border: 1.5px solid var(--ink);
+      background: #fff6e5;
+      padding: 10px;
+      min-height: 54px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .stack-item.active {
+      background: var(--ink);
+      color: var(--chalk);
+    }
+
+    .archive .main-work {
+      padding: 14px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 12px;
+      background:
+        linear-gradient(#d8cfbd 1px, transparent 1px) 0 0 / 100% 42px,
+        #f7f0e4;
+    }
+
+    .command-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .command-input {
+      border: 2px solid var(--ink);
+      background: var(--chalk);
+      min-height: 46px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .buttonish {
+      border: 2px solid var(--ink);
+      background: var(--yellow);
+      min-height: 46px;
+      padding: 0 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .evidence-board {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(6, minmax(48px, 1fr));
+      gap: 8px;
+      min-height: 372px;
+    }
+
+    .artifact {
+      border: 2px solid var(--ink);
+      background: var(--chalk);
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .artifact h3,
+    .card-title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1;
+      font-family: var(--serif);
+    }
+
+    .artifact p {
+      margin: 8px 0 0;
+      font-size: 12px;
+      line-height: 1.35;
+      color: #6d6558;
+    }
+
+    .artifact.a { grid-column: span 4; grid-row: span 3; background: #fdf8eb; }
+    .artifact.b { grid-column: span 3; grid-row: span 2; background: #dfe7d1; }
+    .artifact.c { grid-column: span 2; grid-row: span 4; background: #ead3c8; }
+    .artifact.d { grid-column: span 3; grid-row: span 3; background: #d7e4e7; }
+    .artifact.e { grid-column: span 4; grid-row: span 3; background: #f4e5b8; }
+    .artifact.f { grid-column: span 2; grid-row: span 2; background: #f5f0e5; }
+
+    .pin {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--ink);
+      background: var(--red);
+      transform: rotate(12deg);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .timeline div {
+      border: 1.5px solid var(--ink);
+      background: #fff6e5;
+      min-height: 62px;
+      padding: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .map-card {
+      border: 2px solid var(--ink);
+      background: #fff9ec;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+    .map-line {
+      height: 10px;
+      background: repeating-linear-gradient(90deg, var(--ink) 0 12px, transparent 12px 18px);
+      margin: 10px 0;
+    }
+
+    /* Design 2: Care cockpit */
+    .care {
+      --care-ink: #102626;
+      --care-paper: #eef4ee;
+      background: var(--care-paper);
+    }
+
+    .care .app-frame {
+      border-color: var(--care-ink);
+      background: #f7fbf6;
+    }
+
+    .care .frame-top {
+      background: #d7e6d7;
+      border-color: var(--care-ink);
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr) 360px;
+      min-height: 558px;
+    }
+
+    .care-nav {
+      border-right: 2px solid var(--care-ink);
+      padding: 14px;
+      background: #e3eee3;
+    }
+
+    .ward-map {
+      padding: 14px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 12px;
+    }
+
+    .ward-toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .bed-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(110px, 1fr));
+      gap: 10px;
+      align-content: start;
+    }
+
+    .bed {
+      min-height: 102px;
+      border: 1.5px solid var(--care-ink);
+      background: #fbfff9;
+      padding: 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .bed.warning { background: #fff0d4; }
+    .bed.blocked { background: #f1d6d1; }
+    .bed.ok { background: #e4f0df; }
+
+    .bed .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1.5px solid var(--care-ink);
+      background: #6e8d4c;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .bed.blocked .status-dot { background: #b74332; }
+    .bed.warning .status-dot { background: #d9aa38; }
+
+    .care-detail {
+      border-left: 2px solid var(--care-ink);
+      background: #f1f6ef;
+      padding: 14px;
+    }
+
+    .callout {
+      border: 2px solid var(--care-ink);
+      padding: 12px;
+      margin-bottom: 12px;
+      background: #fff9eb;
+    }
+
+    .callout h3 {
+      margin: 0 0 8px;
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .care-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .care-list div {
+      border: 1.5px solid var(--care-ink);
+      padding: 10px;
+      background: #fbfff9;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 8px;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    /* Design 3: Launch page */
+    .foundry {
+      background: #f7f0e8;
+    }
+
+    .foundry-stage {
+      min-height: 590px;
+      display: grid;
+      grid-template-columns: minmax(340px, .92fr) minmax(360px, 1.08fr);
+      border: 2px solid #15100d;
+      margin: 14px;
+      background:
+        linear-gradient(90deg, rgba(21,16,13,.1) 1px, transparent 1px) 0 0 / 36px 36px,
+        #fff8ee;
+    }
+
+    .foundry-copy {
+      padding: clamp(26px, 5vw, 58px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 2px solid #15100d;
+    }
+
+    .foundry-copy h3 {
+      margin: 18px 0;
+      font-family: var(--display);
+      font-style: italic;
+      font-size: clamp(58px, 9vw, 132px);
+      line-height: .74;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .foundry-copy p {
+      font-size: 17px;
+      line-height: 1.52;
+      color: #5d5046;
+      max-width: 580px;
+    }
+
+    .specimen-wall {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 10px;
+      padding: 18px;
+      background: #171411;
+      color: #fff7e8;
+      min-height: 590px;
+    }
+
+    .glyph-card {
+      border: 1px solid rgba(255,255,255,.32);
+      padding: 12px;
+      min-height: 76px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.08), transparent),
+        #211d18;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateY(0);
+      animation: riseIn .8s both;
+    }
+
+    .glyph-card.big {
+      grid-column: span 3;
+      grid-row: span 3;
+      background: #f2d276;
+      color: #171411;
+    }
+
+    .glyph-card.tall {
+      grid-column: span 2;
+      grid-row: span 3;
+      background: #cfc5f2;
+      color: #171411;
+    }
+
+    .glyph-card.wide {
+      grid-column: span 3;
+      grid-row: span 2;
+      background: #cfe5e4;
+      color: #171411;
+    }
+
+    .glyph-card mark {
+      background: transparent;
+      color: inherit;
+      font-family: var(--display);
+      font-size: clamp(46px, 8vw, 116px);
+      line-height: .75;
+    }
+
+    .glyph-card small {
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+
+    .motion-band {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-top: 2px solid #15100d;
+    }
+
+    .motion-band div {
+      padding: 16px;
+      min-height: 92px;
+      border-right: 2px solid #15100d;
+      background: #fff9ef;
+    }
+
+    .motion-band div:last-child { border-right: 0; }
+
+    /* Design 4: Spatial product / data */
+    .orbit {
+      background: #101214;
+      color: #edf0ea;
+    }
+
+    .orbit .design-head {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(219,85,56,.2), transparent 28%),
+        radial-gradient(circle at 82% 6%, rgba(89,145,158,.22), transparent 28%),
+        #171b1c;
+      color: #f7f3e9;
+      border-color: rgba(255,255,255,.18);
+    }
+
+    .orbit .design-head p,
+    .orbit .brief-chip span { color: #b8b1a5; }
+
+    .orbit .brief-chip {
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.2);
+      color: #f7f3e9;
+    }
+
+    .orbit-stage {
+      margin: 14px;
+      min-height: 610px;
+      border: 1px solid rgba(255,255,255,.24);
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr) 330px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 48px 48px,
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px) 0 0 / 48px 48px,
+        #0c0f10;
+      overflow: hidden;
+    }
+
+    .orbit-panel {
+      padding: 16px;
+      border-right: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.04);
+    }
+
+    .orbit-panel.right {
+      border-right: 0;
+      border-left: 1px solid rgba(255,255,255,.24);
+    }
+
+    .orbital-canvas {
+      position: relative;
+      min-height: 610px;
+      overflow: hidden;
+    }
+
+    .planet {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(38vw, 430px);
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 34% 30%, rgba(255,255,255,.95), rgba(255,255,255,.08) 13%, transparent 22%),
+        radial-gradient(circle at 60% 62%, rgba(220,76,54,.84), transparent 18%),
+        radial-gradient(circle at 28% 70%, rgba(42,125,143,.8), transparent 23%),
+        conic-gradient(from 20deg, #f1d27b, #c85b43, #235d69, #283d3b, #f1d27b);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.2),
+        0 0 80px rgba(210,108,64,.32),
+        inset -30px -40px 70px rgba(0,0,0,.48);
+      animation: slowTurn 14s linear infinite;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(56vw, 660px);
+      height: min(20vw, 230px);
+      border: 1px solid rgba(255,255,255,.46);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) rotate(-13deg);
+    }
+
+    .satellite {
+      position: absolute;
+      width: 78px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,.7);
+      background: #eef2e8;
+      color: #101214;
+      font-family: var(--mono);
+      font-size: 10px;
+      display: grid;
+      place-items: center;
+      text-transform: uppercase;
+      animation: pulseSat 2.6s ease-in-out infinite;
+    }
+
+    .satellite.one { left: 18%; top: 20%; }
+    .satellite.two { right: 16%; top: 28%; animation-delay: .4s; }
+    .satellite.three { left: 28%; bottom: 18%; animation-delay: .9s; }
+
+    .telemetry-card {
+      border: 1px solid rgba(255,255,255,.24);
+      padding: 12px;
+      margin-top: 10px;
+      background: rgba(255,255,255,.05);
+    }
+
+    .sparkline {
+      height: 44px;
+      margin-top: 10px;
+      background:
+        linear-gradient(130deg, transparent 0 15%, rgba(255,255,255,.5) 15% 18%, transparent 18% 33%, rgba(217,170,56,.85) 33% 36%, transparent 36% 55%, rgba(30,111,134,.9) 55% 58%, transparent 58% 100%),
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px) 0 0 / 100% 11px;
+      border: 1px solid rgba(255,255,255,.18);
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .legend span {
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 9px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    .qa {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      padding: 18px;
+      background: #171411;
+      color: var(--chalk);
+    }
+
+    .qa div {
+      border: 1px solid rgba(255,255,255,.16);
+      padding: 12px;
+      min-height: 92px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .qa b {
+      display: block;
+      font-family: var(--serif);
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .qa span {
+      display: block;
+      margin-top: 8px;
+      color: #beb4a7;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(18px) rotate(-1deg); }
+      to { opacity: 1; transform: translateY(0) rotate(0); }
+    }
+
+    @keyframes slowTurn {
+      to { filter: hue-rotate(28deg); transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes pulseSat {
+      50% { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(217,170,56,.18); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .masthead,
+      .design-head,
+      .foundry-stage,
+      .archive .app-body,
+      .care-grid,
+      .orbit-stage {
+        grid-template-columns: 1fr;
+      }
+
+      .brief-grid,
+      .brief-line,
+      .scorecard,
+      .qa {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .archive .rail,
+      .archive .inspector,
+      .care-nav,
+      .care-detail,
+      .orbit-panel,
+      .orbit-panel.right,
+      .foundry-copy {
+        border: 0;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .orbit-panel,
+      .orbit-panel.right {
+        border-color: rgba(255,255,255,.22);
+      }
+
+      .bed-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .evidence-board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+      }
+
+      .artifact.a,
+      .artifact.b,
+      .artifact.c,
+      .artifact.d,
+      .artifact.e,
+      .artifact.f {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 160px;
+      }
+
+      .planet {
+        width: min(72vw, 380px);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell { padding: 12px; }
+      .masthead { min-height: auto; }
+      .brief-grid,
+      .brief-line,
+      .scorecard,
+      .motion-band,
+      .qa {
+        grid-template-columns: 1fr;
+      }
+
+      .design-head,
+      .app-frame,
+      .foundry-stage,
+      .orbit-stage {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .app-frame,
+      .foundry-stage,
+      .orbit-stage {
+        min-height: auto;
+      }
+
+      .command-row,
+      .ward-toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      .bed-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .specimen-wall {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .glyph-card.big,
+      .glyph-card.tall,
+      .glyph-card.wide {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .orbit-stage {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <div class="kicker">Stark v0.7 design lab</div>
+        <h1>Four product surfaces.</h1>
+      </div>
+      <p>A compact gallery of generated product directions. Open a surface, inspect the app/site, then use the small spec chips only as implementation notes.</p>
+    </header>
+
+    <nav class="nav-strip" aria-label="Preview sections">
+      <a href="#archive">Archive Workbench</a>
+      <a href="#care">Care Cockpit</a>
+      <a href="#foundry">Foundry Launch</a>
+      <a href="#orbit">OrbitLab Spatial</a>
+    </nav>
+
+    <section class="brief-grid" aria-label="Stark decisions tested">
+      <article class="brief"><span class="micro">Surface</span><strong>Archive workbench</strong><p>Desktop knowledge app with evidence stacks, merge conflicts, and inspector actions.</p></article>
+      <article class="brief"><span class="micro">Surface</span><strong>Care cockpit</strong><p>Operational ward map for blocked discharges, stale vitals, and shift handoff.</p></article>
+      <article class="brief"><span class="micro">Surface</span><strong>Foundry launch</strong><p>Typography product page where glyph specimens are the proof surface.</p></article>
+      <article class="brief"><span class="micro">Surface</span><strong>OrbitLab spatial</strong><p>Telemetry demo with a justified 3D object path and static fallback.</p></article>
+    </section>
+
+    <section class="design archive" id="archive">
+      <div class="design-head">
+        <div>
+          <div class="kicker">Desktop app / Workbench archetype</div>
+          <h2>Atlas Archive</h2>
+        </div>
+        <div>
+          <p>Desktop knowledge app for teams assembling cited research packets. The surface opens directly on work: evidence board, command row, artifact timeline, and inspector.</p>
+          <div class="brief-line">
+            <div class="brief-chip"><span class="micro">Concept seed</span><b>Research evidence table</b></div>
+            <div class="brief-chip"><span class="micro">Typography</span><b>Fraunces display, Archivo UI, Chivo Mono labels</b></div>
+            <div class="brief-chip"><span class="micro">State</span><b>Duplicate cluster needs merge approval</b></div>
+            <div class="brief-chip"><span class="micro">Motion</span><b>Motion layout continuity for artifact reordering</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="app-frame">
+        <div class="frame-top">
+          <span class="window-dots"><i></i><i></i><i></i></span>
+          <span>Archive index / selected stack: migration interviews</span>
+          <span>Conflict state</span>
+        </div>
+        <div class="app-body">
+          <aside class="rail">
+            <div class="label">Stacks</div>
+            <div class="stack-list">
+              <div class="stack-item active"><b>Migration interviews</b><span>43 artifacts / 8 unresolved</span></div>
+              <div class="stack-item"><b>Security review</b><span>16 artifacts / clean</span></div>
+              <div class="stack-item"><b>Launch copy</b><span>28 artifacts / stale source</span></div>
+              <div class="stack-item"><b>Customer proof</b><span>9 artifacts / needs citation</span></div>
+            </div>
+            <div class="map-card">
+              <div class="label">IA gate</div>
+              <div class="map-line"></div>
+              <p>Labels use user language: stack, source, merge, cite, publish.</p>
+            </div>
+          </aside>
+          <section class="main-work">
+            <div class="command-row">
+              <div class="command-input">⌘K / Find artifact, cite source, merge duplicates</div>
+              <div class="buttonish">Resolve 8</div>
+              <div class="buttonish" style="background:#d7e4e7;">Export proof</div>
+            </div>
+            <div class="evidence-board">
+              <article class="artifact a"><i class="pin"></i><div><h3>Interview 12 contradicts roadmap claim.</h3><p>Source says onboarding failure is data import, not setup wizard length.</p></div><span class="micro">Blocked / needs owner</span></article>
+              <article class="artifact b"><div><h3>Merge cluster</h3><p>4 fragments describe the same buyer objection.</p></div><span class="micro">Review</span></article>
+              <article class="artifact c"><i class="pin"></i><div><h3>Quote wall</h3><p>12 high-confidence snippets with permission tags.</p></div><span class="micro">Ready</span></article>
+              <article class="artifact d"><div><h3>Timeline gap</h3><p>No source after beta 3 for activation claim.</p></div><span class="micro">Missing</span></article>
+              <article class="artifact e"><div><h3>Publish packet</h3><p>One-page proof report assembled from cited artifacts.</p></div><span class="micro">Draft</span></article>
+              <article class="artifact f"><div><h3>Risk</h3><p>2 private notes excluded.</p></div><span class="micro">Safe</span></article>
+            </div>
+            <div class="timeline">
+              <div>Import<br>08:41</div><div>Cluster<br>08:44</div><div>Conflict<br>08:47</div><div>Owner ping<br>08:50</div><div>Publish gate<br>Waiting</div>
+            </div>
+          </section>
+          <aside class="inspector">
+            <div class="label">Inspector / selected conflict</div>
+            <div class="map-card"><h3 class="card-title">Permission blocked</h3><p>Private note cannot be included in public proof packet until owner grants quote permission.</p></div>
+            <div class="map-card"><h3 class="card-title">Recommended action</h3><p>Request permission from Mia, or replace with anonymized beta cohort aggregate.</p></div>
+            <div class="map-card"><h3 class="card-title">Accessibility</h3><p>Keyboard path: command row → artifact grid → inspector actions. Pins are visual only; status text is explicit.</p></div>
+          </aside>
+        </div>
+      </div>
+      <div class="scorecard">
+        <div><b>4.6</b><span>Product specificity</span></div>
+        <div><b>4.3</b><span>State coverage</span></div>
+        <div><b>4.4</b><span>Hierarchy</span></div>
+        <div><b>4.2</b><span>Originality</span></div>
+        <div><b>4.8</b><span>Dependency restraint</span></div>
+      </div>
+    </section>
+
+    <section class="design care" id="care">
+      <div class="design-head">
+        <div>
+          <div class="kicker">Operational app / Monitoring cockpit</div>
+          <h2>Meridian Ward</h2>
+        </div>
+        <div>
+          <p>Healthcare operations desktop UI for shift handoff. The layout is deliberately calm: ward map, escalation queue, visible blockers, and action order.</p>
+          <div class="brief-line">
+            <div class="brief-chip"><span class="micro">Concept seed</span><b>Ward map with risk lanes</b></div>
+            <div class="brief-chip"><span class="micro">Restraint</span><b>No smooth-scroll, no decorative animation</b></div>
+            <div class="brief-chip"><span class="micro">State</span><b>Blocked discharge and stale vitals</b></div>
+            <div class="brief-chip"><span class="micro">Platform</span><b>Windows/desktop density, keyboard first</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="app-frame">
+        <div class="frame-top">
+          <span class="window-dots"><i></i><i></i><i></i></span>
+          <span>Meridian Ward / North floor</span>
+          <span>Shift handoff in 18m</span>
+        </div>
+        <div class="care-grid">
+          <aside class="care-nav">
+            <div class="label">Queues</div>
+            <div class="stack-list">
+              <div class="stack-item active"><b>Escalations</b><span>4 need action</span></div>
+              <div class="stack-item"><b>Discharge ready</b><span>12 patients</span></div>
+              <div class="stack-item"><b>Transport</b><span>6 pending</span></div>
+              <div class="stack-item"><b>Pharmacy</b><span>3 waiting</span></div>
+            </div>
+          </aside>
+          <section class="ward-map">
+            <div class="ward-toolbar">
+              <div class="command-input">Filter by room, nurse, escalation, transport, discharge blocker</div>
+              <div class="buttonish">Handoff view</div>
+            </div>
+            <div class="bed-grid">
+              <div class="bed ok"><b><span class="status-dot"></span>204A</b><span>Ready / transport 09:20</span><small>Owner: D. Amini</small></div>
+              <div class="bed warning"><b><span class="status-dot"></span>204B</b><span>Vitals stale 22m</span><small>Notify: charge nurse</small></div>
+              <div class="bed blocked"><b><span class="status-dot"></span>205A</b><span>Discharge blocked</span><small>Missing pharmacy signoff</small></div>
+              <div class="bed ok"><b><span class="status-dot"></span>205B</b><span>Observation complete</span><small>Chart queued</small></div>
+              <div class="bed warning"><b><span class="status-dot"></span>206A</b><span>Family pickup late</span><small>ETA unknown</small></div>
+              <div class="bed ok"><b><span class="status-dot"></span>206B</b><span>Transport assigned</span><small>8 minutes</small></div>
+              <div class="bed blocked"><b><span class="status-dot"></span>207A</b><span>Lab missing</span><small>Retry ordered</small></div>
+              <div class="bed ok"><b><span class="status-dot"></span>207B</b><span>Clean</span><small>Next round 10:00</small></div>
+            </div>
+          </section>
+          <aside class="care-detail">
+            <div class="callout">
+              <div class="label">Selected blocker</div>
+              <h3>205A cannot discharge.</h3>
+              <p>Pharmacy signoff is missing. Patient transport is already reserved, so the primary action is to resolve signoff before 09:20.</p>
+            </div>
+            <div class="care-list">
+              <div><span>1</span><b>Ping pharmacy</b><small>Primary</small></div>
+              <div><span>2</span><b>Hold transport</b><small>Fallback</small></div>
+              <div><span>3</span><b>Notify family</b><small>If delayed</small></div>
+              <div><span>4</span><b>Log handoff note</b><small>Required</small></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="scorecard">
+        <div><b>4.8</b><span>Platform idiom</span></div>
+        <div><b>4.7</b><span>Scan speed</span></div>
+        <div><b>4.9</b><span>Accessibility</span></div>
+        <div><b>4.0</b><span>Originality</span></div>
+        <div><b>5.0</b><span>Motion restraint</span></div>
+      </div>
+    </section>
+
+    <section class="design foundry" id="foundry">
+      <div class="design-head">
+        <div>
+          <div class="kicker">Landing page / Specimen wall</div>
+          <h2>Looseleaf Type</h2>
+        </div>
+        <div>
+          <p>Type foundry launch page where the product is the interface. Specimens, licensing, trial download, and motion notes sit in the first product surface.</p>
+          <div class="brief-line">
+            <div class="brief-chip"><span class="micro">Concept seed</span><b>Printer drawer, not product cards</b></div>
+            <div class="brief-chip"><span class="micro">Motion</span><b>CSS for reveal, View Transitions for specimen detail</b></div>
+            <div class="brief-chip"><span class="micro">Asset</span><b>Glyph cards are the proof surface</b></div>
+            <div class="brief-chip"><span class="micro">Rejected</span><b>GSAP, Lenis, decorative 3D</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="foundry-stage">
+        <div class="foundry-copy">
+          <div>
+            <div class="label">Variable serif / retail license open</div>
+            <h3>Letters that refuse to sit still.</h3>
+            <p>The first viewport is the product: glyph rhythm, optical sizes, ligatures, and specimen texture. No stock laptop, no feature-card pile, no generic gradient.</p>
+          </div>
+          <div class="quality-ribbon">
+            <span>Trial font</span><span>Specimen PDF</span><span>Web license</span><span>Motion: CSS only</span>
+          </div>
+        </div>
+        <div class="specimen-wall">
+          <div class="glyph-card big" style="animation-delay:.03s"><mark>Qq</mark><small>Soft axis / 72pt</small></div>
+          <div class="glyph-card tall" style="animation-delay:.08s"><mark>&amp;</mark><small>Wonk axis / display</small></div>
+          <div class="glyph-card" style="animation-delay:.12s"><mark>a</mark><small>9pt text</small></div>
+          <div class="glyph-card" style="animation-delay:.16s"><mark>fi</mark><small>Ligature</small></div>
+          <div class="glyph-card wide" style="animation-delay:.2s"><mark>True proof beats claims</mark><small>Marketing line as specimen</small></div>
+          <div class="glyph-card" style="animation-delay:.24s"><mark>7</mark><small>Tabular</small></div>
+          <div class="glyph-card" style="animation-delay:.28s"><mark>R</mark><small>Retail cut</small></div>
+          <div class="glyph-card" style="animation-delay:.32s"><mark>?</mark><small>Empty slot</small></div>
+        </div>
+      </div>
+      <div class="motion-band">
+        <div><b>View Transition</b><p>Specimen card to detail page, feature-detected and optional.</p></div>
+        <div><b>Reduced motion</b><p>Cards render immediately; no content depends on animation.</p></div>
+        <div><b>Asset plan</b><p>Generated paper texture optional; glyph proofs stay real text.</p></div>
+      </div>
+    </section>
+
+    <section class="design orbit" id="orbit">
+      <div class="design-head">
+        <div>
+          <div class="kicker">Spatial product demo / Object-detail stage</div>
+          <h2>OrbitLab</h2>
+        </div>
+        <div>
+          <p>Telemetry product demo with a spatial object at the center. A 3D implementation would be justified here, but the static fallback still tells the product story.</p>
+          <div class="brief-line">
+            <div class="brief-chip"><span class="micro">Concept seed</span><b>Orbital proof, not dashboard cards</b></div>
+            <div class="brief-chip"><span class="micro">Library</span><b>R3F + Drei only in implementation</b></div>
+            <div class="brief-chip"><span class="micro">Fallback</span><b>Static image and table if WebGL fails</b></div>
+            <div class="brief-chip"><span class="micro">QA</span><b>Canvas nonblank, DPR cap, mobile framing</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="orbit-stage">
+        <aside class="orbit-panel">
+          <div class="label">Simulation controls</div>
+          <div class="telemetry-card"><b>Scenario</b><p>Polar pass / emergency bandwidth allocation</p></div>
+          <div class="telemetry-card"><b>Motion choice</b><p>Three/R3F for object rotation, CSS for panels, no GSAP/Lenis.</p></div>
+          <div class="telemetry-card"><b>Accessibility</b><p>Equivalent table and textual status remain usable when canvas is unavailable.</p></div>
+        </aside>
+        <section class="orbital-canvas" aria-label="Static fallback for orbital simulation">
+          <div class="orbit-ring"></div>
+          <div class="planet"></div>
+          <div class="satellite one">SAT-04</div>
+          <div class="satellite two">SAT-09</div>
+          <div class="satellite three">Relay</div>
+        </section>
+        <aside class="orbit-panel right">
+          <div class="label">Telemetry table</div>
+          <div class="legend">
+            <span><b>Coverage</b><em>84%</em></span>
+            <span><b>Packet loss</b><em>0.8%</em></span>
+            <span><b>Thermal risk</b><em>Moderate</em></span>
+            <span><b>Fallback</b><em>Ready</em></span>
+          </div>
+          <div class="sparkline"></div>
+          <div class="telemetry-card"><b>Blocked state</b><p>High-power burst is disabled because thermal envelope exceeds policy by 4 degrees.</p></div>
+        </aside>
+      </div>
+      <div class="qa">
+        <div><b>Motion</b><span>Purposeful object rotation only; reduced-motion disables loops.</span></div>
+        <div><b>Assets</b><span>3D is product proof, not background decoration.</span></div>
+        <div><b>Perf</b><span>Implementation would lazy-load R3F, cap DPR, pause offscreen.</span></div>
+        <div><b>State</b><span>Blocked command, fallback, telemetry, and risk visible.</span></div>
+        <div><b>Responsive</b><span>Panels stack before canvas becomes cramped.</span></div>
+        <div><b>A11y</b><span>Simulation has text/table equivalent.</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
