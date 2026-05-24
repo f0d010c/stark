@@ -8,7 +8,6 @@
 - Added a next-level design roadmap covering reference boards, typography systems, motion libraries, assets, stack blueprints, visual QA, quality evals, and governance.
 - Added quality measurement and reference governance docs so future design improvements stay measurable and runtime guidance stays lean.
 - Updated root, web, Windows, Apple, and cross-platform skills to preserve desktop archetype, originality seed, typography personality, and layout sketch decisions.
-- Added curated design preview artifacts showing the new originality system across desktop app, music app, AI agent UI, and developer landing page directions.
 
 ## 0.6.3 - 2026-05-14 - Windows detection and SwiftUI line-height fixes
 

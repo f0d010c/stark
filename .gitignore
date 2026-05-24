@@ -51,6 +51,7 @@ screenshots/
 screenshots-*/
 **/screenshots/
 **/screenshots-*/
+design-previews/
 
 # Keep curated proof screenshots in the repo.
 !assets/screenshots/
