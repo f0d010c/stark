@@ -1,11 +1,19 @@
 ---
 name: apple-design
-description: Build apps for iOS 26 / iPadOS 26 / macOS 26 (Tahoe) / watchOS 26 / visionOS 26 across all common stacks — system-like SwiftUI, branded SwiftUI (HIG + custom identity), React Native, Flutter Cupertino, and Electron/Tauri 2 for macOS. Use when the user asks for SwiftUI, an iOS app, iPad app, Mac app, Apple Watch app, visionOS app, an App Store deliverable, or anything Apple-platform deliverable. ALWAYS ask the user which track first — do not default to SwiftUI. SKIP when the target is only Android, Windows, or web-in-browser.
+description: Use when the user asks for SwiftUI, UIKit, AppKit, iOS, iPadOS, macOS, watchOS, visionOS, Liquid Glass, HIG, SF Symbols, App Store deliverables, Apple settings/forms, branded Apple apps, React Native iOS, Flutter Cupertino, or Electron/Tauri macOS shells. Builds Apple-platform apps across system-like SwiftUI, branded SwiftUI, React Native, Flutter Cupertino, and desktop web shells while preserving UX decisions, native idiom, desktop archetype, originality seed, state coverage, Dynamic Type, accessibility, and HIG/Liquid Glass rules. ALWAYS ask which track first. SKIP when the target is only Android, Windows, or web-in-browser.
 ---
 
 # apple-design — pick the track first
 
 Apple platforms have multiple stacks with different visual ceilings and cost. **Ask the user which one before any code.**
+
+## What This Skill Can Do
+
+- Choose the right Apple track: strict SwiftUI, branded SwiftUI, React Native, Flutter Cupertino, or Electron/Tauri for macOS.
+- Design iPhone task flows, iPad/macOS productivity surfaces, menu-bar utilities, document apps, settings, inspectors, media apps, and desktop-class workbenches.
+- Preserve UX briefs, state coverage, action hierarchy, keyboard flow, Dynamic Type, focus, accessibility, and safe areas.
+- Apply HIG, Liquid Glass, SF Symbols, SF typography, NavigationSplitView, DocumentGroup, inspectors, sheets, toolbars, and platform-specific motion.
+- Add originality through composition, content, and state treatment without replacing native controls with web-style chrome.
 
 ## Step 0 (MANDATORY) — Ask the user which track
 

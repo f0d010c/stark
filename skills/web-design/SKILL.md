@@ -1,11 +1,19 @@
 ---
 name: web-design
-description: Use for web apps, landing pages, dashboards, React/Next/Vite/Tailwind frontends, web UI reference planning, animation, motion, scrolling, GSAP, Motion, Lenis, command palettes, split panes, and frontend interaction decisions. Builds web surfaces with the right surface type, visual direction, hierarchy, motion, layout, copy, assets, and anti-slop discipline. ALWAYS choose surface type and ask which aesthetic direction first. SKIP when the target is a native desktop/mobile app.
+description: Use for websites, web apps, landing pages, dashboards, SaaS products, docs, checkout, agent/tool runs, React/Next/Vite/Astro/Tailwind frontends, web UI reference planning, originality, typography, assets, animation, motion, scrolling, GSAP, Motion, Lenis, View Transitions, command palettes, split panes, inspectors, and frontend interaction decisions. Builds web surfaces with surface type, UX handoff, visual direction, hierarchy, layout sketch, copy, assets, responsive containment, motion/library choices, and anti-slop discipline. ALWAYS choose surface type and ask which aesthetic direction first. SKIP when the target is a native desktop/mobile app.
 ---
 
 # web-design — pick the direction first, then execute precisely
 
 Goal: build web surfaces that feel specific, useful, and visually deliberate. Marketing pages can chase an Awwwards-level ceiling; dashboards, editors, docs, checkout, and agent-run UIs should prioritize product proof, scan speed, state coverage, and stable interaction before spectacle.
+
+## What This Skill Can Do
+
+- Design landing pages, SaaS dashboards, docs, checkout, product proof pages, editor/canvas tools, and agent-run UIs.
+- Choose between static HTML/CSS/JS, Vite React, Next, Astro, or the existing stack based on interaction needs.
+- Plan originality, concept seed, composition, typography, layout sketch, copy voice, asset system, and responsive containment.
+- Choose motion/library techniques such as CSS, Motion, GSAP ScrollTrigger, View Transitions, native scroll CSS, Lenis, or no motion.
+- Audit and repair generic AI web patterns like centered hero/three cards, static bento, decorative dashboards, and over-animation.
 
 ## Step 0 (MANDATORY) — Choose surface type, then direction
 

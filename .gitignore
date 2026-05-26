@@ -46,6 +46,9 @@ Thumbs.db
 # Local-only Playwright visual QA helper
 scripts/screenshot-tool/
 
+# Local-only maintainer checks
+scripts/public_readiness.py
+
 # Local visual QA artifacts
 screenshots/
 screenshots-*/

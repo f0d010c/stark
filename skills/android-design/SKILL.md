@@ -1,11 +1,19 @@
 ---
 name: android-design
-description: Use when the user asks for an Android app, Compose UI, Material 3, Material You, Pixel-style app, foldable adaptive layout, React Native Android, Flutter Android, Compose Multiplatform, or any Android deliverable. Builds Android 16+ apps across system-like Compose, branded Compose, React Native, Flutter, and Compose Multiplatform. ALWAYS ask which track first. SKIP when the target is only iOS, Windows, or web-in-browser.
+description: Use when the user asks for an Android app, Compose UI, Material 3, Material You, Material 3 Expressive, Pixel-style app, foldable/adaptive layout, Play Store deliverable, React Native Android, Flutter Android, Compose Multiplatform, or any Android deliverable. Builds Android apps across system-like Compose, branded Compose, React Native, Flutter, and Compose Multiplatform while preserving UX decisions, state coverage, adaptive navigation, Material motion, accessibility, and product-specific visual direction. ALWAYS ask which track first. SKIP when the target is only iOS, Windows, or web-in-browser.
 ---
 
 # android-design — pick the track first
 
 Android has multiple stacks with different visual ceilings. **Ask the user which one before any code.**
+
+## What This Skill Can Do
+
+- Choose the right Android track: strict Compose/Material, branded Compose, React Native, Flutter, or Compose Multiplatform.
+- Design mobile task flows, onboarding, forms, settings, dashboards, media/product surfaces, foldables, tablets, and adaptive layouts.
+- Preserve UX briefs, state coverage, navigation hierarchy, gesture/back behavior, loading/error/permission states, and accessibility.
+- Apply Material 3 Expressive, dynamic color, edge-to-edge, predictive back, motion schemes, shape, typography, and responsive window-size classes.
+- Add branded originality through content surfaces, composition, typography, and state treatment without breaking Android idioms.
 
 ## Step 0 (MANDATORY) — Ask the user which track
 

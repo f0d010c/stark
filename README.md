@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo/stark-mark.svg" alt="stark logo" width="96" height="96">
+</p>
+
 # stark
 
 [![Release](https://img.shields.io/github/v/release/f0d010c/stark?style=for-the-badge&label=release&labelColor=111111&color=ff6b4a)](https://github.com/f0d010c/stark/releases)
@@ -242,6 +246,22 @@ The repo keeps proof as screenshots instead of full generated app folders, so th
 | CRM v2 | <img src="assets/screenshots/crm-v2/desktop.png" alt="CRM v2 desktop screenshot" width="360"> | <img src="assets/screenshots/crm-v2/mobile.png" alt="CRM v2 mobile screenshot" width="180"> |
 
 Screenshot folders live under `assets/screenshots/<project>/`.
+
+## Brand Assets
+
+Stark's small logo mark lives under `assets/logo/`.
+
+- `assets/logo/stark-mark.svg` — primary small mark
+- `assets/logo/stark-favicon.svg` — favicon/app-icon-safe variant
+- `assets/logo/stark-mark-ink.svg` — monochrome variant
+
+The mark is a compact UI grid interrupted by an ember spark: generic panels turning into a product-specific design direction.
+
+## Public Plugin Readiness
+
+Public-discovery readiness is tracked in `docs/public-plugin-readiness.md`.
+
+Before publishing or submitting Stark anywhere, run the marketplace lint, smoke tests, unit tests, whitespace check, and local-only content scan listed there.
 
 ## Native Tracks
 

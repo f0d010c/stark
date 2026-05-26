@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.1 - 2026-05-26 - public readiness and skill discovery
+
+- Added Stark logo SVG assets and README branding.
+- Refreshed public plugin metadata across Codex and Claude-compatible manifests.
+- Added a public plugin readiness checklist for marketplace-style review.
+- Added an automated CI public-readiness step for manifest, asset, local-only file, and secret-pattern checks.
+- Expanded root and subskill descriptions so discovery reflects UX flows, originality, platform design, motion, assets, references, and token capabilities.
+
 ## 0.7.0 - 2026-05-24 - originality and desktop design system
 
 - Added desktop app archetypes so Windows, macOS, Tauri, Electron, and cross-platform desktop work choose an app shape before components.

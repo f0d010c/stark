@@ -1,11 +1,20 @@
 ---
 name: ux-design
-description: Use when the user asks for UX, product flow, user journey, wireframes, usability, conversion, onboarding, checkout, signup, navigation, forms, state design, dashboard workflows, or making an app easier to use over time. Designs and audits user experience flows, information architecture, forms, onboarding, dashboards, settings, empty/loading/error states, activation, retention, and repeated-use product ergonomics before visual polish. Pair with platform UI skills after the UX flow is clear.
+description: Use when the user asks for UX, product flow, user journey, wireframes, usability, conversion, onboarding, checkout, signup, navigation, forms, state design, dashboard workflows, command palettes, settings, permissions, long-running task progress, admin/internal tools, activation, retention, or making an app easier to use over time. Designs and audits user experience flows, information architecture, content hierarchy, forms, onboarding, dashboards, settings, empty/loading/error/permission/success states, recovery paths, and repeated-use product ergonomics before visual polish. Pair with platform UI skills after the UX flow is clear.
 ---
 
 # ux-design - product flow before pixels
 
 Use this skill when the product has to be understandable and usable, not just attractive. The output should make the user path clearer, reduce unnecessary decisions, and define states that survive real use.
+
+## What This Skill Can Do
+
+- Map core user journeys, task paths, branching flows, and recovery paths.
+- Define information architecture, navigation, labels, content groups, and page/screen inventory.
+- Design onboarding, activation, checkout, signup, forms, settings, dashboards, command palettes, and internal workflows.
+- Specify empty, loading, error, permission, success, stale, retry, resume, and audit states.
+- Audit an existing UI for usability, hierarchy, conversion, repeated-use friction, accessibility risks, and missing states.
+- Hand a compact UX decision brief to platform skills so visual design does not erase the product job.
 
 ## Step 1 - Identify the job and user mode
 

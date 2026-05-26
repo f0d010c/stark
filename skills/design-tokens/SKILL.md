@@ -1,11 +1,18 @@
 ---
 name: design-tokens
-description: Use when the user asks for design tokens, translate these tokens, export tokens, make a Compose color scheme from a Figma palette, audit tokens, or share a single token source across web and native. Generates, audits, and translates W3C DTCG tokens to Tailwind v4 @theme, Compose Material3 ColorScheme and Typography, SwiftUI Color/Font extensions, and WinUI ResourceDictionary. SKIP when no token work is involved.
+description: Use when the user asks for design tokens, DTCG tokens, theme systems, color/typography/spacing/radius/elevation/motion tokens, translating tokens, exporting tokens, making a Compose color scheme from a palette, auditing tokens, or sharing a single token source across web and native. Generates, audits, and translates W3C DTCG tokens to Tailwind v4 @theme, CSS variables, Compose Material3 ColorScheme/Typography, SwiftUI Color/Font extensions, and WinUI ResourceDictionary while preserving semantic naming and platform constraints. SKIP when no token/theme-system work is involved.
 ---
 
 # design-tokens — single source, every platform
 
 Goal: one DTCG-format JSON, four platform outputs. No drift.
+
+## What This Skill Can Do
+
+- Generate and audit W3C DTCG token bundles for color, typography, spacing, radius, motion, shadow/elevation, and semantic state roles.
+- Translate one source token JSON to Tailwind, CSS variables, Compose, SwiftUI, and WinUI using `../../scripts/token_export.py`.
+- Catch token drift, raw/semantic naming mistakes, unsupported platform values, circular references, and single-platform-only token systems.
+- Advise when tokens are wrong for the job, such as bespoke campaign pages that need art direction more than a reusable system.
 
 ## Step 1 — Source format: W3C DTCG
 

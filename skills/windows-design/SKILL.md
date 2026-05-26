@@ -1,11 +1,19 @@
 ---
 name: windows-design
-description: Use when the user asks for a Windows app, Win11 UI, XAML, Fluent design, WinUI, WPF, PowerToys-style tool, Microsoft Store app, music/photo/creative app, Tauri desktop, Electron desktop, or any Windows desktop deliverable. Builds Windows 11/12 apps across system-like WinUI 3, branded WinUI 3, Tauri 2, and Electron. ALWAYS ask which track first. SKIP when the user explicitly wants only Apple, Android, or web-in-browser.
+description: Use when the user asks for a Windows app, Win11/Win12 UI, XAML, Fluent design, WinUI, WPF, PowerToys-style tool, Microsoft Store app, desktop utility, admin tool, music/photo/creative app, Tauri desktop, Electron desktop, or any Windows desktop deliverable. Builds Windows apps across system-like WinUI 3, branded WinUI 3, Tauri 2, and Electron while preserving UX decisions, desktop archetype, originality seed, layout sketch, state coverage, Fluent/Mica rules, and motion restraint. ALWAYS ask which track first. SKIP when the user explicitly wants only Apple, Android, or web-in-browser.
 ---
 
 # windows-design — pick the track first
 
 Windows desktop has four distinct tracks. Each has different visual ceilings, different cost. **Ask the user which one before any code.** Do not default.
+
+## What This Skill Can Do
+
+- Choose the right Windows track: strict WinUI, branded WinUI, Tauri, or Electron.
+- Design desktop archetypes such as command centers, libraries, workbenches, monitoring cockpits, tray utilities, media apps, document apps, and settings/preferences.
+- Preserve UX briefs, state coverage, command hierarchy, keyboard paths, inspector/detail panes, and recovery flows.
+- Apply Fluent, Mica/Acrylic, Segoe UI Variable, Fluent icons, SettingsCard, NavigationView, InfoBar, and Windows density rules.
+- Avoid generic sidebar/cards/table shells by using product-specific composition and anti-default rewrites.
 
 ## Step 1 (MANDATORY) — Ask the user which track
 

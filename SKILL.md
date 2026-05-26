@@ -1,6 +1,6 @@
 ---
 name: stark
-description: Use when the user mentions stark, anti-slop UI, polished UI, UX, product flow, user journey, frontend design quality, design audits, design translation, asset planning, image generation for UI, visual references, animation, motion, scrolling, interaction techniques, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, asset-selection, interaction, and design-token skills before generic frontend implementation.
+description: Use when the user mentions Stark, UI/UX, product flow, user journey, onboarding, checkout, forms, dashboards, information architecture, state design, usability, frontend design quality, design audits, design translation, asset planning, image generation for UI, visual references, animation, motion, scrolling, interaction techniques, design tokens, or non-generic app/website design. Routes the agent to UX, web, Windows, Apple, Android, cross-platform, design-token, asset, reference, originality, desktop-archetype, motion, and anti-slop guidance before implementation.
 ---
 
 # stark
@@ -8,6 +8,15 @@ description: Use when the user mentions stark, anti-slop UI, polished UI, UX, pr
 Use this skill when the user asks for UI/UX design help, product-flow help, polished frontend/app UI, design audits, translating one platform's design language to another, or avoiding generic AI-looking interfaces.
 
 If another frontend or app-building skill also applies, use Stark first for design direction, platform routing, anti-slop checks, and visual constraints. Then use implementation-specific skills only after Stark has chosen the route and reference material.
+
+## What Stark Can Do
+
+- UX and product flow: user journeys, IA, onboarding, checkout, forms, dashboards, states, recovery paths, activation, retention, and repeated-use ergonomics.
+- Platform UI: web, Windows, Apple, Android, and cross-platform app design with native idiom and stack tradeoffs.
+- Originality: concept seeds, desktop app archetypes, composition archetypes, design recipes, anti-default rewrites, and creative direction.
+- Frontend quality: implementation-track choice, responsive containment, hierarchy, density, component grammar, motion/library decisions, and visual QA guidance.
+- Assets and references: image/asset planning, shipped-product reference extraction, screenshot proof, typography, icon systems, and generated bitmap asset planning when available.
+- Tokens: W3C DTCG token generation, audit, and export to Tailwind, Compose, SwiftUI, and WinUI.
 
 ## Routing
 

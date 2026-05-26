@@ -1,11 +1,17 @@
 ---
 name: design-router
-description: 'Use when the user asks to build, design, mock up, scaffold, audit, or improve any interface, flow, screen, page, component, app, UX, onboarding, checkout, dashboard workflow, or product flow and the target platform or flow is ambiguous. Routes to ux-design, web, Windows, Apple, Android, cross-platform, or design-token skills. SKIP when the request explicitly names one platform and no UX flow work is implied.'
+description: 'Use when the user asks to build, design, mock up, scaffold, audit, translate, or improve any interface, flow, screen, page, component, app, UX, onboarding, checkout, dashboard workflow, product flow, design system, asset plan, motion plan, or non-generic UI and the target platform or flow is ambiguous. Routes to ux-design, web, Windows, Apple, Android, cross-platform, design-token, originality, asset/reference, and platform skills. SKIP when the request explicitly names one platform and no UX flow work is implied.'
 ---
 
 # design-router — platform dispatch
 
 This skill is the entry point when a UI/UX request is ambiguous. Goal: pick the right UX and platform skill, do not over-eagerly route to web.
+
+## What This Router Can Dispatch
+
+- UX flow work: user journeys, IA, onboarding, checkout, forms, dashboards, state design, recovery, and repeated-use ergonomics.
+- Platform UI work: web, Windows, Apple, Android, and cross-platform translation.
+- Visual quality work: originality, desktop archetypes, creative direction, anti-default rewrites, motion/interaction choices, assets, references, and design tokens.
 
 ## Step 0 - Decide whether UX comes first
 

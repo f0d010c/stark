@@ -1,11 +1,19 @@
 ---
 name: cross-platform-design
-description: Use when the user wants one codebase across web, iOS, Android, Windows, and Mac, asks for the same app on all platforms, or names Compose Multiplatform, Tauri 2, React Native, Flutter, .NET MAUI, Avalonia, or Uno Platform. Builds cross-platform UI by translating each surface into the host platform's native idiom rather than pixel-cloning. SKIP when only one platform is targeted.
+description: Use when the user wants one codebase or one product design across web, iOS, Android, Windows, and Mac, asks for the same app on all platforms, asks to translate/port a UI between platforms, or names Compose Multiplatform, Tauri 2, Electron, React Native, Flutter, .NET MAUI, Avalonia, or Uno Platform. Builds cross-platform UI by preserving UX decisions, originality seed, desktop archetype, state coverage, tokens, and product job while translating each surface into the host platform's native idiom rather than pixel-cloning. SKIP when only one platform is targeted and no translation/cross-platform tradeoff is involved.
 ---
 
 # cross-platform-design — translate idiom, not pixels
 
 Goal: ship one codebase that respects each platform's HIG/Material/Fluent — not a Flutter app that looks like Flutter on every OS.
+
+## What This Skill Can Do
+
+- Choose cross-platform stacks and explain tradeoffs across Tauri, Electron, React Native, Flutter, Compose Multiplatform, Avalonia, Uno, and MAUI.
+- Translate Apple, Android, Windows, and web patterns by idiom instead of copying pixels.
+- Preserve UX briefs, state coverage, action hierarchy, tokens, desktop archetype, originality seed, layout sketch, and product metaphor across platforms.
+- Define per-platform navigation, controls, typography, icons, motion, density, and accessibility adaptations.
+- Warn when one shared UI will harm platform fit or when a single-platform implementation is the better choice.
 
 ## Step 0 — Preserve UX and UI decisions
 
