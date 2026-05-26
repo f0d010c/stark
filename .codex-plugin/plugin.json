@@ -1,6 +1,6 @@
 {
   "name": "stark",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "UI/UX design plugin for AI coding agents. Routes product flow, platform idiom, originality, motion, assets, and tokens before implementation.",
   "author": {
     "name": "stark contributors",

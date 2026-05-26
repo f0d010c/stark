@@ -12,7 +12,7 @@
         "ref": "main"
       },
       "description": "Multi-platform UI/UX design plugin for AI coding agents. Routes product flow, platform idiom, originality, motion, assets, and tokens before implementation.",
-      "version": "0.7.1",
+      "version": "0.7.2",
       "tags": ["codex", "design", "ui", "ux", "frontend", "multi-platform", "motion", "anti-slop"]
     }
   ]

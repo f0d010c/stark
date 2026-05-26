@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.2 - 2026-05-26 - README gallery cleanup
+
+- Reworked the README into a shorter public-facing overview with links to deeper docs.
+- Removed weaker Ops Dashboard and CRM v2 screenshot rows from the gallery.
+- Removed the corresponding screenshot assets so the public proof set stays focused.
+
 ## 0.7.1 - 2026-05-26 - public readiness and skill discovery
 
 - Added Stark logo SVG assets and README branding.
