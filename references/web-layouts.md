@@ -101,11 +101,11 @@ Date | Title | Action. Hover-weight title transition.
 
 ```
 ─────────────────────────────────────────────
-                                              
-   HAYES & Co.                                
-                                              
-   Independent watchmaker.                    
-                                              
+
+   HAYES & Co.
+
+   Independent watchmaker.
+
 ─────────────────────────────────────────────
 © 2026 · Made to outlast us · All rights reserved
 ```

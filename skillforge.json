@@ -3,92 +3,80 @@
   "type": "plugin",
   "examples": [
     {
-      "prompt": "Design a landing page for a developer tool that should not look like generic AI SaaS.",
+      "prompt": "Design a distinctive React landing page for a developer tool.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Make a Win11 app shell with NavigationView and Mica.",
+      "prompt": "Audit this responsive web dashboard for usability and accessibility.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Audit this React hero section for AI design slop.",
+      "prompt": "Make a WinUI app shell with NavigationView and Mica.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Improve the onboarding UX and define empty/loading/error states.",
+      "prompt": "Design a SwiftUI onboarding flow with denied-permission recovery.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Design a CRM workflow for sales reps who need saved filters and bulk actions.",
+      "prompt": "Design an Android app in Jetpack Compose with Material 3.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Plan a long-running AI agent run UI with progress, artifacts, retry, and stop controls.",
+      "prompt": "Plan a cross-platform Tauri desktop interface.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Design a dense web app SaaS dashboard that does not use marketing-page spacing.",
+      "prompt": "Improve this checkout product flow and its error recovery.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Use Stark to plan assets for a Codex landing page, including image generation if available.",
+      "prompt": "Create a design system with tokens, component variants, and state coverage.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Use Stark reference analysis to study real shipped command palettes before designing mine.",
+      "prompt": "Export these design tokens to Tailwind, SwiftUI, Compose, and WinUI.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Make this dashboard feel like a real product with proof surfaces, non-happy states, and faster scan speed.",
+      "prompt": "Plan animation and motion direction with reduced-motion behavior for this product page.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Use Stark to choose whether this React product page should use CSS transitions, Motion, GSAP ScrollTrigger, Lenis, or no animation.",
+      "prompt": "Audit this native interface for platform idiom and keyboard behavior.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Audit this dashboard for over-animation and wrong scrolling choices.",
+      "prompt": "Make this generic app interface more product-specific and non-generic.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Use Stark to design a cinematic campaign landing page with strong key art, page rhythm, and GSAP-style motion.",
+      "prompt": "Choose typography, assets, and responsive composition for this website.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Audit this landing page: the hero image is good but the typography, section rhythm, and art direction fall apart after the first viewport.",
+      "prompt": "Review this generated UI using rendered evidence and repair the biggest failure.",
       "shouldTrigger": true
     },
     {
-      "prompt": "Use Stark to create a creative direction brief before building a memorable React landing page with one tasteful risk.",
-      "shouldTrigger": true
+      "prompt": "Refactor this database query.",
+      "shouldTrigger": false
     },
     {
-      "prompt": "Use Stark to make this desktop app actually original instead of another sidebar and cards shell.",
-      "shouldTrigger": true
+      "prompt": "Explain how OAuth refresh tokens work.",
+      "shouldTrigger": false
     },
     {
-      "prompt": "Create a concept seed and three design directions before building this product UI.",
-      "shouldTrigger": true
+      "prompt": "Write unit tests for this parser.",
+      "shouldTrigger": false
     },
     {
-      "prompt": "Use Stark design recipes to sketch the layout before coding this app.",
-      "shouldTrigger": true
-    },
-    {
-      "prompt": "Replace the generic sidebar/cards/table layout with a stronger product-specific composition.",
-      "shouldTrigger": true
-    },
-    {
-      "prompt": "Choose whether this interactive product demo should be static HTML, Vite React, Next, or Astro before implementing it.",
-      "shouldTrigger": true
-    },
-    {
-      "prompt": "Help me understand quicksort.",
+      "prompt": "Configure a Kubernetes deployment.",
       "shouldTrigger": false
     }
   ],
   "checks": {
-    "maxSkillMdLines": 650,
+    "maxSkillMdLines": 300,
     "requireOpenAiYaml": false,
     "allowScripts": true
   }

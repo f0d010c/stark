@@ -22,10 +22,9 @@ This checklist keeps Stark ready for public Codex plugin discovery or marketplac
 Run:
 
 ```bash
-npx agent-skillforge lint . --format text --strict --profile marketplace
-npx agent-skillforge smoke .
-python -m unittest discover -s tests
-git diff --check
+npm ci
+npm run check
+npm run pack:plugin
 ```
 
 Scan for local-only content:
@@ -55,4 +54,4 @@ Keep local:
 
 `design-previews/` is ignored intentionally. Promote only selected proof into `assets/screenshots/` or public docs.
 
-The CI workflow also runs an inline public-readiness check. Keep maintainer-only local scripts out of git.
+CI runs the same repository validator and deterministic packaging path used locally. Keep maintainer-only local scripts out of git.

@@ -2,6 +2,8 @@
 
 Use this when Stark inspects shipped products, Mobbin/Figma/reference screenshots, product docs, or public app examples before designing.
 
+When comparing several references before design, start with `reference-board-workflow.md`, then use this file for deeper extraction on each reference.
+
 ## Principle
 
 References are evidence of decisions, not source material to clone. Extract the structure behind the design, then adapt it to the user's product, platform, constraints, and visual direction.

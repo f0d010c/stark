@@ -20,7 +20,7 @@ import sys
 SIGNALS: dict[str, list[str]] = {
     "windows": [
         r"\bwinui\b", r"\bxaml\b", r"\bwpf\b", r"\bwinapp\s*sdk\b",
-        r"\bfluent\b", r"\bmica\b", r"\bacrylic\b", r"\bwindows\b",
+        r"\bfluent(?:\s+(?:design|ui|2))\b", r"\bmica\b", r"\bacrylic\b", r"\bwindows\b",
         r"\bwin11\b", r"\bwin12\b", r"\bsegoe\b", r"\bmicrosoft store\b",
         r"\bpowertoys\b", r"\b\.xaml\b", r"\bcommunitytoolkit\b",
         r"\bnavigationview\b", r"\bsettingscard\b",
@@ -30,19 +30,20 @@ SIGNALS: dict[str, list[str]] = {
         r"\bipados?\b", r"\bios\b", r"\biphone\b", r"\bipad\b",
         r"\bliquid\s*glass\b", r"\bsf\s*symbols?\b", r"\bsf\s*pro\b",
         r"\b\.swift\b", r"\bnavigationsplitview\b", r"\btabview\b",
-        r"\bhig\b", r"\bapp\s*store\b", r"\bxcode\b",
+        r"\bhig\b", r"\b(?:apple|ios|mac)\s+app\s*store\b", r"\bxcode\b",
         r"\btahoe\b", r"\bcupertino\b", r"\bcatalyst\b",
         r"\bvisionos\b", r"\bwatchos\b",
     ],
     "android": [
-        r"\bjetpack compose\b", r"\bcompose\b(?!\s*[- ]?multiplatform)",
+        r"\bjetpack compose\b",
         r"\bmaterial 3\b", r"\bmaterial you\b", r"\bm3 expressive\b",
         r"\bmaterial 3 expressive\b", r"\bm3e\b",
-        r"\bandroid\b", r"\bpixel\b(?!\s*art)", r"\bplay store\b",
+        r"\bandroid\b", r"\bpixel\s+(?:phone|tablet|device|launcher)\b", r"\bplay store\b",
         r"\b\.kt\b", r"\b\.kts\b", r"\bkotlin\b",
         r"\bnavigationsuitescaffold\b", r"\bpredictive back\b",
     ],
     "web": [
+        r"\bweb\b",
         r"\breact\b", r"\bnext(?:\.js)?\b", r"\bnextjs\b",
         r"\bastro\b", r"\bsveltekit\b", r"\bsvelte\b",
         r"\bvue\b", r"\bsolid(?:\s*js)?\b", r"\bqwik\b",
@@ -85,17 +86,17 @@ def detect(text: str) -> str:
     if len(named_platforms) > 1:
         return "cross-platform"
 
-    # Otherwise: highest score
-    top = max(nonzero.items(), key=lambda kv: kv[1])
-    runner_up = sorted(nonzero.values(), reverse=True)
-    if len(runner_up) > 1 and runner_up[0] - runner_up[1] < 2:
-        if len(named_platforms) == 1:
-            return named_platforms[0]
-        top_platforms = [platform for platform, value in nonzero.items() if value == runner_up[0]]
-        if len(top_platforms) == 1:
-            return top_platforms[0]
-        return "ambiguous"
-    return top[0]
+    top_score = max(nonzero.values())
+    top_platforms = [platform for platform, value in nonzero.items() if value == top_score]
+    if len(top_platforms) == 1:
+        return top_platforms[0]
+
+    # A named native platform may break a tie with generic web vocabulary such
+    # as "dashboard", but it must not override stronger web evidence.
+    tied_named = [platform for platform in named_platforms if platform in top_platforms]
+    if len(tied_named) == 1:
+        return tied_named[0]
+    return "ambiguous"
 
 
 def main() -> int:

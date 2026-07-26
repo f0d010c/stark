@@ -43,8 +43,14 @@ Prefer small, sharp references and indexes.
 
 - Root `SKILL.md` should route.
 - Platform skills should preserve platform contracts.
-- `references/ui-patterns/README.md` should decide which 2-4 narrow files to read.
+- A task should load two core references and at most two conditional references.
+- Post-render gates should load only after rendered evidence exists.
+- Catalogs should expose optional references without injecting them into every task.
 - Full generated apps, temporary previews, and Playwright artifacts should stay out of runtime.
+
+## Currency rule
+
+Version-sensitive references must include a last-verified month and link to an official release channel, changelog, or documentation page. Re-check them at least quarterly or when a platform release changes the recommended stable track. Do not hard-code a future version as stable without an official source.
 
 ## Review checklist
 
@@ -55,3 +61,5 @@ Before merging a reference:
 - It avoids copying trade dress, brand assets, or proprietary layouts.
 - It includes quality gates or examples specific enough to audit.
 - It does not force every design task to load more files.
+- It is indexed by the relevant catalog.
+- Version-sensitive claims have an official source and verification date.

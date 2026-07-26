@@ -4,6 +4,10 @@ Use this for landing pages that should feel like a polished campaign, launch pag
 
 Do not use this as the default for dashboards, docs, checkout, forms, admin tools, or repeated-use product surfaces.
 
+Use `composition-system.md` with this file to choose the first viewport pattern, section rhythm, grid grammar, proof placement, and mobile replacement so the page does not feel like a slide deck after the hero.
+
+When the hero/key art is strong but the rest of the page risks becoming generic, also use `page-proof-architecture.md`. Each section should have a proof job, rhythm change, copy constraint, and mobile proof order.
+
 ## Surface modes
 
 Choose one mode before designing:

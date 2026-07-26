@@ -1,0 +1,170 @@
+{
+  "$description": "Standard Stark dogfood batches for repeatable generated-design evaluation. These are not trigger prompts; they define reusable surface stress tests, evidence, pass bars, and failure checks.",
+  "batches": [
+    {
+      "id": "product_proof_landing",
+      "surface": "product proof landing page",
+      "quality_target": "high-craft",
+      "prompt": "Use Stark director to generate a high-craft product proof landing page for a developer tool that turns failing CI logs into a reviewed pull request. The first viewport must show the proof object above the fold, avoid generic SaaS cards, use one restrained motion mechanic, and include desktop/mobile evidence, CTA smoke, rendered quality gate, one non-happy proof state, and a repair if the first read is weak.",
+      "guidance_under_test": [
+        "design-director-runbook.md",
+        "surface-playbook-matrix.md",
+        "generation-blueprint-contract.md",
+        "implementation-pattern-library.md",
+        "page-proof-architecture.md",
+        "conversion-proof-system.md"
+      ],
+      "required_evidence": [
+        "desktop screenshot or visual inspection",
+        "mobile screenshot or overflow measurement",
+        "proof object visible above fold",
+        "CTA interaction smoke",
+        "one non-happy proof state",
+        "rendered quality gate",
+        "generated-output scorecard",
+        "design acceptance gate",
+        "repair and re-check when first read is weak"
+      ],
+      "pass_bar": "No hard fails, weighted score >= 4, rendered quality gate public or better for gallery use.",
+      "failure_stress": "If it looks like generic SaaS cards, replace the layout with a product proof workbench and rewrite copy around concrete artifacts.",
+      "gallery_rule": "Desktop and mobile evidence required; screenshot must prove the CI-to-PR workflow."
+    },
+    {
+      "id": "operator_workbench",
+      "surface": "dashboard / CRM / operations workbench",
+      "quality_target": "production app",
+      "prompt": "Use Stark director to generate a production-grade operator workbench for renewal rescue. It must show a dense queue, filters, owner assignment, risk state, detail pane, stale data, empty/error behavior, and a mobile replacement. Avoid marketing spacing and decorative charts. Capture filter/selection smoke, desktop/mobile evidence, rendered quality gate, task ergonomics, and one repair.",
+      "guidance_under_test": [
+        "product-intent-matrix.md",
+        "surface-playbook-matrix.md",
+        "implementation-pattern-library.md",
+        "product-data-content-system.md",
+        "task-ergonomics.md",
+        "usability-scenario-testing.md"
+      ],
+      "required_evidence": [
+        "desktop screenshot or visual inspection",
+        "mobile replacement evidence",
+        "filter or selection interaction smoke",
+        "stale state",
+        "empty or error state",
+        "rendered quality gate",
+        "generated-output scorecard",
+        "task ergonomics check",
+        "repair and re-check for scan speed or density failures"
+      ],
+      "pass_bar": "No desktop-only squeeze, weighted score >= 3.5, primary task visible within 3 seconds.",
+      "failure_stress": "If it becomes a marketing dashboard, add queue density, selected detail, owner action, and realistic state distribution.",
+      "gallery_rule": "Only gallery-ready if the screenshot proves an operational task, not decorative metrics."
+    },
+    {
+      "id": "agent_run_review",
+      "surface": "agent run review UI",
+      "quality_target": "production app",
+      "prompt": "Use Stark director to generate an agent run review UI for generated pull requests. It must include a run timeline, artifact inspector, readable logs, blocked/retry/cancel states, owner notes, and mobile replacement. Avoid generic dashboard cards. Capture state switching, artifact selection, desktop/mobile evidence, rendered quality gate, accessibility interaction evidence, and one repair.",
+      "guidance_under_test": [
+        "implementation-pattern-library.md",
+        "interaction-state-matrix.md",
+        "microinteraction-affordance-system.md",
+        "accessibility-interaction-contract.md",
+        "browser-qa-matrix.md"
+      ],
+      "required_evidence": [
+        "desktop screenshot or visual inspection",
+        "mobile replacement evidence",
+        "run state switch",
+        "artifact selection smoke",
+        "blocked/retry/cancel state",
+        "log readability check",
+        "keyboard or focus evidence",
+        "rendered quality gate",
+        "generated-output scorecard"
+      ],
+      "pass_bar": "No generic cards, weighted score >= 3.5, blocked/retry state must be actionable.",
+      "failure_stress": "If logs or artifacts are unreadable, reduce decorative treatment and add typography/data density repairs.",
+      "gallery_rule": "Gallery screenshot must show timeline plus artifact inspector or a blocked recovery path."
+    },
+    {
+      "id": "editor_canvas",
+      "surface": "creative editor / canvas app",
+      "quality_target": "production app",
+      "prompt": "Use Stark director to generate a creative editor for campaign scene assembly. The canvas must dominate, the inspector must update from selection, the toolbar must expose states, and locked/invalid edits must be visible. Avoid making the app a card gallery. Capture selection smoke, keyboard/focus path, locked or invalid state, desktop/mobile evidence, rendered quality gate, and one repair.",
+      "guidance_under_test": [
+        "implementation-pattern-library.md",
+        "component-anatomy.md",
+        "interaction-state-matrix.md",
+        "product-library-composition.md",
+        "responsive-containment.md"
+      ],
+      "required_evidence": [
+        "desktop screenshot or visual inspection",
+        "mobile replacement evidence",
+        "selection changes inspector",
+        "locked or invalid state",
+        "keyboard or focus path",
+        "canvas remains dominant",
+        "rendered quality gate",
+        "generated-output scorecard",
+        "repair and re-check for chrome/canvas competition"
+      ],
+      "pass_bar": "Canvas dominance preserved, weighted score >= 3.5, no inspector or toolbar layout shift from state changes.",
+      "failure_stress": "If the app reads as a gallery, convert cards into canvas, layers, inspector, and tool state.",
+      "gallery_rule": "Gallery screenshot must show a selected object and inspector state, not an empty canvas."
+    },
+    {
+      "id": "animated_product_story",
+      "surface": "animation-led product story",
+      "quality_target": "portfolio",
+      "prompt": "Use Stark animation direction to generate an original animated product story for an AI media tool. Borrow only abstract qualities from premium references: depth, pacing, lighting, and proof timing. Invent a new main object, repeated motif, and motion mechanic. Capture nonblank media/canvas evidence, reduced-motion replacement, mobile fallback, rendered quality gate, originality delta, and one repair.",
+      "guidance_under_test": [
+        "animation-creation.md",
+        "premium-animation-direction.md",
+        "choreography-state-machine.md",
+        "motion-pattern-atlas.md",
+        "motion-library-playbooks.md",
+        "advanced-visual-systems.md"
+      ],
+      "required_evidence": [
+        "desktop screenshot or visual inspection",
+        "mobile fallback evidence",
+        "nonblank media/canvas check",
+        "reduced-motion replacement",
+        "originality delta",
+        "motion still-frame quality",
+        "rendered quality gate",
+        "generated-output scorecard",
+        "repair and re-check for pasted-prop symptoms"
+      ],
+      "pass_bar": "Rendered quality gate public or portfolio, weighted score >= 4, one object and one transformation are clear.",
+      "failure_stress": "If it looks copied or messy, remove decorative props and rebuild around product truth, main object, motif, and proof surface.",
+      "gallery_rule": "Gallery screenshot must still read as product proof when motion is paused."
+    },
+    {
+      "id": "trust_flow",
+      "surface": "checkout / permissions / docs trust flow",
+      "quality_target": "production app",
+      "prompt": "Use Stark director to generate a trust-heavy install or checkout flow for a plugin marketplace. It must show permissions, scope, risk, denied/recovery states, validation or copy behavior, accessible focus, and calm motion. Avoid hiding risk behind pretty cards. Capture interaction smoke, focus path, desktop/mobile evidence, rendered quality gate, copy credibility, and one repair.",
+      "guidance_under_test": [
+        "accessibility-interaction-contract.md",
+        "form-state-validation-system.md",
+        "copy-system.md",
+        "conversion-proof-system.md",
+        "theme-mode-density-system.md"
+      ],
+      "required_evidence": [
+        "desktop screenshot or visual inspection",
+        "mobile screenshot or overflow measurement",
+        "permission, validation, search, or copy interaction smoke",
+        "denied or recovery state",
+        "focus path",
+        "copy credibility check",
+        "rendered quality gate",
+        "generated-output scorecard",
+        "repair and re-check for hidden risk or distracting motion"
+      ],
+      "pass_bar": "No hidden risk, weighted score >= 3.5, focus and recovery path must be visible.",
+      "failure_stress": "If the flow is too pretty but vague, expose risk, scope, owner, denial reason, and recovery copy.",
+      "gallery_rule": "Gallery screenshot must show a risk, permission, or recovery decision clearly."
+    }
+  ]
+}

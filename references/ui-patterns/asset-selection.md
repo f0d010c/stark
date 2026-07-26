@@ -1,6 +1,6 @@
 # Asset selection
 
-Use this after the UI decision brief and before implementation when a design needs icons, screenshots, product previews, references, typography, textures, diagrams, or generated imagery.
+Use this after the UI decision brief and before implementation when a design needs icons, screenshots, product previews, references, typography, textures, diagrams, or generated imagery. When the asset is central to product proof or visual quality, follow this with `asset-realism-matrix.md` before `asset-production-pipeline.md`.
 
 ## Principle
 

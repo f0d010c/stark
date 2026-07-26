@@ -1,0 +1,775 @@
+{
+  "$description": "Design-quality eval prompts for Stark. These are not trigger-only evals; they check whether Stark guidance covers higher-craft design decisions, usability, choreography, typography, libraries, and QA evidence.",
+  "$instructions": "Each prompt lists expected evidence tags. A run should produce the relevant briefs or decisions before implementation and include QA evidence when the prompt asks for audit or delivery.",
+  "tags": [
+    "design_orchestration",
+    "design_director_runbook",
+    "design_preflight",
+    "design_mode_router",
+    "ambition_calibration_contract",
+    "ambition_surface_recipe",
+    "taste_calibration_system",
+    "variant_selection_loop",
+    "product_intent_matrix",
+    "surface_playbook_matrix",
+    "generation_blueprint_contract",
+    "prompt_to_build_compiler",
+    "implementation_pattern_library",
+    "signature_surface_recipe",
+    "navigation_information_architecture",
+    "experience_continuity_system",
+    "pattern_selection",
+    "composition_system",
+    "layout_precision_system",
+    "spatial_rhythm_density_system",
+    "progressive_disclosure_information_scent",
+    "adaptive_composition_system",
+    "responsive_adaptation_gate",
+    "page_proof_architecture",
+    "conversion_proof_system",
+    "animation_direction",
+    "premium_animation_direction",
+    "animation_composition_cohesion_gate",
+    "choreography_state_machine",
+    "motion_timing_easing",
+    "motion_pattern_atlas",
+    "motion_library_playbook",
+    "designer_authored_motion_handoff",
+    "motion_frame_qa_contract",
+    "typography_system",
+    "typography_strategy",
+    "font_selection_matrix",
+    "typography_pairing_lab",
+    "type_recipe",
+    "font_implementation_contract",
+    "rendered_typography_quality_gate",
+    "copy_system",
+    "copy_quality_gate",
+    "product_data_content_system",
+    "text_resilience_localization_system",
+    "style_diversity_matrix",
+    "visual_language_decision_matrix",
+    "design_fingerprint_diversity_gate",
+    "brand_identity_motif_system",
+    "native_desktop_app_quality",
+    "execution_protocol",
+    "component_anatomy",
+    "component_api_variant_contract",
+    "component_visual_composition",
+    "interaction_state_matrix",
+    "input_interaction_model",
+    "interaction_physics_direct_manipulation",
+    "transition_continuity_contract",
+    "interactive_prototype_contract",
+    "component_state_gallery",
+    "story_driven_qa_harness",
+    "design_system_production_loop",
+    "microinteraction_affordance_system",
+    "form_state_validation_system",
+    "material_system",
+    "visual_token_recipe",
+    "color_material_contrast_gate",
+    "visual_finish_system",
+    "theme_mode_density_system",
+    "token_implementation_contract",
+    "asset_realism_matrix",
+    "asset_production",
+    "art_direction_asset_board",
+    "media_loading_contract",
+    "icon_illustration_system",
+    "frontend_technique_matrix",
+    "capability_maximization_matrix",
+    "library_capability_fit",
+    "capability_recipe_cookbook",
+    "frontend_library_production_preset",
+    "library_implementation_blueprint",
+    "library_source_verification_gate",
+    "capability_stack_rendered_gate",
+    "library_orchestration_system",
+    "stack_blueprint",
+    "component_architecture",
+    "product_library_playbook",
+    "product_library_composition",
+    "library_de_defaulting_system",
+    "reference_board",
+    "research_synthesis_contract",
+    "benchmark_repair_loop",
+    "motion_recipe",
+    "quality_metrics",
+    "generated_output_scorecard",
+    "quality_calibration_ladder",
+    "dogfood_generation_loop",
+    "dogfood_batch_matrix",
+    "showcase_selection_quality",
+    "rendered_quality_gate",
+    "first_draft_triage_loop",
+    "design_critique_panel",
+    "design_taste_diagnostics",
+    "visual_repair_playbook",
+    "feedback_memory_loop",
+    "qa_evidence_contract",
+    "browser_qa_matrix",
+    "runtime_evidence_regression",
+    "frontend_quality_automation_gate",
+    "implementation_review_loop",
+    "visual_qa",
+    "visual_qa_workflow",
+    "usability_states",
+    "task_ergonomics",
+    "first_run_empty_state_system",
+    "usability_pattern_matrix",
+    "usability_heuristic_evaluation",
+    "usability_scenario_testing",
+    "task_flow_acceptance_harness",
+    "rendered_usability_acceptance_gate",
+    "reference_transformation",
+    "responsive_containment",
+    "accessibility",
+    "accessibility_interaction_contract",
+    "accessibility_acceptance_gate",
+    "advanced_visual_system",
+    "design_acceptance_gate",
+    "performance_budget_contract",
+    "performance",
+    "data_viz_library",
+    "dashboard_insight_hierarchy",
+    "ux_measurement_instrumentation"
+  ],
+  "prompts": [
+    {
+      "id": "cinematic_ai_video_launch",
+      "prompt": "Design a cinematic landing page for an AI video model. Use a Luma-level quality bar, but transform the reference into an original concept.",
+      "expected": ["reference_board", "research_synthesis_contract", "benchmark_repair_loop", "design_orchestration", "taste_calibration_system", "variant_selection_loop", "pattern_selection", "composition_system", "page_proof_architecture", "conversion_proof_system", "style_diversity_matrix", "visual_language_decision_matrix", "design_fingerprint_diversity_gate", "brand_identity_motif_system", "animation_direction", "premium_animation_direction", "animation_composition_cohesion_gate", "choreography_state_machine", "motion_timing_easing", "motion_pattern_atlas", "motion_library_playbook", "designer_authored_motion_handoff", "motion_frame_qa_contract", "art_direction_asset_board", "advanced_visual_system", "motion_recipe", "typography_system", "typography_pairing_lab", "copy_system", "reference_transformation", "visual_qa"]
+    },
+    {
+      "id": "developer_tool_product_proof",
+      "prompt": "Build a developer-tool product page that proves the workflow instead of using generic SaaS cards. Choose the motion stack and typography before coding.",
+      "expected": ["design_preflight", "design_mode_router", "design_orchestration", "design_director_runbook", "product_intent_matrix", "signature_surface_recipe", "navigation_information_architecture", "experience_continuity_system", "pattern_selection", "composition_system", "adaptive_composition_system", "responsive_adaptation_gate", "page_proof_architecture", "conversion_proof_system", "ux_measurement_instrumentation", "motion_library_playbook", "typography_system", "type_recipe", "copy_system", "copy_quality_gate", "product_data_content_system", "text_resilience_localization_system", "frontend_technique_matrix", "capability_maximization_matrix", "library_orchestration_system", "stack_blueprint", "component_architecture", "product_library_playbook", "product_library_composition", "library_de_defaulting_system", "accessibility_interaction_contract", "usability_states", "task_ergonomics", "first_run_empty_state_system", "usability_pattern_matrix", "usability_heuristic_evaluation", "usability_scenario_testing", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "responsive_containment"]
+    },
+    {
+      "id": "composition_anti_presentation",
+      "prompt": "Use Stark composition to redesign a product page that feels like a presentation. Choose the first viewport pattern, focal path, grid, section rhythm, proof placement, repeated motif, responsive replacement, rejected composition, and QA checks before styling.",
+      "expected": ["composition_system", "layout_precision_system", "spatial_rhythm_density_system", "progressive_disclosure_information_scent", "adaptive_composition_system", "responsive_adaptation_gate", "page_proof_architecture", "pattern_selection", "product_intent_matrix", "design_orchestration", "style_diversity_matrix", "visual_language_decision_matrix", "design_fingerprint_diversity_gate", "visual_repair_playbook", "typography_system", "copy_system", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "progressive_disclosure_information_scent",
+      "prompt": "Use Stark progressive disclosure and information scent to fix this UI that feels like a presentation and has too much weak explanatory text. Define first-layer content, second-layer content, deep detail, hidden-until-needed content, scent labels, navigation/CTA scent, disclosure controls, copy compression, mobile disclosure, accessibility structure, measurement signal, and QA checks.",
+      "expected": ["progressive_disclosure_information_scent", "composition_system", "page_proof_architecture", "copy_system", "copy_quality_gate", "text_resilience_localization_system", "navigation_information_architecture", "ux_measurement_instrumentation", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "design_director_full_runbook",
+      "prompt": "Use Stark director to go all out on a new React product page. Before coding, create the full design runbook: research references, originality move, structural pattern, component anatomy, typography recipe, copy voice, visual tokens, assets, motion/choreography, product libraries, usability states, responsive strategy, QA evidence, and rejected defaults.",
+      "expected": ["design_preflight", "design_mode_router", "ambition_calibration_contract", "design_director_runbook", "taste_calibration_system", "variant_selection_loop", "design_orchestration", "reference_board", "research_synthesis_contract", "benchmark_repair_loop", "surface_playbook_matrix", "generation_blueprint_contract", "prompt_to_build_compiler", "implementation_pattern_library", "signature_surface_recipe", "navigation_information_architecture", "experience_continuity_system", "pattern_selection", "layout_precision_system", "spatial_rhythm_density_system", "progressive_disclosure_information_scent", "adaptive_composition_system", "responsive_adaptation_gate", "page_proof_architecture", "conversion_proof_system", "ux_measurement_instrumentation", "component_anatomy", "component_api_variant_contract", "component_visual_composition", "input_interaction_model", "interactive_prototype_contract", "component_state_gallery", "story_driven_qa_harness", "design_system_production_loop", "style_diversity_matrix", "visual_language_decision_matrix", "design_fingerprint_diversity_gate", "brand_identity_motif_system", "native_desktop_app_quality", "typography_system", "font_implementation_contract", "rendered_typography_quality_gate", "typography_pairing_lab", "type_recipe", "copy_system", "copy_quality_gate", "product_data_content_system", "text_resilience_localization_system", "visual_token_recipe", "color_material_contrast_gate", "visual_finish_system", "theme_mode_density_system", "token_implementation_contract", "asset_realism_matrix", "asset_production", "art_direction_asset_board", "media_loading_contract", "advanced_visual_system", "animation_composition_cohesion_gate", "motion_library_playbook", "frontend_technique_matrix", "capability_maximization_matrix", "library_capability_fit", "capability_recipe_cookbook", "frontend_library_production_preset", "library_implementation_blueprint", "library_source_verification_gate", "capability_stack_rendered_gate", "library_orchestration_system", "performance_budget_contract", "product_library_playbook", "product_library_composition", "library_de_defaulting_system", "accessibility_interaction_contract", "accessibility_acceptance_gate", "task_ergonomics", "first_run_empty_state_system", "usability_scenario_testing", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "responsive_containment", "qa_evidence_contract", "frontend_quality_automation_gate", "implementation_review_loop", "dogfood_generation_loop", "dogfood_batch_matrix", "rendered_quality_gate", "first_draft_triage_loop", "design_acceptance_gate", "quality_metrics", "quality_calibration_ladder", "accessibility", "performance"]
+    },
+    {
+      "id": "native_desktop_app_quality_contract",
+      "prompt": "Use Stark native desktop app quality contract before coding a Windows or macOS desktop app. Define target platform and stack, desktop archetype, main object, window model, command model, navigation model, work surface, secondary surfaces, native material/chrome, density and resize behavior, state and recovery coverage, keyboard and focus paths, platform evidence, hard fails, and QA checks.",
+      "expected": ["native_desktop_app_quality", "design_preflight", "product_intent_matrix", "navigation_information_architecture", "component_anatomy", "component_visual_composition", "interaction_state_matrix", "input_interaction_model", "transition_continuity_contract", "interactive_prototype_contract", "usability_pattern_matrix", "usability_scenario_testing", "accessibility_interaction_contract", "qa_evidence_contract", "implementation_review_loop", "runtime_evidence_regression", "visual_qa"]
+    },
+    {
+      "id": "animated_3d_product_page",
+      "prompt": "Create a 3D product landing page with an inspectable hero object, reduced-motion fallback, and mobile QA.",
+      "expected": ["animation_direction", "animation_composition_cohesion_gate", "choreography_state_machine", "motion_pattern_atlas", "motion_library_playbook", "designer_authored_motion_handoff", "motion_frame_qa_contract", "art_direction_asset_board", "media_loading_contract", "advanced_visual_system", "adaptive_composition_system", "page_proof_architecture", "performance_budget_contract", "material_system", "visual_token_recipe", "asset_realism_matrix", "asset_production", "qa_evidence_contract", "visual_qa", "visual_qa_workflow", "accessibility", "performance", "responsive_containment"]
+    },
+    {
+      "id": "creative_editor_app",
+      "prompt": "Design a creative editor UI where the canvas stays dominant, inspectors are stable, and component motion supports editing rather than spectacle.",
+      "expected": ["native_desktop_app_quality", "taste_calibration_system", "pattern_selection", "component_anatomy", "component_api_variant_contract", "component_visual_composition", "interaction_state_matrix", "input_interaction_model", "interaction_physics_direct_manipulation", "transition_continuity_contract", "interactive_prototype_contract", "component_state_gallery", "microinteraction_affordance_system", "stack_blueprint", "component_architecture", "product_library_playbook", "typography_system", "typography_strategy", "motion_library_playbook", "usability_states", "task_ergonomics", "usability_pattern_matrix", "visual_qa", "responsive_containment"]
+    },
+    {
+      "id": "agent_run_ui",
+      "prompt": "Design a long-running AI agent run UI with plan, tool calls, artifacts, retry, blocked states, and clear scan speed.",
+      "expected": ["execution_protocol", "product_intent_matrix", "pattern_selection", "component_anatomy", "interaction_state_matrix", "input_interaction_model", "interaction_physics_direct_manipulation", "transition_continuity_contract", "interactive_prototype_contract", "motion_recipe", "usability_states", "task_ergonomics", "usability_pattern_matrix", "typography_system", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "interaction_state_agent_run",
+      "prompt": "Use Stark interaction states for an agent run UI. Define queued, running, waiting, blocked, failed, retrying, cancelled, succeeded, disabled reasons, available controls, recovery paths, focus behavior, mobile behavior, and evidence tasks before visual styling.",
+      "expected": ["interaction_state_matrix", "input_interaction_model", "transition_continuity_contract", "interactive_prototype_contract", "component_state_gallery", "microinteraction_affordance_system", "component_anatomy", "component_visual_composition", "accessibility_interaction_contract", "task_ergonomics", "usability_scenario_testing", "usability_states", "product_intent_matrix", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "component_visual_composition_contract",
+      "prompt": "Use Stark component visual composition before coding this product UI. Define component set, product job, density, surface roles, edge/border roles, padding/gap scale, type/icon alignment, state visuals, focus and target rule, elevation/shadow rule, repeated-item rule, mobile/touch adaptation, library default removed, and QA checks.",
+      "expected": ["component_visual_composition", "component_api_variant_contract", "component_anatomy", "interaction_state_matrix", "microinteraction_affordance_system", "visual_token_recipe", "visual_finish_system", "theme_mode_density_system", "token_implementation_contract", "library_de_defaulting_system", "accessibility_interaction_contract", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "input_interaction_model_contract",
+      "prompt": "Use Stark input interaction model before coding this interactive product UI. Define primary input modes, main object, direct manipulation path, keyboard/command path, touch/mobile path, pointer/gesture ownership, scroll and focus ownership, state and undo model, feedback and constraints, library/API owner, rejected interactions, and QA probes.",
+      "expected": ["input_interaction_model", "interaction_physics_direct_manipulation", "transition_continuity_contract", "interaction_state_matrix", "interactive_prototype_contract", "microinteraction_affordance_system", "accessibility_interaction_contract", "task_ergonomics", "usability_scenario_testing", "frontend_technique_matrix", "library_capability_fit", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "interaction_physics_direct_manipulation",
+      "prompt": "Use Stark interaction physics for this editor/canvas interaction before coding. Define manipulated object, interaction type, input owners, affordance/handle, bounds and constraints, snap points, feedback states, cancel/undo/recovery, keyboard alternative, touch/mobile alternative, motion physics, performance boundary, accessibility boundary, rejected behavior, and QA evidence.",
+      "expected": ["interaction_physics_direct_manipulation", "input_interaction_model", "interaction_state_matrix", "microinteraction_affordance_system", "accessibility_interaction_contract", "transition_continuity_contract", "interactive_prototype_contract", "task_ergonomics", "performance_budget_contract", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "transition_continuity_contract",
+      "prompt": "Use Stark transition continuity before adding motion to this app. Define source state, destination state, persistent object, transition job, continuity pattern, state owner, library/native owner, focus and scroll behavior, loading/error/recovery behavior, reduced-motion substitution, mobile/touch substitution, performance boundary, rejected transition, and QA evidence.",
+      "expected": ["transition_continuity_contract", "interaction_state_matrix", "input_interaction_model", "interactive_prototype_contract", "motion_pattern_atlas", "motion_library_playbook", "accessibility_interaction_contract", "performance_budget_contract", "runtime_evidence_regression", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "design_mode_router",
+      "prompt": "Use Stark design mode router before choosing style or libraries for this ambiguous prompt. Decide whether the output should be targeted repair, product app/workbench, product proof landing, cinematic animation, trust/risk flow, docs platform, visual system/sample, or gallery proof. Include quality target, primary proof, interaction depth, expression/library/motion ceilings, evidence required, and hard no.",
+      "expected": ["design_preflight", "design_mode_router", "ambition_calibration_contract", "product_intent_matrix", "surface_playbook_matrix", "design_director_runbook", "taste_calibration_system", "interactive_prototype_contract", "qa_evidence_contract", "visual_qa", "responsive_containment"]
+    },
+    {
+      "id": "ambition_calibration_contract",
+      "prompt": "Use Stark ambition calibration before this next-level public product UI. Map the user's wording to requested and target quality levels, evidence required, product object depth, originality depth, typography depth, motion depth, library depth, asset depth, usability depth, QA depth, things to maximize, things to keep quiet, things to reject, stop condition, and continue condition.",
+      "expected": ["ambition_calibration_contract", "ambition_surface_recipe", "design_preflight", "design_mode_router", "taste_calibration_system", "design_acceptance_gate", "quality_calibration_ladder", "capability_maximization_matrix", "design_orchestration", "qa_evidence_contract", "rendered_quality_gate", "visual_qa", "responsive_containment"]
+    },
+    {
+      "id": "ambition_surface_recipes",
+      "prompt": "Use Stark ambition surface recipes after ambition calibration for this next-level product surface. Choose the concrete surface recipe, maximized dimensions, quiet support, structure, typography posture, library ceiling, motion and asset strategy, usability proof, QA evidence, rejected effort, stop condition, and continue condition.",
+      "expected": ["ambition_surface_recipe", "ambition_calibration_contract", "surface_playbook_matrix", "capability_recipe_cookbook", "capability_maximization_matrix", "typography_system", "motion_pattern_atlas", "qa_evidence_contract", "design_acceptance_gate", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "product_intent_agent_dashboard",
+      "prompt": "Use Stark product intent to design an agent operations dashboard. Choose the intent, user mode, primary object, structural pattern, product libraries, motion level, typography posture, required states, responsive replacement, QA evidence, and avoided defaults before styling.",
+      "expected": ["product_intent_matrix", "surface_playbook_matrix", "generation_blueprint_contract", "implementation_pattern_library", "design_director_runbook", "navigation_information_architecture", "product_data_content_system", "pattern_selection", "component_anatomy", "interaction_state_matrix", "microinteraction_affordance_system", "product_library_playbook", "dashboard_insight_hierarchy", "data_viz_library", "motion_library_playbook", "typography_system", "task_ergonomics", "usability_states", "ux_measurement_instrumentation", "responsive_containment", "qa_evidence_contract", "accessibility", "performance"]
+    },
+    {
+      "id": "surface_playbook_selection",
+      "prompt": "Use Stark surface playbook for a mixed product request. Classify whether it is developer tool, AI launch, operational dashboard, CRM, checkout, docs, editor, agent run, trust, analytics, marketplace, or campaign; choose must-read references, usually skipped references, structural pattern, product libraries, motion/visual libraries, typography posture, required states, responsive replacement, QA gates, library ceiling, and hard bans before implementation.",
+      "expected": ["surface_playbook_matrix", "ambition_surface_recipe", "product_intent_matrix", "pattern_selection", "library_orchestration_system", "frontend_technique_matrix", "product_library_playbook", "motion_library_playbook", "typography_system", "task_ergonomics", "responsive_containment", "qa_evidence_contract", "visual_qa"]
+    },
+    {
+      "id": "ux_measurement_instrumentation_contract",
+      "prompt": "Use Stark UX measurement and instrumentation before accepting this product UI. Define surface, user mode, primary task, success metric, leading indicators, friction signals, failure/recovery metrics, event taxonomy, instrumented controls/states, privacy/data boundary, accessibility signal, performance signal, experiment/variant boundary, QA evidence, and post-launch learning loop.",
+      "expected": ["ux_measurement_instrumentation", "task_ergonomics", "usability_scenario_testing", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "interaction_state_matrix", "qa_evidence_contract", "browser_qa_matrix", "accessibility_interaction_contract", "accessibility_acceptance_gate", "performance_budget_contract", "performance", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "generation_blueprint_contract",
+      "prompt": "Use Stark generation blueprint before coding a serious animated React product page. Convert the surface playbook, stack blueprint, frontend techniques, product libraries, motion libraries, fixtures, required states, choreography hooks, assets, typography/tokens, responsive replacements, accessibility/performance hooks, QA hooks, and deleted defaults into concrete files and components.",
+      "expected": ["generation_blueprint_contract", "prompt_to_build_compiler", "signature_surface_recipe", "surface_playbook_matrix", "stack_blueprint", "frontend_technique_matrix", "component_architecture", "library_orchestration_system", "product_library_playbook", "motion_library_playbook", "choreography_state_machine", "product_data_content_system", "interaction_state_matrix", "interactive_prototype_contract", "component_state_gallery", "typography_system", "visual_token_recipe", "token_implementation_contract", "responsive_containment", "accessibility_interaction_contract", "performance_budget_contract", "qa_evidence_contract", "implementation_review_loop"]
+    },
+    {
+      "id": "prompt_to_build_compiler",
+      "prompt": "Use Stark prompt-to-build compiler after the design blueprint and before implementation. Produce build target, component inventory, state fixtures, library ownership, typography/tokens, choreography hooks, responsive replacements, accessibility hooks, QA selectors, forbidden defaults, implementation directive, and acceptance comparison.",
+      "expected": ["prompt_to_build_compiler", "generation_blueprint_contract", "implementation_pattern_library", "library_orchestration_system", "product_data_content_system", "interaction_state_matrix", "interactive_prototype_contract", "typography_system", "choreography_state_machine", "responsive_containment", "accessibility_interaction_contract", "qa_evidence_contract", "implementation_review_loop", "visual_qa"]
+    },
+    {
+      "id": "implementation_pattern_library",
+      "prompt": "Use Stark implementation pattern library before coding a known product surface. Choose between product proof workbench, operational queue cockpit, agent run timeline, editor workbench, trust matrix, docs command manual, animated product story, or data proof panel; include file shape, state model, library owner, fixtures, non-happy states, choreography or microinteraction ownership, responsive replacement, QA hooks, and removed defaults.",
+      "expected": ["implementation_pattern_library", "signature_surface_recipe", "generation_blueprint_contract", "surface_playbook_matrix", "component_architecture", "product_data_content_system", "interaction_state_matrix", "interactive_prototype_contract", "library_orchestration_system", "product_library_playbook", "motion_library_playbook", "responsive_containment", "accessibility_interaction_contract", "qa_evidence_contract", "implementation_review_loop", "visual_qa"]
+    },
+    {
+      "id": "signature_surface_recipes",
+      "prompt": "Use Stark signature surface recipes before coding this high-craft generated product page. Choose proof workbench landing, cinematic output reveal, operational cockpit, agent run review, editor instrument, trust decision flow, docs command manual, data proof panel, gallery proof system, or mobile task stack; include product object, composition skeleton, proof surface, typography posture, library preset, motion signature, states, responsive replacement, originality move, rejected recipe, and QA evidence.",
+      "expected": ["signature_surface_recipe", "implementation_pattern_library", "generation_blueprint_contract", "product_intent_matrix", "surface_playbook_matrix", "composition_system", "page_proof_architecture", "typography_system", "frontend_library_production_preset", "library_orchestration_system", "interactive_prototype_contract", "responsive_containment", "qa_evidence_contract", "visual_qa"]
+    },
+    {
+      "id": "checkout_pricing_flow",
+      "prompt": "Design a pricing and checkout flow with plan comparison, cancellation clarity, error states, and no distracting motion near payment.",
+      "expected": ["reference_board", "conversion_proof_system", "pattern_selection", "typography_system", "typography_strategy", "type_recipe", "form_state_validation_system", "usability_states", "task_ergonomics", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "docs_platform_site",
+      "prompt": "Design a docs platform site with command palette, route transitions, copyable code, and mobile-friendly navigation.",
+      "expected": ["navigation_information_architecture", "pattern_selection", "motion_library_playbook", "stack_blueprint", "component_architecture", "product_library_playbook", "accessibility_interaction_contract", "typography_system", "text_resilience_localization_system", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "trust_permission_matrix",
+      "prompt": "Design a plugin install trust screen that shows permissions, scope, risk, audit trail, denied states, and recovery paths.",
+      "expected": ["execution_protocol", "pattern_selection", "component_anatomy", "usability_states", "task_ergonomics", "typography_system", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "visual_qa_audit",
+      "prompt": "Audit this animated landing page for visual quality, mobile containment, typography, reduced motion, performance, accessibility, and copied-reference risk.",
+      "expected": ["design_director_runbook", "benchmark_repair_loop", "quality_metrics", "rendered_quality_gate", "visual_repair_playbook", "feedback_memory_loop", "qa_evidence_contract", "browser_qa_matrix", "runtime_evidence_regression", "implementation_review_loop", "design_acceptance_gate", "visual_qa", "visual_qa_workflow", "typography_system", "type_recipe", "reference_transformation", "accessibility", "performance", "responsive_containment"]
+    },
+    {
+      "id": "motion_stack_selection",
+      "prompt": "Choose between CSS, Motion, GSAP, Three.js, Rive, Lottie, video, Lenis, and View Transitions for this interactive product story.",
+      "expected": ["motion_library_playbook", "designer_authored_motion_handoff", "motion_pattern_atlas", "motion_timing_easing", "motion_frame_qa_contract", "motion_recipe", "animation_direction", "choreography_state_machine", "design_orchestration", "performance", "accessibility"]
+    },
+    {
+      "id": "anti_collage_animation_rewrite",
+      "prompt": "This animated landing page looks like random elements were pasted around a copied reference. Rewrite the concept into one original hero object, one transformation, real proof, better copy, and a QA plan.",
+      "expected": ["design_orchestration", "animation_direction", "premium_animation_direction", "animation_composition_cohesion_gate", "choreography_state_machine", "reference_transformation", "typography_system", "type_recipe", "copy_system", "visual_qa", "responsive_containment"]
+    },
+    {
+      "id": "premium_animation_direction",
+      "prompt": "This Luma-inspired animated hero technically works, but it feels low-quality and pasted together. Create a premium animation direction that defines the product truth, main object, signature transformation, visual world, motif, proof surface, copy voice, asset plan, originality delta, library ownership, mobile fallback, and QA gates.",
+      "expected": ["design_orchestration", "reference_board", "research_synthesis_contract", "benchmark_repair_loop", "animation_direction", "premium_animation_direction", "animation_composition_cohesion_gate", "choreography_state_machine", "motion_timing_easing", "motion_pattern_atlas", "motion_library_playbook", "designer_authored_motion_handoff", "motion_frame_qa_contract", "art_direction_asset_board", "media_loading_contract", "advanced_visual_system", "performance_budget_contract", "asset_realism_matrix", "asset_production", "copy_system", "reference_transformation", "visual_qa", "qa_evidence_contract", "performance", "accessibility"]
+    },
+    {
+      "id": "animation_composition_cohesion_gate",
+      "prompt": "Use Stark animation composition cohesion gate after a rendered animated hero feels messy or pasted together. Define the original transformation, product idea, hero object, scene container, supporting asset jobs, depth and perspective, lighting/material system, color/value hierarchy, text integration, motion job, focus path, responsive crop, reduced-motion still, pasted-element risk, required repair, re-check evidence, and gate result.",
+      "expected": ["animation_composition_cohesion_gate", "premium_animation_direction", "animation_direction", "choreography_state_machine", "motion_pattern_atlas", "motion_timing_easing", "art_direction_asset_board", "asset_realism_matrix", "advanced_visual_system", "design_fingerprint_diversity_gate", "benchmark_repair_loop", "copy_system", "qa_evidence_contract", "browser_qa_matrix", "visual_qa", "responsive_containment", "performance", "accessibility"]
+    },
+    {
+      "id": "taste_calibration_system",
+      "prompt": "Use Stark taste calibration before making this high-craft UI more premium. Define surface risk, user frequency, expression level, density level, novelty budget, motion budget, library budget, typography posture, asset/key-art posture, restraints, one allowed showpiece, things to remove, and QA taste checks before choosing effects.",
+      "expected": ["taste_calibration_system", "design_director_runbook", "design_orchestration", "style_diversity_matrix", "pattern_selection", "motion_library_playbook", "product_library_playbook", "typography_system", "quality_metrics", "visual_qa"]
+    },
+    {
+      "id": "variant_selection_loop",
+      "prompt": "Use Stark variant selection before implementing this high-craft product page. Generate three meaningfully different directions, score product specificity, structural originality, proof strength, typography fit, motion fit, library fit, usability fit, responsive strategy, originality boundary, implementation risk, then select one variant, reject the others, name borrowed details, QA probes, and anti-sameness checks.",
+      "expected": ["variant_selection_loop", "feedback_memory_loop", "design_director_runbook", "taste_calibration_system", "style_diversity_matrix", "pattern_selection", "composition_system", "typography_system", "motion_pattern_atlas", "library_orchestration_system", "usability_scenario_testing", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "motion_pattern_selection",
+      "prompt": "Use Stark motion patterns for this animation-led product page before choosing libraries. Pick between object birth, scroll proof film, shared-object continuity, material inspection, prompt-to-output trace, cursor lens, state-machine illustration, data morph, kinetic type, 2D canvas field, designer-authored sequence, and view choreography. Name rejected patterns, mobile/reduced-motion versions, and QA probes.",
+      "expected": ["animation_direction", "premium_animation_direction", "choreography_state_machine", "motion_timing_easing", "motion_pattern_atlas", "motion_library_playbook", "motion_frame_qa_contract", "reference_transformation", "responsive_containment", "accessibility", "performance", "visual_qa"]
+    },
+    {
+      "id": "motion_timing_easing_system",
+      "prompt": "Use Stark motion timing and easing before coding this animation-led page. Define surface frequency, motion job, attention hierarchy, timing scale, easing language, stagger/sequence rule, interruption behavior, resting frame, reduced-motion substitution, persistent-motion control, performance-safe properties, QA frames, and rejected timing.",
+      "expected": ["animation_direction", "premium_animation_direction", "choreography_state_machine", "motion_timing_easing", "motion_pattern_atlas", "motion_library_playbook", "motion_frame_qa_contract", "qa_evidence_contract", "browser_qa_matrix", "visual_qa", "accessibility", "performance", "responsive_containment"]
+    },
+    {
+      "id": "designer_authored_motion_handoff",
+      "prompt": "Use Stark designer-authored motion handoff before coding this animated product page. Define motion owner, product object, motion thesis, authored asset or timeline, beat map, runtime controls, state inputs, DOM-owned text and controls, export/package, fallback frame, reduced-motion substitute, mobile substitute, performance budget, versioning owner, rejected motion, and QA frame hooks.",
+      "expected": ["designer_authored_motion_handoff", "animation_direction", "premium_animation_direction", "choreography_state_machine", "motion_pattern_atlas", "motion_library_playbook", "motion_frame_qa_contract", "library_implementation_blueprint", "media_loading_contract", "advanced_visual_system", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "motion_frame_qa_contract",
+      "prompt": "Use Stark motion frame QA before accepting this animated product page. Define poster, start, beat, proof, end, reduced-motion, and mobile frames; capture method; stable selectors or state hooks; nonblank media probes; visual comparison risk; required repair; and re-check evidence.",
+      "expected": ["animation_direction", "choreography_state_machine", "motion_pattern_atlas", "motion_library_playbook", "motion_frame_qa_contract", "media_loading_contract", "qa_evidence_contract", "browser_qa_matrix", "visual_qa", "visual_qa_workflow", "accessibility", "performance", "responsive_containment"]
+    },
+    {
+      "id": "analytics_data_panel",
+      "prompt": "Design an analytics product screen where the chart is the product object. Choose Chart.js, ECharts, D3/visx, Vega-Lite, Observable Plot, or native SVG, and define the data panel anatomy, accessible summary, states, and responsive fallback.",
+      "expected": ["execution_protocol", "pattern_selection", "component_anatomy", "dashboard_insight_hierarchy", "data_viz_library", "product_library_playbook", "usability_states", "task_ergonomics", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "data_visualization_library_selection",
+      "prompt": "Use Stark data visualization library selection for an analytics dashboard. Name the user question, decision/action, dataset shape, chart form, library choice, accessible summary, table/source fallback, responsive replacement, motion rule, rejected chart libraries, and QA checks before implementation.",
+      "expected": ["data_viz_library", "dashboard_insight_hierarchy", "product_data_content_system", "frontend_technique_matrix", "product_library_playbook", "performance_budget_contract", "component_anatomy", "task_ergonomics", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "dashboard_insight_hierarchy",
+      "prompt": "Use Stark dashboard insight hierarchy before chart choice for this analytics UI. Define audience, monitoring job, primary decision/action, north-star metric, supporting metrics, exception/alert logic, segment/filter model, freshness/source, insight order, detail/drill path, empty/stale/partial state, responsive replacement, data honesty checks, and QA evidence.",
+      "expected": ["dashboard_insight_hierarchy", "data_viz_library", "product_data_content_system", "task_ergonomics", "usability_pattern_matrix", "component_anatomy", "interaction_state_matrix", "accessibility_interaction_contract", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "product_data_content_system",
+      "prompt": "Use Stark product data and content system for this generated dashboard. Define the domain model, primary and secondary objects, realistic record shape, relationships, state distribution, edge cases, time/money/unit rules, domain vocabulary, fixture generation method, privacy boundary, and QA scenarios before styling.",
+      "expected": ["product_data_content_system", "copy_system", "product_intent_matrix", "dashboard_insight_hierarchy", "component_anatomy", "interaction_state_matrix", "data_viz_library", "task_ergonomics", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "text_resilience_localization_system",
+      "prompt": "Use Stark text resilience and localization for this product UI. Define text sources, locale/date/number/currency/unit formatting, expansion risk, wrapping/truncation rules, plural/grammar behavior, RTL/bidi behavior, font fallback/subset plan, component stress cases, and QA checks for long labels, pseudo-localization, CJK, RTL, mobile, and zoom before implementation.",
+      "expected": ["text_resilience_localization_system", "typography_system", "font_selection_matrix", "copy_system", "product_data_content_system", "layout_precision_system", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "material_asset_page",
+      "prompt": "Design a high-craft product page where the material system, generated assets, icons, proof media, and screenshot critique loop are chosen before code.",
+      "expected": ["execution_protocol", "design_orchestration", "style_diversity_matrix", "brand_identity_motif_system", "material_system", "visual_token_recipe", "asset_realism_matrix", "asset_production", "art_direction_asset_board", "icon_illustration_system", "typography_system", "visual_qa", "visual_qa_workflow", "accessibility"]
+    },
+    {
+      "id": "asset_realism_selection",
+      "prompt": "Use Stark asset realism before producing hero media for this product page. Decide whether the asset is product proof, workflow proof, trust proof, cinematic proof, brand mood, navigation aid, empty-state art, or data proof. Choose real, code-rendered, generated bitmap, diagrammatic, or abstract realism; keep important UI text code-native; plan responsive framing, performance, accessibility, rejected asset types, and QA probes.",
+      "expected": ["asset_realism_matrix", "asset_production", "art_direction_asset_board", "media_loading_contract", "advanced_visual_system", "visual_token_recipe", "icon_illustration_system", "qa_evidence_contract", "visual_qa", "visual_qa_workflow", "accessibility", "performance", "responsive_containment"]
+    },
+    {
+      "id": "art_direction_asset_board",
+      "prompt": "Use Stark art direction asset board before producing hero key art for this product page. Define product truth, asset role, main shot, secondary shots, layer stack, DOM-owned content, generated/image prompt, negative constraints, desktop/tablet/mobile crops, fallback/poster, performance plan, accessibility, and QA evidence.",
+      "expected": ["art_direction_asset_board", "asset_realism_matrix", "asset_production", "media_loading_contract", "advanced_visual_system", "adaptive_composition_system", "visual_token_recipe", "typography_system", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "media_loading_contract",
+      "prompt": "Use Stark media loading contract for this media-heavy product page. Define critical media, LCP candidate, responsive sources, art-direction crops, reserved geometry, loading priority, preload/fetch priority, poster fallback, reduced-motion behavior, offscreen lazy policy, accessibility text, nonblank/runtime QA, and rejected media.",
+      "expected": ["media_loading_contract", "asset_realism_matrix", "asset_production", "art_direction_asset_board", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "style_diversity_selection",
+      "prompt": "Use Stark style diversity before visual design so this project does not look like the last generated Stark page. Choose a lane such as operational ink, trust ledger, studio workbench, cinematic proof, editorial archive, industrial command, product showroom, playful instrument, civic utility, or experimental poster. Include layout grammar, material strategy, typography posture, token strategy, motion posture, memorable anchor, rejected lanes, anti-sameness bans, and QA checks.",
+      "expected": ["style_diversity_matrix", "visual_language_decision_matrix", "design_fingerprint_diversity_gate", "brand_identity_motif_system", "variant_selection_loop", "design_orchestration", "pattern_selection", "composition_system", "layout_precision_system", "typography_system", "font_selection_matrix", "typography_pairing_lab", "material_system", "visual_token_recipe", "theme_mode_density_system", "visual_qa"]
+    },
+    {
+      "id": "visual_language_decision_matrix",
+      "prompt": "Use Stark visual language before visual styling. Translate product category, user mode, frequency, trust/risk, density, audience maturity, and primary object into chosen visual language, material posture, typography posture, palette/value posture, shape/radius/border posture, layout rhythm, motion posture, asset/media posture, icon/illustration stance, copy voice, motif/repetition rule, one tasteful risk, rejected languages, hard bans, and QA checks.",
+      "expected": ["visual_language_decision_matrix", "style_diversity_matrix", "design_fingerprint_diversity_gate", "product_intent_matrix", "surface_playbook_matrix", "taste_calibration_system", "brand_identity_motif_system", "material_system", "visual_token_recipe", "typography_system", "typography_pairing_lab", "copy_system", "motion_library_playbook", "asset_realism_matrix", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "brand_identity_motif_system",
+      "prompt": "Use Stark brand identity and motif system for this public product page before visual polish. Define recognition target, brand words, motif, shape grammar, color role, typography role, icon/illustration stance, motion/material echo, product proof tie, repetition rule, restraint rule, rejected identity moves, and QA checks.",
+      "expected": ["brand_identity_motif_system", "design_fingerprint_diversity_gate", "visual_language_decision_matrix", "style_diversity_matrix", "copy_system", "visual_token_recipe", "typography_system", "typography_pairing_lab", "asset_realism_matrix", "art_direction_asset_board", "icon_illustration_system", "motion_pattern_atlas", "visual_finish_system", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "design_fingerprint_diversity_gate",
+      "prompt": "Use Stark design fingerprint diversity gate after rendering this repeated/generated design. Compare the previous or forbidden fingerprint against the current structure, motif, typography, palette/material, asset/proof surface, interaction/motion, product-specificity proof, same-looking residue, required repair, re-check evidence, and gate result.",
+      "expected": ["design_fingerprint_diversity_gate", "style_diversity_matrix", "visual_language_decision_matrix", "brand_identity_motif_system", "variant_selection_loop", "rendered_quality_gate", "first_draft_triage_loop", "visual_repair_playbook", "feedback_memory_loop", "browser_qa_matrix", "qa_evidence_contract", "visual_qa"]
+    },
+    {
+      "id": "typography_pairing_by_style_lane",
+      "prompt": "Use Stark typography pairing after choosing the style lane. Map operational ink, trust ledger, studio workbench, cinematic proof, editorial archive, industrial command, product showroom, playful instrument, civic utility, or experimental poster to a pairing archetype, concrete free stack, licensed target if available, numeric/data behavior, loading/subset plan, variable/motion rule, rejected pairing, and QA checks.",
+      "expected": ["style_diversity_matrix", "typography_system", "font_selection_matrix", "typography_pairing_lab", "type_recipe", "font_implementation_contract", "performance", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "empty_state_illustration_system",
+      "prompt": "Design an empty state for a developer tool that uses illustration and icons to guide the next action without looking generic or hiding recovery paths.",
+      "expected": ["component_anatomy", "first_run_empty_state_system", "asset_production", "icon_illustration_system", "usability_states", "task_ergonomics", "typography_system", "typography_strategy", "type_recipe", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "cross_platform_typography_strategy",
+      "prompt": "Choose a typography strategy for a branded cross-platform desktop app. Preserve native scaling, choose display/body/mono roles, define number rules, and avoid generic web defaults.",
+      "expected": ["native_desktop_app_quality", "typography_system", "typography_strategy", "font_selection_matrix", "typography_pairing_lab", "type_recipe", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "web_type_recipe_selection",
+      "prompt": "Choose a concrete web typography recipe for this product page. Pick display, body, and mono/data faces, import/loading, numeric behavior, where the personality lives, where type stays quiet, and QA checks.",
+      "expected": ["typography_system", "typography_strategy", "font_selection_matrix", "typography_pairing_lab", "type_recipe", "font_implementation_contract", "rendered_typography_quality_gate", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "font_selection_ai_product",
+      "prompt": "Use Stark font selection for an AI product page. Choose the font job, display class, body/UI class, mono/data class, concrete stack, numeric behavior, loading plan, variable font or motion rule, rejected fonts, and QA checks before styling.",
+      "expected": ["typography_system", "typography_strategy", "font_selection_matrix", "typography_pairing_lab", "type_recipe", "font_implementation_contract", "rendered_typography_quality_gate", "performance", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "font_implementation_contract",
+      "prompt": "Use Stark font implementation contract after selecting a type recipe for this high-craft web page. Define delivery mode, exact families/weights/styles, subset or text range, CSS variables/classes, fallback stack and metric strategy, numeric/OpenType features, critical/preload policy, framework integration such as next/font if applicable, license/privacy boundary, text stress fixtures, rendered QA evidence, and rejected loading choice.",
+      "expected": ["font_implementation_contract", "rendered_typography_quality_gate", "font_selection_matrix", "typography_system", "type_recipe", "typography_pairing_lab", "text_resilience_localization_system", "qa_evidence_contract", "browser_qa_matrix", "visual_qa", "responsive_containment", "performance"]
+    },
+    {
+      "id": "rendered_typography_quality_gate",
+      "prompt": "Use Stark rendered typography quality gate after browser or screenshot evidence exists. Inspect rendered families, display/body/mono roles, hierarchy texture, line breaks and measure, density fit, numeric behavior, long text stress, mobile and zoom behavior, font loading and fallback behavior, performance/license/privacy note, generic/default residue, failed text sample, required repair, re-check evidence, and gate result.",
+      "expected": ["rendered_typography_quality_gate", "font_implementation_contract", "font_selection_matrix", "typography_system", "typography_pairing_lab", "type_recipe", "text_resilience_localization_system", "browser_qa_matrix", "qa_evidence_contract", "rendered_quality_gate", "visual_finish_system", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "vite_react_dashboard_architecture",
+      "prompt": "Build a Vite React operational dashboard. Before coding, choose the stack blueprint, feature modules, primitives, state owner, keyboard behavior, responsive containment, and QA hooks.",
+      "expected": ["design_preflight", "execution_protocol", "surface_playbook_matrix", "generation_blueprint_contract", "implementation_pattern_library", "navigation_information_architecture", "pattern_selection", "layout_precision_system", "component_anatomy", "frontend_technique_matrix", "performance_budget_contract", "stack_blueprint", "component_architecture", "product_library_playbook", "product_library_composition", "library_de_defaulting_system", "visual_token_recipe", "quality_metrics", "usability_states", "task_ergonomics", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "frontend_technique_selection",
+      "prompt": "Use Stark frontend techniques before coding this React product page. Choose what belongs to CSS Grid/subgrid, container queries, custom properties, native scroll CSS, View Transitions, Popover/anchor positioning, responsive media, Motion, GSAP, product libraries, and fallback QA.",
+      "expected": ["frontend_technique_matrix", "capability_maximization_matrix", "library_capability_fit", "capability_recipe_cookbook", "frontend_library_production_preset", "library_implementation_blueprint", "library_source_verification_gate", "capability_stack_rendered_gate", "library_orchestration_system", "performance_budget_contract", "stack_blueprint", "component_architecture", "motion_library_playbook", "product_library_playbook", "data_viz_library", "responsive_containment", "accessibility", "performance", "visual_qa"]
+    },
+    {
+      "id": "capability_maximization_matrix",
+      "prompt": "Use Stark capability maximization for a next-level React page that could use browser primitives, Motion, GSAP, Three/R3F, Rive/Lottie/video, View Transitions, product libraries, data-viz, typography, generated assets, and QA. Choose the primary capability, supporting capabilities, explicitly rejected capabilities, ownership boundaries, best-result combination, removal rule, and QA evidence before implementation.",
+      "expected": ["capability_maximization_matrix", "ambition_calibration_contract", "ambition_surface_recipe", "library_capability_fit", "capability_recipe_cookbook", "frontend_library_production_preset", "library_implementation_blueprint", "library_source_verification_gate", "capability_stack_rendered_gate", "design_mode_router", "frontend_technique_matrix", "library_orchestration_system", "motion_library_playbook", "product_library_playbook", "product_library_composition", "advanced_visual_system", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "library_capability_fit_contract",
+      "prompt": "Use Stark library capability fit before coding this advanced React page. Score Motion, GSAP, Three/R3F, Rive/Lottie, video, View Transitions, product libraries, data-viz, and native CSS against product proof, native alternatives, composition rules, state ownership, text/control ownership, fallback, performance risk, QA probe, rejected capability, and removal trigger.",
+      "expected": ["library_capability_fit", "capability_recipe_cookbook", "frontend_library_production_preset", "library_implementation_blueprint", "library_source_verification_gate", "capability_stack_rendered_gate", "capability_maximization_matrix", "frontend_technique_matrix", "library_orchestration_system", "motion_library_playbook", "product_library_playbook", "advanced_visual_system", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "capability_recipe_cookbook",
+      "prompt": "Use Stark capability recipe cookbook before choosing libraries for this high-craft surface. Select the recipe for AI launch, developer tool, dashboard/CRM, editor/canvas, docs platform, agent run UI, trust/checkout, analytics, or showcase; define signature capability, quiet supporting capabilities, rejected capabilities, owners, anti-stacks, performance/removal rule, and QA proof.",
+      "expected": ["capability_recipe_cookbook", "capability_maximization_matrix", "library_capability_fit", "frontend_library_production_preset", "library_orchestration_system", "surface_playbook_matrix", "product_intent_matrix", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "responsive_containment", "accessibility", "performance", "visual_qa"]
+    },
+    {
+      "id": "frontend_library_production_presets",
+      "prompt": "Use Stark frontend library production presets after accepting Motion, GSAP, View Transitions, Three/R3F, Rive, Lottie, Anime.js, Theatre.js, PixiJS/canvas, or data-viz for this high-craft page. Choose the production preset, source-backed capability, owners, fixtures, state model, fallback, performance budget, QA probes, rejected preset, and removal trigger before coding.",
+      "expected": ["frontend_library_production_preset", "library_implementation_blueprint", "library_source_verification_gate", "capability_stack_rendered_gate", "capability_recipe_cookbook", "capability_maximization_matrix", "library_capability_fit", "library_orchestration_system", "motion_library_playbook", "frontend_technique_matrix", "advanced_visual_system", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "accessibility_interaction_contract", "responsive_containment", "performance", "visual_qa"]
+    },
+    {
+      "id": "library_implementation_blueprints",
+      "prompt": "Use Stark library implementation blueprints before coding an accepted Motion, GSAP, Three/R3F, Rive, Lottie, View Transitions, native scroll/WAAPI, or data-viz feature. Define import/client boundary, state owner, DOM/canvas/media owner, accessibility owner, reduced-motion branch, unsupported or failed-load fallback, cleanup/disposal, performance guard, QA selectors, evidence to capture, and the library-specific hard fail.",
+      "expected": ["library_implementation_blueprint", "library_source_verification_gate", "capability_stack_rendered_gate", "frontend_library_production_preset", "library_capability_fit", "library_orchestration_system", "motion_library_playbook", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "accessibility_interaction_contract", "runtime_evidence_regression", "responsive_containment", "performance", "visual_qa"]
+    },
+    {
+      "id": "library_source_verification_gate",
+      "prompt": "Use Stark library source verification before coding an accepted Motion, GSAP, Three/R3F, Rive, Lottie, View Transitions, native scroll/WAAPI, or data-viz feature. Inspect the current official docs or installed package version, verify import path, framework/client boundary, capability used, native alternative, integration owners, cleanup/disposal, reduced-motion branch, unsupported or failed-load fallback, performance/accessibility guards, QA selector/probe, stale/default pattern rejected, and gate result.",
+      "expected": ["library_source_verification_gate", "capability_stack_rendered_gate", "library_implementation_blueprint", "frontend_library_production_preset", "library_capability_fit", "frontend_technique_matrix", "motion_library_playbook", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "accessibility_interaction_contract", "runtime_evidence_regression", "responsive_containment", "performance", "visual_qa"]
+    },
+    {
+      "id": "capability_stack_rendered_gate",
+      "prompt": "Use Stark capability stack rendered gate after an advanced React page renders with Motion, GSAP, Three/R3F, Rive, Lottie, View Transitions, product libraries, or data-viz. Inspect rendered evidence, intended versus actual capabilities, signature and supporting capabilities, product proof gained, usability gained, visual quality gained, accessibility/fallback, mobile and reduced-motion behavior, runtime/performance result, default residue, unused dependencies, conflicts, removal or repair, re-check evidence, and gate result.",
+      "expected": ["capability_stack_rendered_gate", "library_source_verification_gate", "library_implementation_blueprint", "frontend_library_production_preset", "library_capability_fit", "capability_maximization_matrix", "library_orchestration_system", "rendered_quality_gate", "qa_evidence_contract", "browser_qa_matrix", "runtime_evidence_regression", "performance_budget_contract", "accessibility_interaction_contract", "responsive_containment", "performance", "visual_qa"]
+    },
+    {
+      "id": "library_orchestration_system",
+      "prompt": "Use Stark library orchestration for this high-craft React page that may combine native primitives, Motion, GSAP, Three/R3F, Rive/Lottie/video, data-viz, forms, command palettes, and product libraries. Define surface frequency, product object, core interaction, native/product/motion/data/asset/styling/state/accessibility/performance owners, QA probes, rejected libraries, and removal rules before implementation.",
+      "expected": ["library_orchestration_system", "capability_maximization_matrix", "library_capability_fit", "frontend_library_production_preset", "library_implementation_blueprint", "library_source_verification_gate", "capability_stack_rendered_gate", "frontend_technique_matrix", "motion_library_playbook", "product_library_playbook", "product_library_composition", "library_de_defaulting_system", "advanced_visual_system", "performance_budget_contract", "accessibility_interaction_contract", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "performance_budget_selection",
+      "prompt": "Use Stark performance budget before implementing this animation-heavy React page with Motion, GSAP, Three/R3F, video, generated assets, charts, and a data table. Define critical path, heavy features, budgets, library cost, rendering/media/data risk, fallbacks, pause/offscreen policy, rejected effects, and evidence.",
+      "expected": ["performance_budget_contract", "frontend_technique_matrix", "motion_library_playbook", "data_viz_library", "asset_realism_matrix", "stack_blueprint", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "advanced_visual_system_selection",
+      "prompt": "Use Stark advanced visual systems before building this hero with shader-like visuals, canvas particles, WebGL/Spline, Rive state machines, Lottie loops, video, and generated key art. Choose one main mechanic, visual owner, motif, inputs, code-native content, performance budget, fallback, rejected spectacle, and QA probes.",
+      "expected": ["advanced_visual_system", "library_orchestration_system", "animation_direction", "premium_animation_direction", "motion_pattern_atlas", "motion_library_playbook", "art_direction_asset_board", "asset_realism_matrix", "asset_production", "performance_budget_contract", "qa_evidence_contract", "browser_qa_matrix", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "page_proof_architecture",
+      "prompt": "Use Stark page proof architecture for this product page where the hero is strong but the rest feels generic. Define page job, section jobs, proof ladder, sequence, interaction/proof moments, repeated motif, copy constraints, mobile sequence, deleted sections, and QA checks before implementation.",
+      "expected": ["page_proof_architecture", "composition_system", "progressive_disclosure_information_scent", "pattern_selection", "product_intent_matrix", "copy_system", "visual_repair_playbook", "qa_evidence_contract", "design_acceptance_gate", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "conversion_proof_system",
+      "prompt": "Use Stark conversion proof for this product landing page. Define visitor intent, source/message match, offer, primary action, secondary action, decision stage, main objection, proof ladder, trust/risk signals, CTA placement/rhythm, friction removals, measurement events, and QA checks before styling.",
+      "expected": ["conversion_proof_system", "page_proof_architecture", "composition_system", "copy_system", "product_intent_matrix", "text_resilience_localization_system", "visual_qa", "responsive_containment", "accessibility"]
+    },
+    {
+      "id": "design_preflight_scope",
+      "prompt": "Use Stark design preflight before building this ambitious product page. Choose prompt type, surface, user mode, primary object, risk level, must-read references, skipped references, max libraries/effects, evidence required, and stop conditions.",
+      "expected": ["design_preflight", "design_director_runbook", "variant_selection_loop", "design_orchestration", "product_intent_matrix", "pattern_selection", "reference_board", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "next_app_shell_boundaries",
+      "prompt": "Design a Next.js product app shell with server/client component boundaries, loading and error states, route/detail continuity, and a QA plan.",
+      "expected": ["navigation_information_architecture", "experience_continuity_system", "stack_blueprint", "component_architecture", "product_library_playbook", "motion_library_playbook", "motion_recipe", "usability_states", "task_ergonomics", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "navigation_information_architecture",
+      "prompt": "Use Stark navigation and information architecture for this multi-route product app. Define product job, user mode, primary objects, route map, navigation model, current-location model, search/command model, breadcrumb/tab behavior, deep-link state, route states, mobile replacement, focus/scroll restoration, responsive containment, and QA checks before implementation.",
+      "expected": ["navigation_information_architecture", "experience_continuity_system", "product_intent_matrix", "pattern_selection", "component_architecture", "accessibility_interaction_contract", "task_ergonomics", "usability_pattern_matrix", "responsive_containment", "qa_evidence_contract", "browser_qa_matrix", "visual_qa"]
+    },
+    {
+      "id": "experience_continuity_system",
+      "prompt": "Use Stark experience continuity for this multi-screen product before implementation. Define product object model, route/screen map, primary journey, shared navigation/orientation, state language, component/anatomy reuse, typography continuity, token/material continuity, motion continuity, copy/vocabulary continuity, data/fixture continuity, responsive continuity, accessibility continuity, rejected discontinuities, and QA journey checks.",
+      "expected": ["experience_continuity_system", "navigation_information_architecture", "product_intent_matrix", "surface_playbook_matrix", "component_anatomy", "interaction_state_matrix", "component_visual_composition", "typography_system", "visual_token_recipe", "copy_system", "product_data_content_system", "adaptive_composition_system", "accessibility_interaction_contract", "qa_evidence_contract", "browser_qa_matrix", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "adaptive_composition_system",
+      "prompt": "Use Stark adaptive composition for this responsive product UI. Define the core idea to preserve, desktop structure, tablet structure, mobile structure, breakpoint triggers, component/container queries, navigation transformation, proof/media transformation, dense-region transformation, motion/asset fallback, text/CTA transformation, and QA viewports before implementation.",
+      "expected": ["adaptive_composition_system", "responsive_adaptation_gate", "responsive_containment", "composition_system", "layout_precision_system", "spatial_rhythm_density_system", "page_proof_architecture", "navigation_information_architecture", "text_resilience_localization_system", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "responsive_adaptation_gate",
+      "prompt": "Use Stark responsive adaptation gate after rendering this serious web UI. Inspect desktop, tablet, mobile, and reflow evidence; decide breakpoint/container triggers; verify navigation, dense regions, media/proof crops, text/CTA behavior, touch/input behavior, scroll ownership, failed viewport, required repair, re-check evidence, and gate result.",
+      "expected": ["responsive_adaptation_gate", "adaptive_composition_system", "responsive_containment", "browser_qa_matrix", "qa_evidence_contract", "implementation_review_loop", "text_resilience_localization_system", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "layout_precision_system",
+      "prompt": "Use Stark layout precision for this generated product page that feels almost good but slightly cheap. Define grid/container, pane model, alignment spine, spacing rhythm, text measure, media/object frame, control and hit-target rule, adaptive breakpoints, overflow/reflow plan, optical balance, and QA checks before visual tokens.",
+      "expected": ["layout_precision_system", "spatial_rhythm_density_system", "composition_system", "visual_token_recipe", "theme_mode_density_system", "typography_system", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "spatial_rhythm_density_system",
+      "prompt": "Use Stark spatial rhythm and density for this generated page/app that feels like a presentation or same-gap mockup. Define user frequency, density mode, relationship scale, repetition rhythm, whitespace job, compression rule, expansion rule, touch/target rule, scroll ownership, zoom/reflow check, and hard fails before visual tokens.",
+      "expected": ["spatial_rhythm_density_system", "layout_precision_system", "composition_system", "visual_token_recipe", "theme_mode_density_system", "task_ergonomics", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "reference_board_before_design",
+      "prompt": "Research 3-5 references before designing a permissions and trust screen. Extract structure, motion, state/recovery, responsive lessons, and what not to copy.",
+      "expected": ["reference_board", "research_synthesis_contract", "benchmark_repair_loop", "pattern_selection", "component_anatomy", "usability_states", "task_ergonomics", "reference_transformation", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "research_synthesis_contract",
+      "prompt": "Use Stark research synthesis after a reference board and before implementation. Turn shipped references, official library docs, typography choices, choreography lessons, usability requirements, responsive constraints, rejected options, and QA risks into binding build decisions and evidence.",
+      "expected": ["research_synthesis_contract", "reference_board", "design_orchestration", "library_orchestration_system", "typography_system", "font_selection_matrix", "choreography_state_machine", "task_ergonomics", "qa_evidence_contract", "generation_blueprint_contract", "implementation_review_loop", "reference_transformation", "visual_qa"]
+    },
+    {
+      "id": "benchmark_repair_against_reference",
+      "prompt": "This generated landing page is worse than the reference but I do not want a copy. Use Stark benchmark repair to name the quality gap, originality boundary, one high-impact repair, before/after evidence, and remaining delta.",
+      "expected": ["reference_board", "research_synthesis_contract", "benchmark_repair_loop", "design_orchestration", "visual_repair_playbook", "quality_metrics", "qa_evidence_contract", "browser_qa_matrix", "design_acceptance_gate", "reference_transformation", "composition_system", "typography_system", "copy_system", "visual_qa", "responsive_containment"]
+    },
+    {
+      "id": "design_quality_report",
+      "prompt": "Score this generated product UI with Stark quality metrics. Identify hard fail gates, cite evidence, apply the highest-impact repair, and report remaining risk.",
+      "expected": ["quality_metrics", "generated_output_scorecard", "quality_calibration_ladder", "dogfood_generation_loop", "rendered_quality_gate", "visual_finish_system", "visual_repair_playbook", "feedback_memory_loop", "qa_evidence_contract", "browser_qa_matrix", "runtime_evidence_regression", "implementation_review_loop", "design_acceptance_gate", "visual_qa", "visual_qa_workflow", "usability_states", "task_ergonomics", "copy_system", "responsive_containment", "accessibility", "performance"]
+    },
+    {
+      "id": "generated_output_scorecard",
+      "prompt": "Use Stark generated-output scorecard for this rendered generated artifact. Require an evidence pack, hard fails, weighted scores, confidence cap, gate result, publish decision, one required repair, re-check evidence, and feedback-memory decision before calling it gallery-ready.",
+      "expected": ["generated_output_scorecard", "quality_metrics", "rendered_quality_gate", "first_draft_triage_loop", "design_acceptance_gate", "qa_evidence_contract", "browser_qa_matrix", "runtime_evidence_regression", "visual_repair_playbook", "feedback_memory_loop", "responsive_containment", "accessibility", "performance", "visual_qa"]
+    },
+    {
+      "id": "rendered_quality_gate",
+      "prompt": "Use Stark rendered quality gate on a generated UI after browser or screenshot evidence exists. Judge the 3-second read, product object clarity, composition geometry, typography texture, copy/proof credibility, state usefulness, asset/material quality, motion still-frame quality, responsive dignity, library/default residue, screenshot-worthiness, red flags, required repair, and re-check evidence.",
+      "expected": ["rendered_quality_gate", "design_fingerprint_diversity_gate", "rendered_typography_quality_gate", "first_draft_triage_loop", "design_critique_panel", "quality_metrics", "quality_calibration_ladder", "visual_finish_system", "visual_repair_playbook", "browser_qa_matrix", "qa_evidence_contract", "implementation_review_loop", "design_acceptance_gate", "typography_system", "copy_system", "responsive_containment", "visual_qa", "visual_qa_workflow"]
+    },
+    {
+      "id": "design_critique_panel",
+      "prompt": "Use Stark design critique panel after rendered evidence exists. Review product, UX, visual composition, typography/copy, motion/media, accessibility, and implementation/library lenses; preserve the strongest decision, name the highest-risk weakness, choose one repair, and name evidence to re-check.",
+      "expected": ["design_critique_panel", "design_taste_diagnostics", "rendered_quality_gate", "quality_metrics", "visual_repair_playbook", "quality_calibration_ladder", "implementation_review_loop", "qa_evidence_contract", "browser_qa_matrix", "visual_qa", "visual_qa_workflow"]
+    },
+    {
+      "id": "design_taste_diagnostics",
+      "prompt": "Use Stark design taste diagnostics after this critique: the UI feels cheap, bland, messy, copied, childish, overdesigned, generic, and too much like the same Stark page. Diagnose the symptom, likely cause, taste dimension, product risk, strongest decision to preserve, first repair, what not to change, evidence to re-check, and future memory trigger before repairing.",
+      "expected": ["design_taste_diagnostics", "design_critique_panel", "visual_repair_playbook", "feedback_memory_loop", "quality_calibration_ladder", "rendered_quality_gate", "style_diversity_matrix", "visual_language_decision_matrix", "copy_system", "typography_system", "visual_finish_system", "qa_evidence_contract", "visual_qa"]
+    },
+    {
+      "id": "first_draft_triage_loop",
+      "prompt": "Use Stark first-draft triage after rendering this generated high-craft page. Decide whether to keep, repair, rebuild, or reject it; name draft evidence, requested quality level, product object presence, strongest decision to preserve, weakest blocking decision, recipe to preserve or switch to, one next action, evidence to re-check, and what not to polish.",
+      "expected": ["first_draft_triage_loop", "rendered_quality_gate", "design_fingerprint_diversity_gate", "signature_surface_recipe", "implementation_pattern_library", "design_critique_panel", "visual_repair_playbook", "quality_calibration_ladder", "implementation_review_loop", "qa_evidence_contract", "browser_qa_matrix", "visual_qa", "visual_qa_workflow"]
+    },
+    {
+      "id": "quality_calibration_ladder",
+      "prompt": "Use Stark quality calibration after scoring and acceptance evidence shows a generated UI is below the requested level but not broken. Name the requested level, current tier, evidence inspected, weakest dimension, surface-specific ceiling, one-level-up repair, what not to change, evidence to re-check, and stop condition.",
+      "expected": ["quality_calibration_ladder", "quality_metrics", "rendered_quality_gate", "visual_finish_system", "design_acceptance_gate", "visual_repair_playbook", "qa_evidence_contract", "browser_qa_matrix", "composition_system", "typography_system", "copy_system", "task_ergonomics", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "visual_finish_system",
+      "prompt": "Use Stark visual finish on this structurally good but cheap-feeling rendered UI. Preserve the strongest decision, diagnose the weak finish symptom, repair optical alignment, surface detail, type/detail, value contrast, depth/border/shadow, motion still-frame quality, delete weak decoration, and name screenshot evidence to re-check.",
+      "expected": ["visual_finish_system", "layout_precision_system", "visual_token_recipe", "typography_system", "rendered_typography_quality_gate", "rendered_quality_gate", "quality_calibration_ladder", "visual_repair_playbook", "qa_evidence_contract", "browser_qa_matrix", "visual_qa", "visual_qa_workflow", "responsive_containment"]
+    },
+    {
+      "id": "dogfood_generation_loop",
+      "prompt": "Use Stark dogfood generation loop and batch matrix to test whether recent Stark guidance actually improves generated design quality. Choose 3-5 representative standard surfaces, prompts, guidance under test, generated artifacts, desktop/mobile evidence, rendered quality gates, design-quality scores, repairs, re-check evidence, feedback memory entries, guidance changes required, gallery decisions, and remaining risk.",
+      "expected": ["dogfood_generation_loop", "dogfood_batch_matrix", "showcase_selection_quality", "rendered_quality_gate", "design_fingerprint_diversity_gate", "quality_metrics", "qa_evidence_contract", "browser_qa_matrix", "runtime_evidence_regression", "visual_repair_playbook", "feedback_memory_loop", "design_acceptance_gate", "surface_playbook_matrix", "generation_blueprint_contract", "implementation_pattern_library", "visual_qa", "visual_qa_workflow"]
+    },
+    {
+      "id": "showcase_selection_quality_contract",
+      "prompt": "Use Stark showcase selection to curate generated README/gallery examples. Define batch purpose, audience, surfaces generated, quality target, comparison baseline, selection and rejection criteria, required evidence, selected examples, rejected examples, repair candidates, final gallery decision, and next batch gaps.",
+      "expected": ["showcase_selection_quality", "dogfood_generation_loop", "dogfood_batch_matrix", "rendered_quality_gate", "design_fingerprint_diversity_gate", "design_acceptance_gate", "quality_metrics", "benchmark_repair_loop", "runtime_evidence_regression", "visual_repair_playbook", "feedback_memory_loop", "visual_qa", "visual_qa_workflow"]
+    },
+    {
+      "id": "visual_repair_bland_ui",
+      "prompt": "Use Stark repair on a rendered UI that feels bland, generic, and presentation-like. Diagnose the symptom and likely cause, choose the first high-impact repair, name what not to do, apply or specify the fix, and re-check the same evidence.",
+      "expected": ["first_draft_triage_loop", "design_critique_panel", "design_taste_diagnostics", "visual_repair_playbook", "feedback_memory_loop", "composition_system", "quality_metrics", "browser_qa_matrix", "visual_qa", "visual_qa_workflow", "product_intent_matrix", "pattern_selection", "copy_system", "typography_system", "responsive_containment"]
+    },
+    {
+      "id": "feedback_memory_loop",
+      "prompt": "Use Stark feedback memory after this user critique: the page looks cheap, copied, and like the same Stark design again. Preserve the user's wording, classify symptom and severity, name affected dimensions, evidence, repair that worked, repair that failed, a future ban, future preference, future stress test, scope, and expiration before generating another variant.",
+      "expected": ["feedback_memory_loop", "visual_repair_playbook", "variant_selection_loop", "style_diversity_matrix", "benchmark_repair_loop", "implementation_review_loop", "design_acceptance_gate", "quality_metrics", "visual_qa", "responsive_containment"]
+    },
+    {
+      "id": "stark_regenerate_second_attempt",
+      "prompt": "Use Stark regenerate for a second attempt after the user rejected the first design as messy and generic. Carry feedback memory forward, generate three variants, select one, reject the others, implement only the selected direction, run implementation review, QA evidence, visual repair, and acceptance gate.",
+      "expected": ["feedback_memory_loop", "first_draft_triage_loop", "variant_selection_loop", "design_director_runbook", "style_diversity_matrix", "design_fingerprint_diversity_gate", "composition_system", "typography_system", "library_orchestration_system", "implementation_review_loop", "qa_evidence_contract", "visual_repair_playbook", "design_acceptance_gate", "visual_qa"]
+    },
+    {
+      "id": "task_ergonomics_audit",
+      "prompt": "Audit this attractive dashboard for real usability: repeated-use speed, keyboard path, error recovery, state coverage, touch targets, focus visibility, and whether the primary task gets faster after first use.",
+      "expected": ["task_ergonomics", "usability_pattern_matrix", "usability_heuristic_evaluation", "usability_scenario_testing", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "interaction_state_matrix", "usability_states", "quality_metrics", "qa_evidence_contract", "component_anatomy", "copy_system", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "first_run_empty_state_system",
+      "prompt": "Use Stark first-run and empty-state system for this onboarding or empty dashboard. Define user promise, first value action, minimum setup, deferrable setup, sample/demo content, empty-state type, primary CTA, secondary action, permission timing, progress/resume model, recovery states, contextual teaching, success handoff, and QA evidence before visual styling.",
+      "expected": ["first_run_empty_state_system", "task_ergonomics", "usability_pattern_matrix", "usability_scenario_testing", "task_flow_acceptance_harness", "interaction_state_matrix", "copy_system", "product_data_content_system", "icon_illustration_system", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "usability_pattern_selection",
+      "prompt": "Use Stark usability patterns before visual design for this product UI. Choose between guided setup, review wizard, command surface, priority queue, master/detail, monitoring board, workbench, settings, permission matrix, checkout path, task-led docs, agent progress, collaboration thread, and mobile priority stack. Include primary actions, speed path, error prevention, recovery, keyboard/touch model, rejected patterns, and evidence tasks.",
+      "expected": ["task_ergonomics", "usability_pattern_matrix", "usability_heuristic_evaluation", "usability_scenario_testing", "task_flow_acceptance_harness", "interaction_state_matrix", "form_state_validation_system", "component_anatomy", "usability_states", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "usability_heuristic_evaluation",
+      "prompt": "Use Stark heuristic evaluation on this polished but confusing product UI. Define surface, user mode, core task, evaluation method, narrow scope, heuristics checked, cognitive walkthrough steps, findings, 0-4 severity with rationale, evidence, first repair, re-check, and remaining risk before visual polish.",
+      "expected": ["usability_heuristic_evaluation", "task_ergonomics", "usability_pattern_matrix", "usability_scenario_testing", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "interaction_state_matrix", "accessibility_interaction_contract", "qa_evidence_contract", "browser_qa_matrix", "copy_system", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "usability_scenario_testing",
+      "prompt": "Use Stark usability scenario testing for this serious product UI. Define first-run, returning-user, error/recovery, keyboard-only, and mobile/touch scenarios; success criteria; friction budget; evidence captured; usability failures; fix applied; re-check; and remaining risk before claiming it is usable.",
+      "expected": ["usability_scenario_testing", "usability_heuristic_evaluation", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "task_ergonomics", "usability_pattern_matrix", "interaction_state_matrix", "accessibility_interaction_contract", "qa_evidence_contract", "browser_qa_matrix", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "task_flow_acceptance_harness",
+      "prompt": "Use Stark task-flow acceptance harness before accepting this product UI. Define first-run, returning-user, error/recovery, keyboard-only, mobile/touch, and state-stress tasks with fixtures, success criteria, friction budget, selectors/test hooks, evidence to capture, failed task, required fix, re-check, and ship decision.",
+      "expected": ["task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "task_ergonomics", "usability_scenario_testing", "interactive_prototype_contract", "accessibility_interaction_contract", "qa_evidence_contract", "browser_qa_matrix", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "rendered_usability_acceptance_gate",
+      "prompt": "Use Stark rendered usability acceptance gate after this attractive generated product UI renders. Inspect primary task, first-run, returning-user speed path, error/recovery, keyboard/focus, mobile/touch, state stress, risk/consequence clarity, cognitive walkthrough failure, severity, friction budget, required repair, re-check evidence, and gate result.",
+      "expected": ["rendered_usability_acceptance_gate", "usability_heuristic_evaluation", "usability_scenario_testing", "task_flow_acceptance_harness", "task_ergonomics", "usability_pattern_matrix", "accessibility_interaction_contract", "accessibility_acceptance_gate", "browser_qa_matrix", "qa_evidence_contract", "rendered_quality_gate", "implementation_review_loop", "visual_qa", "responsive_containment", "accessibility"]
+    },
+    {
+      "id": "copy_system_rewrite",
+      "prompt": "Rewrite this nice-looking product page so the copy stops feeling cheap. Define the copy job, hero headline, proof labels, CTA text, state/recovery copy, banned phrases, and QA checks.",
+      "expected": ["copy_system", "copy_quality_gate", "design_orchestration", "typography_system", "font_selection_matrix", "usability_states", "quality_metrics", "visual_qa"]
+    },
+    {
+      "id": "copy_quality_gate",
+      "prompt": "Use Stark copy quality gate on this rendered UI. Inventory the actual H1, CTAs, proof labels, nav labels, state/recovery text, and risk copy; judge voice fit, product nouns, action verbs, banned phrases, mobile readability, failed text, required rewrite, re-check evidence, and gate result.",
+      "expected": ["copy_quality_gate", "copy_system", "progressive_disclosure_information_scent", "text_resilience_localization_system", "browser_qa_matrix", "qa_evidence_contract", "quality_metrics", "visual_qa"]
+    },
+    {
+      "id": "visual_token_recipe_selection",
+      "prompt": "Choose a visual token recipe for this product UI: palette ratio, background/surface/text/accent roles, semantic states, spacing density, radius, borders, shadows, contrast, and banned default palettes.",
+      "expected": ["material_system", "visual_token_recipe", "color_material_contrast_gate", "theme_mode_density_system", "token_implementation_contract", "typography_system", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "color_material_contrast_gate",
+      "prompt": "Use Stark color/material contrast gate after rendering this UI. Inspect token/source files, rendered modes, palette ratio, surface hierarchy, text and non-text contrast, focus/selection visibility, semantic state separation, brand/accent ownership, chart/media color behavior, material depth, default residue, required repair, re-check evidence, and gate result.",
+      "expected": ["color_material_contrast_gate", "visual_token_recipe", "theme_mode_density_system", "token_implementation_contract", "accessibility_acceptance_gate", "browser_qa_matrix", "qa_evidence_contract", "visual_qa"]
+    },
+    {
+      "id": "token_implementation_contract",
+      "prompt": "Use Stark token implementation contract before coding this themed React UI. Map primitive, semantic, component, state, mode/density, and chart/media tokens into CSS variables, Tailwind/theme variables, product-library overrides, contrast checks, dead-token checks, and QA evidence.",
+      "expected": ["visual_token_recipe", "color_material_contrast_gate", "theme_mode_density_system", "token_implementation_contract", "product_library_composition", "library_de_defaulting_system", "component_state_gallery", "accessibility_interaction_contract", "frontend_technique_matrix", "qa_evidence_contract", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "theme_mode_density_system",
+      "prompt": "Use Stark theme mode and density system for this product app. Define light, dark, high contrast, forced-colors behavior, compact and comfortable density, semantic token parity, focus and selection parity, brand-theme boundaries, media/chart adaptation, first-paint behavior, and QA checks before implementation.",
+      "expected": ["theme_mode_density_system", "visual_token_recipe", "color_material_contrast_gate", "token_implementation_contract", "material_system", "accessibility_interaction_contract", "product_library_composition", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "form_state_validation_system",
+      "prompt": "Use Stark form state and validation system for this checkout/settings flow. Define form job, user risk, form pattern, field anatomy, validation timing, dirty/submitting/server states, error recovery, async validation, review/confirmation, React Hook Form/Zod or native ownership, accessibility, responsive behavior, and QA checks before implementation.",
+      "expected": ["form_state_validation_system", "interaction_state_matrix", "microinteraction_affordance_system", "accessibility_interaction_contract", "product_library_playbook", "product_library_composition", "task_ergonomics", "usability_pattern_matrix", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "interactive_prototype_contract",
+      "prompt": "Use Stark interactive prototype contract before coding this generated dashboard/app preview. Define the product task, primary interaction, state owner, fixture/state model, controls that must work, intentionally static controls, state transitions, error/recovery path, keyboard/touch path, motion feedback tied to state, and QA probes.",
+      "expected": ["interactive_prototype_contract", "component_state_gallery", "story_driven_qa_harness", "component_anatomy", "interaction_state_matrix", "microinteraction_affordance_system", "frontend_technique_matrix", "component_architecture", "product_data_content_system", "accessibility_interaction_contract", "qa_evidence_contract", "browser_qa_matrix", "usability_states", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "component_api_variant_contract",
+      "prompt": "Use Stark component API and variant contract before implementing this reusable/library-backed component. Define product job, behavior owner, public props, controlled and uncontrolled state, slots/anatomy, variants, size/density, state props or data attributes, token hooks, accessibility contract, responsive contract, library wrapping rule, story args, test selectors, rejected API, and deprecation/removal rule.",
+      "expected": ["component_api_variant_contract", "component_anatomy", "component_visual_composition", "component_state_gallery", "story_driven_qa_harness", "design_system_production_loop", "token_implementation_contract", "product_library_composition", "library_de_defaulting_system", "accessibility_interaction_contract", "interactive_prototype_contract", "frontend_technique_matrix", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "component_state_gallery",
+      "prompt": "Use Stark component state gallery for this reusable React product UI before acceptance. Define components to gallery, story/state list, props/args, fixture variants, interaction stories, visual states, responsive widths, theme/density modes, accessibility probes, visual-regression targets, and hard fails.",
+      "expected": ["component_state_gallery", "story_driven_qa_harness", "design_system_production_loop", "component_anatomy", "interaction_state_matrix", "interactive_prototype_contract", "microinteraction_affordance_system", "frontend_technique_matrix", "product_library_composition", "accessibility_interaction_contract", "qa_evidence_contract", "browser_qa_matrix", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "story_driven_qa_harness",
+      "prompt": "Use Stark story-driven QA harness before accepting this reusable React product UI. Define Storybook/local-gallery/Playwright story format, state stories, interaction stories, visual baseline stories, accessibility stories, responsive/theme/density stories, deterministic fixtures, dynamic regions to stabilize, selectors/test hooks, checks to run, hard fails, required repair, re-check evidence, and baseline/update decision.",
+      "expected": ["story_driven_qa_harness", "component_state_gallery", "design_system_production_loop", "interactive_prototype_contract", "accessibility_interaction_contract", "runtime_evidence_regression", "frontend_quality_automation_gate", "qa_evidence_contract", "browser_qa_matrix", "component_anatomy", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "design_system_production_loop",
+      "prompt": "Use Stark design system production loop for this generated React component set. Define system source of truth, token source, component inventory, component-to-code mapping, variant/property model, state coverage, Storybook or local docs coverage, usage guidance, accessibility contract, theme/mode/density contract, product-library ownership, token/code export, drift checks, versioning/change note, out-of-system exceptions, and ship decision.",
+      "expected": ["design_system_production_loop", "component_api_variant_contract", "component_state_gallery", "story_driven_qa_harness", "token_implementation_contract", "theme_mode_density_system", "product_library_composition", "library_de_defaulting_system", "accessibility_interaction_contract", "frontend_quality_automation_gate", "visual_qa", "accessibility", "responsive_containment"]
+    },
+    {
+      "id": "microinteraction_affordance_system",
+      "prompt": "Use Stark microinteraction and affordance system for this product UI. Define hover, focus, pressed, selected, disabled, busy, success, and error feedback; timing/easing; pointer, keyboard, and touch parity; selection and drag affordances; optimistic/async feedback; reduced-motion behavior; library ownership; and QA checks.",
+      "expected": ["microinteraction_affordance_system", "interaction_state_matrix", "accessibility_interaction_contract", "visual_token_recipe", "theme_mode_density_system", "task_ergonomics", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "product_library_selection",
+      "prompt": "Choose the product libraries for this React dashboard: accessible primitives, table behavior, server state, forms, validation, popovers, command menu, rejected libraries, ownership, styling, and QA.",
+      "expected": ["product_intent_matrix", "surface_playbook_matrix", "generation_blueprint_contract", "implementation_pattern_library", "stack_blueprint", "component_architecture", "product_library_playbook", "product_library_composition", "form_state_validation_system", "usability_states", "task_ergonomics", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "product_library_composition",
+      "prompt": "Use Stark product-library composition for this React app before coding. Choose behavior owner, styling owner, state/data owner, token/theme mapping, component anatomy, data/form/overlay model, originality move, rejected default library styling, and QA probes.",
+      "expected": ["product_intent_matrix", "frontend_technique_matrix", "stack_blueprint", "component_architecture", "product_library_playbook", "product_library_composition", "form_state_validation_system", "accessibility_interaction_contract", "visual_token_recipe", "token_implementation_contract", "interaction_state_matrix", "task_ergonomics", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "library_de_defaulting_system",
+      "prompt": "Use Stark library de-defaulting for this React UI that uses shadcn, Radix, TanStack Table, TanStack Query, React Hook Form, Zod, Floating UI, cmdk, and Embla. Identify default fingerprints, product-specific replacements, token changes, anatomy changes, state/style changes, copy/data changes, responsive changes, removed components, docs-example comparison, and QA checks before shipping.",
+      "expected": ["library_de_defaulting_system", "product_library_playbook", "product_library_composition", "visual_token_recipe", "theme_mode_density_system", "token_implementation_contract", "component_architecture", "accessibility_interaction_contract", "form_state_validation_system", "interaction_state_matrix", "visual_qa", "responsive_containment"]
+    },
+    {
+      "id": "accessibility_interaction_contract",
+      "prompt": "Use Stark accessibility interaction contract before implementing this React app with dialogs, menus, tabs, comboboxes, command palette, form errors, status updates, and custom disabled controls. Define native elements, ARIA patterns, keyboard model, focus model, live-region model, hidden content, reduced motion, target/touch behavior, labels, rejected patterns, and QA probes.",
+      "expected": ["accessibility_interaction_contract", "accessibility_acceptance_gate", "component_anatomy", "interaction_state_matrix", "form_state_validation_system", "product_library_composition", "qa_evidence_contract", "browser_qa_matrix", "task_ergonomics", "accessibility", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "accessibility_acceptance_gate",
+      "prompt": "Use Stark accessibility acceptance gate before accepting this serious public UI. Define target WCAG 2.2 A/AA scope, evidence inspected, semantic structure, names/roles/values, keyboard/focus, contrast/non-text contrast, text resize/reflow, motion/media, target/input modalities, forms/errors/status, custom widget APG behavior, automated and manual checks, hard fails, required repair, re-check evidence, remaining risk, and gate result.",
+      "expected": ["accessibility_acceptance_gate", "accessibility_interaction_contract", "qa_evidence_contract", "browser_qa_matrix", "runtime_evidence_regression", "design_acceptance_gate", "implementation_review_loop", "component_state_gallery", "form_state_validation_system", "interaction_state_matrix", "responsive_containment", "accessibility", "visual_qa"]
+    },
+    {
+      "id": "qa_evidence_contract",
+      "prompt": "Create the QA evidence contract for this animation-heavy React product page. Require desktop/mobile screenshots, console, primary interaction, reduced motion, nonblank media/canvas checks, hard fails, fix applied, and re-check.",
+      "expected": ["qa_evidence_contract", "browser_qa_matrix", "quality_metrics", "design_acceptance_gate", "visual_qa", "visual_qa_workflow", "accessibility", "performance", "responsive_containment"]
+    },
+    {
+      "id": "runtime_evidence_regression_contract",
+      "prompt": "Use Stark runtime evidence regression for this generated showcase before accepting screenshots. Define target surface, evidence owner, baseline viewports, baseline states, baseline interactions, screenshot scope, dynamic regions to mask, runtime probes, accessibility probes, performance/vitals probes, media/canvas probes, acceptance threshold, update-baseline rule, failure triage, and stored artifacts.",
+      "expected": ["runtime_evidence_regression", "frontend_quality_automation_gate", "browser_qa_matrix", "qa_evidence_contract", "rendered_quality_gate", "implementation_review_loop", "design_acceptance_gate", "visual_qa_workflow", "component_state_gallery", "motion_frame_qa_contract", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "frontend_quality_automation_gate",
+      "prompt": "Use Stark frontend quality automation gate for this public React demo before release. Define advisory/blocking/release-blocking mode, local and CI commands, Playwright projects/viewports, Storybook or local-gallery coverage, visual baselines, interaction flows, accessibility checks, performance/vitals checks, usability tasks, deterministic fixtures, artifact output, failure triage, skipped checks, baseline-update rule, and ship decision.",
+      "expected": ["frontend_quality_automation_gate", "runtime_evidence_regression", "story_driven_qa_harness", "qa_evidence_contract", "browser_qa_matrix", "component_state_gallery", "accessibility_interaction_contract", "performance_budget_contract", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate", "implementation_review_loop", "design_acceptance_gate", "accessibility", "performance", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "design_acceptance_gate",
+      "prompt": "Use Stark acceptance gate after QA on this public high-craft product page. Classify the result as blocked, passable, good, high-craft, or portfolio; compare evidence to the requested level; name hard fails, scores below target, one required repair, evidence to re-check, and whether to stop or continue.",
+      "expected": ["design_acceptance_gate", "ambition_calibration_contract", "rendered_quality_gate", "quality_metrics", "qa_evidence_contract", "browser_qa_matrix", "visual_repair_playbook", "benchmark_repair_loop", "visual_qa", "visual_qa_workflow", "accessibility", "performance", "responsive_containment"]
+    },
+    {
+      "id": "implementation_review_loop",
+      "prompt": "Use Stark implementation review to compare the design decisions against the rendered/code output. Inspect source decisions, files/components, runtime evidence, drift, missing states, library ownership mismatch, typography/token mismatch, motion/choreography mismatch, responsive/adaptive mismatch, usability scenario mismatch, accessibility/focus mismatch, performance/fallback mismatch, highest-impact fix, re-check evidence, and remaining risk.",
+      "expected": ["implementation_review_loop", "qa_evidence_contract", "browser_qa_matrix", "visual_repair_playbook", "design_acceptance_gate", "design_director_runbook", "library_orchestration_system", "usability_scenario_testing", "responsive_containment", "visual_qa"]
+    },
+    {
+      "id": "browser_qa_matrix_probe",
+      "prompt": "Use Stark browser QA to verify a rendered React landing page. Define probes for desktop/mobile overflow, h1/CTA/proof text, console errors, primary interaction, keyboard/focus, reduced motion, nonblank images/video/canvas, typography fit, state evidence, hard fails, fix, and re-check.",
+      "expected": ["qa_evidence_contract", "browser_qa_matrix", "rendered_quality_gate", "rendered_typography_quality_gate", "implementation_review_loop", "visual_repair_playbook", "visual_qa", "visual_qa_workflow", "quality_metrics", "accessibility", "performance", "responsive_containment"]
+    }
+  ]
+}

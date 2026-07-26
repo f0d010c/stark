@@ -16,6 +16,9 @@ Read:
 
 - `references/ui-patterns/ui-decision-brief.md`
 - `references/ui-patterns/asset-selection.md`
+- `references/ui-patterns/asset-realism-matrix.md`
+- `references/ui-patterns/asset-production-pipeline.md`
+- `references/ui-patterns/advanced-visual-systems.md` when assets become the signature visual system
 - the routed platform or web skill
 
 Then produce an asset plan before implementation:
@@ -24,6 +27,7 @@ Then produce an asset plan before implementation:
 Asset plan
 - Needed assets: product UI mock, icons, texture, typeface, references
 - Source: local Stark library, lucide, generated CSS/SVG mock, imagegen, external reference
+- Advanced visual system: main mechanic, owner, motif, fallback, rejected spectacle, if relevant
 - License risk: none / low / needs attribution / avoid
 - Usage: hero product preview, warning states, workflow diagram, empty state
 - Reference extraction: structure only, not copied visuals

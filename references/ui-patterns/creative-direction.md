@@ -4,6 +4,8 @@ Use this before implementation when the user asks for a polished, original, non-
 
 Creativity is not random decoration. It is a specific world, a few strong constraints, and one tasteful risk held consistently across the interface.
 
+Use `style-diversity-matrix.md` after the creative direction brief when the work risks looking like prior Stark output. Then use `composition-system.md` to turn the chosen world, lane, metaphor, and motif into a first viewport pattern, grid, section rhythm, proof placement, and responsive replacement.
+
 ## Creative direction brief
 
 Before coding, produce this:

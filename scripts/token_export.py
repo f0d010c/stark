@@ -29,6 +29,10 @@ from typing import Any
 
 
 REF = re.compile(r"\{([^}]+)\}")
+RESERVED_IDENTIFIERS = {
+    "class", "default", "extension", "fun", "import", "in", "is", "let",
+    "object", "package", "static", "val", "var", "when",
+}
 
 
 def load_tokens(path: Path) -> dict[str, Any]:
@@ -67,7 +71,7 @@ def resolve(value: Any, all_tokens: dict[str, dict[str, Any]], visited: set[str]
     if full_ref:
         ref_path = full_ref.group(1)
         if ref_path not in all_tokens:
-            return value
+            raise ValueError(f"Unresolved token reference: {ref_path}")
         if ref_path in visited:
             raise ValueError(f"Circular token reference detected: {' -> '.join([*visited, ref_path])}")
         return resolve(all_tokens[ref_path]["$value"], all_tokens, visited | {ref_path})
@@ -75,7 +79,7 @@ def resolve(value: Any, all_tokens: dict[str, dict[str, Any]], visited: set[str]
     def replace_reference(match: re.Match[str]) -> str:
         ref_path = match.group(1)
         if ref_path not in all_tokens:
-            return match.group(0)
+            raise ValueError(f"Unresolved token reference: {ref_path}")
         if ref_path in visited:
             raise ValueError(f"Circular token reference detected: {' -> '.join([*visited, ref_path])}")
         resolved = resolve(all_tokens[ref_path]["$value"], all_tokens, visited | {ref_path})
@@ -104,10 +108,27 @@ def tailwind_color_name(path: str) -> str:
 
 
 def camel(s: str) -> str:
-    parts = [part for part in re.split(r"[._-]+", s) if part]
+    parts = [part for part in re.split(r"[^A-Za-z0-9]+", s) if part]
     if not parts:
-        return ""
-    return parts[0] + "".join(part[:1].upper() + part[1:] for part in parts[1:])
+        return "token"
+    identifier = parts[0] + "".join(part[:1].upper() + part[1:] for part in parts[1:])
+    if identifier[0].isdigit():
+        identifier = f"token{identifier}"
+    if identifier in RESERVED_IDENTIFIERS:
+        identifier = f"{identifier}Token"
+    return identifier
+
+
+def ensure_unique_identifiers(paths: list[str], target: str) -> None:
+    seen: dict[str, str] = {}
+    for path in paths:
+        identifier = camel(path)
+        previous = seen.get(identifier)
+        if previous is not None and previous != path:
+            raise ValueError(
+                f"{target} identifier collision: {previous!r} and {path!r} both map to {identifier!r}"
+            )
+        seen[identifier] = path
 
 
 def numeric_token_value(value: Any, default: float) -> float:
@@ -229,6 +250,10 @@ def swift_font_expr(value: dict[str, Any]) -> str:
 
 
 def export_swiftui(tokens: dict[str, dict[str, Any]]) -> str:
+    ensure_unique_identifiers(
+        [path for path, tok in tokens.items() if tok.get("$type") in {"color", "typography"}],
+        "SwiftUI",
+    )
     lines = ["import SwiftUI", "", "extension Color {"]
     for path, tok in tokens.items():
         if tok.get("$type") != "color":
@@ -346,6 +371,10 @@ def compose_typography_slot(path: str) -> str | None:
 
 
 def export_compose(tokens: dict[str, dict[str, Any]]) -> str:
+    ensure_unique_identifiers(
+        [path for path, tok in tokens.items() if tok.get("$type") in {"color", "dimension", "typography"}],
+        "Compose",
+    )
     lines = [
         "package design.tokens",
         "",
@@ -420,6 +449,10 @@ def export_compose(tokens: dict[str, dict[str, Any]]) -> str:
 # ---- WinUI ---------------------------------------------------------------
 
 def export_winui(tokens: dict[str, dict[str, Any]]) -> str:
+    ensure_unique_identifiers(
+        [path for path, tok in tokens.items() if tok.get("$type") in {"color", "dimension"}],
+        "WinUI",
+    )
     lines = [
         '<ResourceDictionary',
         '    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"',
@@ -465,6 +498,7 @@ def main() -> int:
     raw = load_tokens(args.input)
     flat = flatten(raw)
     out = EXPORTERS[args.target](flat)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(out, encoding="utf-8")
     print(f"wrote {args.output} ({len(out)} chars, {len(flat)} tokens)", file=sys.stderr)
     return 0

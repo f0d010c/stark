@@ -1,0 +1,122 @@
+{
+  "$description": "Coverage manifest for the broad Stark design-quality objective: libraries, maximization, choreography, QA, design patterns, fonts, usability, research, originality, and implementation handoff.",
+  "dimensions": [
+    {
+      "id": "library_selection",
+      "requirement": "Choose frontend/product/motion/data libraries by product job, ownership, source evidence, fallback, and removal value instead of trend.",
+      "required_tags": ["frontend_technique_matrix", "library_capability_fit", "motion_library_playbook", "product_library_playbook", "library_orchestration_system", "library_source_verification_gate"],
+      "required_files": [
+        "references/ui-patterns/frontend-technique-matrix.md",
+        "references/ui-patterns/library-capability-fit-contract.md",
+        "references/ui-patterns/motion-library-playbooks.md",
+        "references/ui-patterns/product-library-playbooks.md",
+        "references/ui-patterns/library-orchestration-system.md",
+        "references/ui-patterns/library-source-verification-gate.md"
+      ]
+    },
+    {
+      "id": "capability_maximization",
+      "requirement": "Decide where to maximize craft and which capabilities to keep quiet before using advanced tools.",
+      "required_tags": ["ambition_calibration_contract", "ambition_surface_recipe", "capability_maximization_matrix", "capability_recipe_cookbook", "capability_stack_rendered_gate"],
+      "required_files": [
+        "references/ui-patterns/ambition-calibration-contract.md",
+        "references/ui-patterns/ambition-surface-recipes.md",
+        "references/ui-patterns/capability-maximization-matrix.md",
+        "references/ui-patterns/capability-recipe-cookbook.md",
+        "references/ui-patterns/capability-stack-rendered-gate.md"
+      ]
+    },
+    {
+      "id": "choreography_motion",
+      "requirement": "Plan animation as choreography with scenes, states, timing, authored handoff, frame QA, and reduced-motion/mobile substitutes.",
+      "required_tags": ["animation_direction", "premium_animation_direction", "choreography_state_machine", "motion_timing_easing", "motion_pattern_atlas", "designer_authored_motion_handoff", "motion_frame_qa_contract"],
+      "required_files": [
+        "references/ui-patterns/animation-creation.md",
+        "references/ui-patterns/premium-animation-direction.md",
+        "references/ui-patterns/choreography-state-machine.md",
+        "references/ui-patterns/motion-timing-easing-system.md",
+        "references/ui-patterns/motion-pattern-atlas.md",
+        "references/ui-patterns/designer-authored-motion-handoff.md",
+        "references/ui-patterns/motion-frame-qa-contract.md"
+      ]
+    },
+    {
+      "id": "qa_evidence",
+      "requirement": "Require browser/runtime/story/visual/regression evidence and accept, repair, or block serious UI with surface-specific gates.",
+      "required_tags": ["qa_evidence_contract", "browser_qa_matrix", "story_driven_qa_harness", "runtime_evidence_regression", "frontend_quality_automation_gate", "design_acceptance_gate"],
+      "required_files": [
+        "references/ui-patterns/qa-evidence-contract.md",
+        "references/ui-patterns/browser-qa-matrix.md",
+        "references/ui-patterns/story-driven-qa-harness.md",
+        "references/ui-patterns/runtime-evidence-regression-contract.md",
+        "references/ui-patterns/frontend-quality-automation-gate.md",
+        "references/ui-patterns/design-acceptance-gate.md"
+      ]
+    },
+    {
+      "id": "design_patterns",
+      "requirement": "Select product-specific structure, surface playbook, implementation pattern, component anatomy, navigation, and responsive adaptation before styling.",
+      "required_tags": ["product_intent_matrix", "surface_playbook_matrix", "pattern_selection", "implementation_pattern_library", "component_anatomy", "navigation_information_architecture", "responsive_adaptation_gate"],
+      "required_files": [
+        "references/ui-patterns/product-intent-matrix.md",
+        "references/ui-patterns/surface-playbook-matrix.md",
+        "references/ui-patterns/pattern-selection.md",
+        "references/ui-patterns/implementation-pattern-library.md",
+        "references/ui-patterns/component-anatomy.md",
+        "references/ui-patterns/navigation-information-architecture.md",
+        "references/ui-patterns/responsive-adaptation-gate.md"
+      ]
+    },
+    {
+      "id": "font_typography",
+      "requirement": "Choose fonts and type systems by surface, density, role, numeric behavior, loading, fallback, and rendered quality.",
+      "required_tags": ["typography_system", "font_selection_matrix", "typography_pairing_lab", "type_recipe", "font_implementation_contract", "rendered_typography_quality_gate"],
+      "required_files": [
+        "references/ui-patterns/typography-systems.md",
+        "references/ui-patterns/font-selection-matrix.md",
+        "references/ui-patterns/typography-pairing-lab.md",
+        "references/ui-patterns/type-recipes.md",
+        "references/ui-patterns/font-implementation-contract.md",
+        "references/ui-patterns/rendered-typography-quality-gate.md"
+      ]
+    },
+    {
+      "id": "usability",
+      "requirement": "Make products usable, not only good-looking, with task ergonomics, workflow patterns, scenario tests, task-flow acceptance, and rendered usability gates.",
+      "required_tags": ["task_ergonomics", "usability_pattern_matrix", "usability_heuristic_evaluation", "usability_scenario_testing", "task_flow_acceptance_harness", "rendered_usability_acceptance_gate"],
+      "required_files": [
+        "references/ux-patterns/task-ergonomics.md",
+        "references/ux-patterns/usability-pattern-matrix.md",
+        "references/ux-patterns/usability-heuristic-evaluation.md",
+        "references/ux-patterns/usability-scenario-testing.md",
+        "references/ux-patterns/task-flow-acceptance-harness.md",
+        "references/ux-patterns/rendered-usability-acceptance-gate.md"
+      ]
+    },
+    {
+      "id": "research_originality",
+      "requirement": "Use references and research without copying identity; synthesize decisions, repair benchmark gaps, and enforce style/originality diversity.",
+      "required_tags": ["reference_board", "research_synthesis_contract", "benchmark_repair_loop", "style_diversity_matrix", "visual_language_decision_matrix", "design_fingerprint_diversity_gate"],
+      "required_files": [
+        "references/ui-patterns/reference-board-workflow.md",
+        "references/ui-patterns/research-synthesis-contract.md",
+        "references/ui-patterns/benchmark-repair-loop.md",
+        "references/ui-patterns/style-diversity-matrix.md",
+        "references/ui-patterns/visual-language-decision-matrix.md",
+        "references/ui-patterns/design-fingerprint-diversity-gate.md"
+      ]
+    },
+    {
+      "id": "implementation_handoff",
+      "requirement": "Turn design decisions into concrete files, components, states, fixtures, library owners, QA selectors, and implementation review.",
+      "required_tags": ["generation_blueprint_contract", "prompt_to_build_compiler", "stack_blueprint", "component_architecture", "implementation_review_loop"],
+      "required_files": [
+        "references/ui-patterns/generation-blueprint-contract.md",
+        "references/ui-patterns/prompt-to-build-compiler.md",
+        "references/ui-patterns/stack-blueprints.md",
+        "references/ui-patterns/frontend-component-standards.md",
+        "references/ui-patterns/implementation-review-loop.md"
+      ]
+    }
+  ]
+}
