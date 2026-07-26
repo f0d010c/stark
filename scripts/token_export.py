@@ -28,7 +28,8 @@ from pathlib import Path
 from typing import Any
 
 
-REF = re.compile(r"\{([^}]+)\}")
+TOKEN_PATH = r"[A-Za-z0-9_-]+(?:\.[A-Za-z0-9_-]+)*"
+REF = re.compile(rf"\{{({TOKEN_PATH})\}}")
 RESERVED_IDENTIFIERS = {
     "class", "default", "extension", "fun", "import", "in", "is", "let",
     "object", "package", "static", "val", "var", "when",
