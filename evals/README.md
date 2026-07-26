@@ -6,6 +6,10 @@ Trigger and quality evals for the plugin's skills.
 
 - `evals.json` — 20 train + 20 validation prompts. Each is `{prompt, expected_skill, should_trigger}`.
 
+- `design-quality-prompts.json` - static coverage prompts for Stark design-quality guidance.
+- `design-goal-coverage.json` - maps the original broad design-quality objective to required tags and reference files.
+- `dogfood-batches.json` - standard generated-design batch prompts with required evidence, pass bars, failure stress tests, and gallery rules.
+
 ## Methodology
 
 Use these prompts to test whether Codex routes to the intended `stark` skill.
@@ -42,5 +46,7 @@ If validation < train by more than 10 points, suspect overfitting on description
 For a quick static check, run:
 
 ```bash
-npx agent-skillforge smoke .
+npm run smoke
 ```
+
+Static smoke checks measure routing coverage, not design quality. For changes to output guidance, run a representative dogfood batch from `dogfood-batches.json`, save the decision brief and rendered evidence, score it with `docs/design-quality-measurement.md`, repair the highest-impact failure, and record the re-check. Do not treat phrase-presence tests as proof that generated UI improved.

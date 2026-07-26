@@ -2,6 +2,8 @@
 
 Use this to prevent visually polished but confusing screens.
 
+For full page/app composition, first viewport shape, section rhythm, grid grammar, proof placement, and anti-presentation repairs, pair this with `composition-system.md`.
+
 ## Primary visual
 
 Every screen needs one dominant visual anchor:

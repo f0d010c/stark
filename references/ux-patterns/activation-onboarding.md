@@ -2,6 +2,8 @@
 
 Use when a user is new and must reach first value: setup flows, import flows, workspace creation, trial activation, first project creation, or profile/account setup.
 
+For generated products, empty dashboards, no-results, permission gates, sample/demo content, recovery states, and detailed first-value QA, pair this with `first-run-empty-state-system.md`.
+
 ## Applies when
 
 - The user does not yet know whether the product is worth effort.

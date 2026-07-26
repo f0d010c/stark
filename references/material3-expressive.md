@@ -202,7 +202,7 @@ PredictiveBackHandler(enabled = canGoBack) { backEvent ->
 - **Google Calendar** — floating toolbar + tonal surfaces
 - **Fitbit (2025 redesign)** — `ContainedLoadingIndicator` cycling shapes
 - **Pixel Camera 10.1** — wavy progress in capture
-- **Androidify** sample — official Compose M3E reference: https://github.com/android/compose-samples/tree/main/Androidify
+- **Androidify** sample — official Compose M3E reference: https://github.com/android/androidify
 
 ## Sources
 

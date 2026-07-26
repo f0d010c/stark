@@ -2,6 +2,8 @@
 
 Use this before final delivery or when auditing a screen.
 
+For scored audits, use `design-quality-metrics.md` after identifying severity. For symptom-specific fixes, use `visual-repair-playbook.md` before polishing.
+
 ## High severity
 
 - Primary action is unclear or visually buried.
@@ -31,3 +33,28 @@ Use this before final delivery or when auditing a screen.
 - Section rhythm could be more varied.
 
 Fix high severity issues before polish. A beautiful screen with the wrong surface type is still wrong.
+
+## Design critique loop
+
+Use this after taking a screenshot or inspecting a rendered screen:
+
+```md
+Design critique
+- First impression:
+- Main object clarity:
+- Typography:
+- Composition:
+- Density:
+- Motion:
+- Assets:
+- State coverage:
+- Platform fit:
+- One fix before shipping:
+```
+
+Rules:
+
+- Name the first obvious flaw even if the design is mostly strong.
+- Apply the one fix before shipping when it is feasible in the current turn.
+- Re-check the same evidence after the fix.
+- Do not use praise as a substitute for evidence.

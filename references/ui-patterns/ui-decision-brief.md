@@ -11,25 +11,112 @@ UI decision brief
 - Originality seed: subject, metaphor, world, main object, layout premise, repeated motif, weird move, restraints
 - Composition archetype: cockpit / map-table / specimen tray / command deck / ledger / timeline wall / studio desk / terminal board / light table / magazine spread / object-detail stage / inspection bay / archive index / instrument panel
 - Layout sketch: compact named regions before code, based on the product job rather than generic cards
+- Page proof architecture: section jobs, proof ladder, sequence, proof moments, mobile sequence, deleted sections, QA checks
+- Conversion proof: visitor intent, source/message match, offer, primary action, secondary action, decision stage, main objection, proof ladder, trust/risk signals, CTA rhythm, friction removals, measurement/events, QA checks
 - Typography personality: display, UI/body, mono labels, why it fits, and banned fallback
+- Typography system: native/branded/custom/mixed strategy, display/body/mono roles, scale, number rule, accessibility scaling, font loading/performance, banned fallback
+- Type recipe: concrete pair, import/loading, numeric behavior, personality zone, quiet zone, QA checks
 - Visual direction: ...
+- Visual language decision: risk, frequency, density, audience, primary object, chosen language, material/type/palette/shape/layout/motion/asset/copy posture, motif, tasteful risk, rejected languages, hard bans
+- Design mode: output mode, quality target, primary proof, interaction depth, expression ceiling, library ceiling, motion ceiling, evidence, hard no
+- Design execution: surface, product object, structural pattern, visual system, choreography/libraries, component anatomy, containment, QA/repair
+- Design orchestration: product job, user mode, transformed concept, memorable anchor, usability anchor, typography system, choreography, library stack, rejected options, QA gates
+- Ambition calibration: user wording, surface, frequency, risk, requested/target level, evidence required, product/originality/type/motion/library/asset/usability/QA depth, maximize, keep quiet, reject, stop/continue
+- Ambition surface recipe: surface, target level, product object, maximized dimensions, quiet support, structure, typography, motion, library ceiling, asset/proof strategy, usability proof, QA evidence, rejected effort, stop/continue
+- Taste calibration: surface risk, user frequency, expression level, density level, novelty budget, motion budget, library budget, typography posture, asset/key-art posture, restraints, one allowed showpiece, things to remove, QA taste checks
+- Variant selection loop: product job, quality target, reference lessons, non-negotiables, variants A/B/C, scorecard, rejected variants, selected variant, borrowed details, implementation risks, QA probes, anti-sameness checks
+- Task ergonomics: frequency/risk fit, cognitive load, control model, speed path, error prevention, recovery, evidence task
+- Usability heuristic evaluation: surface, user mode, core task, method, scope, heuristics checked, walkthrough steps, findings, severity, evidence, first repair, re-check, remaining risk
+- Usability scenario test: first-run, returning-user, error/recovery, keyboard-only, mobile/touch scenarios, success criteria, friction budget, evidence, fix, re-check, remaining risk
+- Rendered usability acceptance gate: rendered evidence, user mode, primary task, object/action first-read, first-run, returning-user speed, error/recovery, keyboard/focus, mobile/touch, state-stress, risk clarity, cognitive walkthrough failure, severity, friction budget, repair, re-check, gate result
+- Navigation/IA: primary objects, route map, navigation model, current-location model, search/command model, breadcrumb/tab behavior, deep-link state, route states, mobile replacement, focus/scroll restoration, QA
+- Surface playbook: surface, must-read references, usually skipped references, structural pattern, product libraries, motion/visual libraries, typography posture, required states, responsive replacement, QA gates, hard bans
+- Pattern selection: user mode, primary object, decision/action, pattern family, rejected pattern, mobile replacement, state coverage
+- Layout precision: grid/container, pane model, alignment spine, spacing rhythm, text measure, media/object frame, hit-target rule, adaptive breakpoints, overflow/reflow plan, optical balance, QA
+- Spatial rhythm/density: user frequency, density mode, relationship scale, repetition rhythm, whitespace job, compression rule, expansion rule, touch/target rule, scroll ownership, zoom/reflow check, hard fails
+- Adaptive composition: core idea, desktop/tablet/mobile structures, breakpoint triggers, component/container queries, nav/proof/media/dense/motion/text transformations, QA viewports
+- Responsive adaptation gate: evidence inspected, viewports, breakpoint/container triggers, desktop/tablet/mobile result, nav/dense/media/text/touch/scroll/reflow result, failed viewport, repair, re-check, gate result
+- Component anatomy: primary anatomy, required parts, states, keyboard/mouse behavior, responsive replacement, visual traps avoided
+- Component API and variants: product job, behavior owner, public props, controlled/uncontrolled state, slots, variants, density, state hooks, token hooks, accessibility, responsive behavior, story args, selectors, rejected API
+- Component visual composition: component set, product job, density, surface roles, edge/border roles, padding/gaps, type/icon alignment, state visuals, focus/target rule, elevation/shadow rule, repeated-item rule, mobile adaptation, library default removed, QA checks
+- Microinteraction system: state vocabulary, feedback job, timing/easing, pointer/touch parity, selection and drag affordances, optimistic/async feedback, reduced motion, library ownership, QA
+- Interactive prototype: product task, primary interaction, state owner, fixture/state model, working controls, intentionally static controls, transitions, recovery, keyboard/touch path, QA probes
+- Component state gallery: components to gallery, story/state list, props/args, fixture variants, interaction stories, responsive widths, theme/density modes, accessibility probes, visual regression target
+- Design system production loop: system source of truth, token source, component inventory, component-to-code mapping, variant/property model, state coverage, stories/docs, usage guidance, accessibility, modes/density, product-library ownership, token/code export, drift checks, versioning, exceptions, ship decision
 - Creative direction: see `creative-direction.md` brief, including world, mood, visual metaphor, material language, typography personality, layout grammar, motion voice, repeated motif, forbidden defaults, tasteful risk, and restraints
+- Copy system: copy job, voice, hero/CTA rule, proof labels, state/recovery copy, risk/legal copy, banned phrases, QA checks
+- Copy quality gate: evidence inspected, text inventory, voice fit, product nouns, action verbs, proof labels, CTA clarity, recovery/risk copy, banned phrases, failed text, rewrite, re-check, gate result
+- Product data/content: domain model, object relationships, record shape, state distribution, edge cases, units/time/money rules, vocabulary, fixture method, privacy boundary, QA scenarios
+- First-run/empty state: user promise, first value action, minimum setup, deferrable setup, sample/demo content, empty-state type, primary CTA, secondary action, permission timing, progress/resume model, recovery states, contextual teaching, success handoff, QA evidence
+- Text resilience/localization: text sources, locale formatting, expansion risk, wrapping/truncation, plural/grammar, RTL/bidi behavior, font fallback, component stress cases, QA checks
 - Density: sparse / balanced / dense / operational
 - Hierarchy: primary visual, primary action, secondary surfaces
 - Component grammar: cards, tables, panes, toolbars, sheets, tabs, forms, command surface
 - Typography: system/native or chosen custom pair, scale, emphasis rule
 - Color/materials: background, surfaces, accent, semantic states
+- Material system: product world, material family, texture/noise role, shadow/elevation rule, platform constraint, banned material cliches
+- Visual token recipe: token roles, palette ratio, surface roles, state roles, spacing/density, radius, borders, shadow/elevation, contrast, banned defaults
+- Color/material contrast gate: evidence, rendered modes, palette ratio, surface hierarchy, text/non-text contrast, focus/selection visibility, semantic states, brand/accent ownership, chart/media colors, material depth, default residue, repair, re-check, gate result
+- Visual finish: finish target, strongest decision, weak finish symptom, optical alignment, surface detail, type/detail, value, depth, motion still-frame, deletion, evidence to re-check
+- Theme/mode/density system: supported modes, token architecture, surface parity, semantic state parity, focus/selection parity, density variants, brand boundaries, media/chart adaptation, platform hooks, persistence/first paint, QA
+- Token implementation contract: token source, primitive/semantic/component/state layers, mode/density aliases, CSS variable map, Tailwind/theme map, product-library overrides, chart/media tokens, contrast/non-text contrast, drift/dead-token checks, QA
 - Motion budget: none / subtle / signature / expressive, plus reduced-motion behavior
+- Animation direction: motion thesis, main object, transformation, 3-5 timeline beats, camera/framing, spatial layers, asset plan, library plan, performance budget, reduced-motion fallback, and interaction gate
+- Motion timing/easing: surface, user frequency, motion job, attention hierarchy, timing scale, easing language, stagger rule, interruption behavior, resting frame, reduced-motion substitution, persistent-motion control, performance-safe properties, QA frames, rejected timing
+- Motion library playbook: chosen libraries, ownership, rejected libraries, fallback, QA
+- Designer-authored motion handoff: motion owner, product object, authored asset/timeline, beat map, runtime controls, state inputs, DOM-owned content, export/package, fallback frame, reduced-motion/mobile substitutes, performance budget, versioning, QA hooks
+- Motion frame QA: timeline owner, key frames, capture method, stable selectors/state hooks, reduced-motion frames, mobile frames, interaction frames, nonblank probes, visual comparison risk, required repair, re-check evidence
+- Animation composition cohesion: product idea, hero object, scene container, supporting asset job map, depth/perspective, lighting/material system, color/value hierarchy, text integration, motion job, originality boundary, repair, re-check, gate result
+- Capability maximization: primary capability, supporting capabilities, rejected capabilities, ownership boundaries, best-result combination, removal rule, QA evidence
+- Library capability fit: product proof, user frequency, candidates, chosen primary capability, native alternative, fit score, composition rule, state/animation owner, text/control ownership, fallback/reduced motion, performance risk, QA probe, rejected capability, removal trigger
+- Capability stack rendered gate: rendered evidence, intended/actual capabilities, signature/supporting capabilities, product proof gained, usability gained, visual quality gained, accessibility/fallback, mobile/reduced-motion, runtime/performance, default residue, unused dependency, conflict, removal/repair, re-check, gate result
+- Library orchestration: native/product/motion/data/asset/styling/state/accessibility/performance owners, QA probes, rejected libraries, removal rule
+- Advanced visual system: main mechanic, visual owner, motif, inputs, code-native content, fallback, rejected spectacle, media/canvas QA
+- Motion recipe: recipe used, trigger, state owner, accessibility, performance traps, when to remove
 - Implementation track: static / Vite + React / Next / Astro / other, plus dependency risk notes
+- Stack blueprint: file structure, component ownership, styling, motion, asset, state/data, QA commands, avoid list
+- Component architecture: app shell, feature modules, primitives, data/state owner, required states, keyboard/focus model, responsive containment, QA hooks
+- Generation blueprint: exact files/components, product data/fixtures, required states, native/product/motion owners, choreography hooks, asset/proof objects, typography/tokens, responsive replacements, accessibility/performance hooks, QA hooks, deleted defaults
+- Prompt-to-build compiler: build target, files/components, state fixtures, library owners, type/tokens, choreography hooks, responsive replacements, QA selectors, forbidden defaults, implementation directive, acceptance comparison
+- Implementation pattern: product proof workbench / operational queue / agent run timeline / editor workbench / trust matrix / docs command manual / animated product story / data proof panel, plus file shape, state model, ownership, responsive replacement, QA hooks, removal list
+- Product library brief: libraries used/rejected, behavior ownership, styling/originality plan, accessibility contract, state/data contract, QA
+- Library de-defaulting: default fingerprints found, product replacement, token changes, anatomy changes, state/style changes, copy/data changes, responsive changes, removed components, docs-example comparison, QA
+- Dashboard insight hierarchy: audience, monitoring job, primary decision/action, north-star metric, supporting metrics, exception logic, filters, freshness/source, insight order, drill path, non-happy data states, responsive replacement, data honesty, QA evidence
+- Data visualization brief: user question, decision/action, dataset shape, chart form, library, interaction, accessible summary, table/source fallback, responsive replacement, motion rule, rejected libraries, QA
+- Form state brief: form job, user risk, pattern, field anatomy, validation timing, state model, error/recovery, async/server model, review/confirmation, library/schema ownership, accessibility, responsive behavior, QA
+- Accessibility acceptance gate: target level, evidence inspected, semantics, names/roles/values, keyboard/focus, contrast, text resize/reflow, motion/media, target/input, forms/errors/status, APG behavior, automated/manual checks, hard fails, repair, re-check, gate result
 - Responsive containment: nav, table/list, toolbar, inspector, and long-label behavior
 - Cinematic system: campaign / editorial scroll story / product proof / immersive brand, if applicable
 - Key art: subject, material, framing, depth, and reuse plan
 - Art direction: visual metaphor, typography system, palette, motion language, repeated motif
 - Page rhythm: hero, context, proof/craft, collection, trust/place, final close
 - Asset plan: icons, screenshots, generated UI mock, imagegen, typography, references, attribution
+- Asset production: asset job, source, license/privacy risk, responsive framing, accessibility, QA
+- Art direction asset board: product truth, asset role, main shot, layer stack, DOM-owned content, generated/image prompt, negative constraints, desktop/tablet/mobile crops, fallback/poster, performance, accessibility, QA evidence
+- Media loading contract: critical media, LCP candidate, responsive sources, art-direction crops, reserved geometry, loading priority, decode/preload/fetch priority, poster/fallback, reduced motion, offscreen/lazy policy, accessibility, nonblank QA
+- Signature media/key art: whether `advanced-visual-systems.md` is needed because the asset is the visual language, not just supporting proof
+- Icon/illustration system: source, stroke/fill style, sizes, interactive states, metaphors, labels, empty-state/diagram job
 - Reference extraction: shipped references used, structural lessons, rejected visual/copy elements
+- Reference board: references compared, structural/motion/state/responsive lessons, what not to copy, decisions Stark will use
+- Research synthesis: source confidence, decision table, library/type/choreography/usability decisions, rejected options, evidence required
+- Anti-collage rewrite: main object, deleted props, repeated motif, proof surface, and first-viewport QA if the page feels pasted together
 - Assets: real product media, generated illustration, icons, screenshots, data visualizations, none
 - State visuals: empty, loading, error, permission, success, long-running
+- Visual QA plan: desktop/mobile evidence, typography, containment, motion/reduced-motion, accessibility, performance, state coverage
+- Visual QA workflow: screenshot/inspection, critique, one fix before shipping, re-check failed evidence
+- Rendered quality gate: 3-second read, product object clarity, composition geometry, typography texture, proof credibility, state visibility, asset/material quality, motion still-frame quality, responsive dignity, library/default residue, screenshot-worthiness, red flags, required repair
+- Rendered typography quality gate: rendered families, display/body/mono roles, hierarchy texture, line breaks, measure, density fit, numeric behavior, long text stress, mobile/zoom, loading/fallback, default residue, repair, re-check, gate result
+- Design fingerprint diversity gate: previous/forbidden fingerprint, current fingerprint, structure, motif, type, material, proof, motion, product-specificity proof, same-looking residue, repair, re-check, gate result
+- QA evidence contract: surface risk, required evidence, captured evidence, hard fails, fix applied, missing evidence, remaining risk
+- Feedback memory loop: feedback source, user wording, symptom, severity, evidence, worked/failed repairs, future ban, future preference, stress test, scope, expiration
+- Implementation review loop: source decisions, files/components inspected, render/runtime evidence, preserved decisions, drift found, missing states, library/type/motion/responsive/usability/accessibility/performance mismatches, highest-impact fix, re-check evidence, remaining risk
+- Runtime evidence regression: baseline viewports, states, interactions, screenshot scope, masks, runtime/accessibility/performance/media probes, acceptance threshold, update-baseline rule, failure triage, stored artifacts
+- Frontend quality automation gate: target surface, quality target, advisory/blocking/release-blocking mode, local/CI commands, Playwright projects, Storybook/local-gallery coverage, visual baselines, interaction/accessibility/performance/usability checks, fixtures/mocks, stabilization/masks, artifacts, failure triage, baseline-update rule, skipped checks, ship decision
+- Showcase selection: batch purpose, audience, surfaces, target, baseline, selection criteria, rejection criteria, evidence, selected examples, rejected examples, repair candidates, gallery gaps
+- Design quality metrics: relevant scores, hard fail gates, evidence, fix applied, remaining risk
+- Quality calibration: requested level, current tier, weakest dimension, one-level-up repair, evidence to re-check
+- Dogfood generation loop: batch purpose, standard batch ids, target surfaces, prompts, generated artifacts, evidence, rendered gates, scores, repairs, feedback memory, guidance changes, gallery decision
+- Design acceptance gate: requested level, current evidence, gate result, required repair, stop/continue decision
 - Tasteful risk: one deliberate unusual choice and the restraints that keep it coherent
 - Bans: ...
 ```
@@ -42,10 +129,69 @@ This brief prevents the common failure where the agent picks decent components b
 - Dense regions need intentional containment: table scroll, priority-column list, sheet/drawer, or breakpoint-specific replacement.
 - Dashboards need a product-specific operational thesis before visual polish; avoid generic CRM/admin furniture with interchangeable labels.
 - Assets must prove the product job or strengthen the visual direction; reject decorative filler.
+- Media must have a loading contract; lazy-loading the LCP proof, missing geometry, blank runtime media, and mobile crops that hide the product object are hard fails.
+- Materials must support hierarchy, product world, and platform constraints; reject trend materials that reduce readability or proof.
+- Themes must preserve semantic state, focus, contrast, media/chart clarity, and density across modes; dark mode is not palette inversion.
+- Color and material systems need rendered acceptance evidence; token names do not prove contrast, focus, semantic state separation, chart meaning, or palette originality.
+- Implemented tokens must map into code and library overrides; repeated raw colors, visual-only semantic names, dead tokens, and starter-theme defaults are hard fails.
+- Icons and illustrations must use a consistent source/style and support controls, states, proof, or next actions.
 - Marketing pages need a memorable first viewport and one clear conversion path.
+- CTA-driven pages need conversion proof; the offer, objection, proof, trust signal, and next action must be visible before styling polish.
+- Serious copy needs an accept/repair/block gate on the actual DOM/screenshot text; rewrite the highest-risk vague headline, CTA, proof label, or recovery/risk text before visual polish.
 - Creative pages need one concrete world and one tasteful risk, not many unrelated effects.
+- High-craft work needs taste calibration before spectacle; choose one showpiece and one novelty axis before adding libraries, motion, or key art.
+- Broad or public-proof work needs ambition calibration before implementation; name the target level, depth sliders, what to maximize, what to keep quiet, and stop/continue condition.
+- High-craft or portfolio work needs an ambition surface recipe after calibration; do not let "next level" remain abstract when structure, type, motion, libraries, assets, usability, and QA need concrete choices.
+- Ambiguous high-craft work needs multiple meaningfully different directions before implementation; select one direction and reject the rest instead of blending them into a collage.
 - Cinematic landing pages need one key-art system and page rhythm before motion decisions.
+- Animation-led pages need storyboarded choreography before library choice; the animation must prove the product or express the concept, not decorate generic sections.
+- Motion timing must match surface frequency; repeated product tools need fast feedback while cinematic pages need a single intentional signature beat with a useful resting frame.
+- Serious animation must pass key-frame QA; a moving page is not accepted if poster, proof, reduced-motion, or mobile frames are messy, blank, copied, or unreadable.
+- Designer-authored animation assets need a production handoff before code; require named beats, labels/inputs, exported state/assets, DOM-owned text and controls, fallbacks, and QA hooks.
+- Reference-led animation pages must transform the subject, object, copy, color role, and motion mechanic. Do not keep a copied hero scene and hide or restyle its props.
+- Research-led work needs a reference board that changes layout or component anatomy, not a moodboard that only changes colors.
+- Data-backed UI needs realistic fixtures and domain vocabulary; if the records could belong to any SaaS product, the design is not specific enough.
+- Text-heavy UI must survive long labels, locale formatting, dynamic data, zoom, and translated strings; clipped controls, hardcoded dates/currency, and brittle one-line layouts are hard fails.
+- Recognizable product design needs a motif and restraint rule; if the logo and accent color are the only identity cues, the design is still generic.
+- Product-specific visual taste needs a language decision before material, type, tokens, assets, and motion; if the same visual language fits every prompt, the output is still generic.
+- First-run and empty states must move users toward first value; blank dashboards, vague "No data" copy, forced profile setup before value, and permission prompts without reason are hard fails.
+- High-craft layouts need pattern selection before visual style; the pattern must match the user's mode and primary object.
+- Surface-specific work needs a playbook before implementation; do not apply campaign, dashboard, checkout, docs, editor, agent-run, trust, or analytics rules interchangeably.
+- High-craft layouts need a precision pass before tokens; name the grid, alignment spine, spacing rhythm, text measure, scroll owner, and adaptive breakpoints instead of nudging by taste.
+- Spacing must communicate relationship and task speed; do not use the same gap scale for labels, controls, panels, and sections, and do not use whitespace to make weak proof feel premium.
+- Tablet and mobile must preserve the product idea through deliberate structural transformations, not squeezed desktop or stacked source order.
+- Serious responsive work needs an accept/repair/block decision after render; no-overflow is not enough if proof, action, touch behavior, media crop, dense regions, or reflow are weak.
+- Long/full pages need section jobs and a proof ladder; do not let every section become headline/paragraph/cards.
+- Charts need a named user question, accessible summary, table/source fallback, and responsive replacement before library choice.
+- Complex product surfaces need anatomy-backed components; do not represent timelines, palettes, inspectors, pricing, trust, editors, or data panels as generic cards.
+- Component visuals need owned composition; do not use the same card, border, radius, padding, icon size, and shadow for every object regardless of role.
+- Input models need an explicit operating path; do not ship drag-only, hover-only, swipe-only, shortcut-only, or scroll-only critical actions.
+- Interactive surfaces need microinteraction states; hover, focus, pressed, selected, disabled, busy, success, and error cannot collapse into the same visual treatment.
+- Final delivery needs visual QA evidence strong enough for the surface risk, especially desktop/mobile framing, typography, motion, state coverage, and console health.
+- Serious accessibility acceptance needs manual evidence; automated checks alone do not prove keyboard flow, focus movement, reduced motion, APG behavior, or task usability.
+- Rendered evidence needs a quality gate; a UI that passes runtime checks can still fail first-read clarity, typography texture, proof credibility, or screenshot-worthiness.
+- Stark improvement work needs dogfood evidence across multiple surfaces; do not judge design quality from one cinematic page or one tiny screenshot.
+- Public examples need curation evidence; a generated batch is not proof until weak, repetitive, or merely passable candidates are rejected or repaired.
+- High-craft final delivery needs a critique-and-repair loop, not just a screenshot.
+- User critique should become scoped future bans, preferences, and stress tests when it might affect another generation.
+- Serious UI final delivery should include design-quality scoring or explicitly state which evidence is missing.
+- Serious UI final delivery should include an acceptance gate and should not stop below the requested level.
+- A decision brief alone does not prove implementation quality; serious work needs a design-to-code review that compares source decisions against files and rendered evidence.
+- Public screenshots and generated examples need regression contracts; do not update screenshot baselines without an intended design change or documented repair.
 - Web stacks must match the product surface: React is useful for stateful, componentized, animated work, but static pages should stay simpler when possible.
+- Multi-route products need a route map and current-location model before visual styling; do not ship an app shell whose nav only looks plausible.
+- Complex frontends need architecture ownership before code; avoid one giant app component with mixed feature logic, fixtures, styling, and motion.
+- Stateful/reusable components need a visible state gallery; happy-path screenshots do not prove disabled, loading, empty, error, long-label, responsive, theme, or keyboard behavior.
+- Reusable components need a designed API; props, slots, variants, state hooks, tokens, accessibility, and story args must express product behavior instead of only exposing style flags.
+- Multi-library interfaces need capability maximization first, then one owner per behavior, a QA probe per dependency, rejected libraries, and removal rules before implementation.
+- Advanced dependencies need a capability fit score; do not select a library unless it materially improves proof, state, authored motion, asset quality, accessibility, or verification beyond the native alternative.
+- Serious generated web work needs a generation blueprint before code; do not let a design brief ship without file/component ownership, fixtures, states, dependency owners, responsive replacements, QA hooks, and deleted defaults.
+- Known product surfaces should start from an implementation pattern; do not rebuild proof workbenches, queues, agent timelines, editors, trust screens, docs, animated stories, or data panels as generic cards.
+- Product libraries need a de-defaulting pass; preserve behavior but replace starter tokens, anatomy, state visuals, copy, data, and responsive behavior before public delivery.
+- Dashboards need insight hierarchy before chart choice; do not ship equal KPI cards, decorative chart variety, invisible filters, or metrics without unit, date range, source, freshness, baseline, and action.
 - Native apps need platform materials, type, icons, spacing, and controls before custom flair.
 - Editor tools need canvas dominance and control stability.
 - If UX and UI conflict, preserve the user's job and recovery path first.
+- If visual polish weakens the task ergonomics contract, fix the workflow before polishing.
+- Serious product UI needs heuristic severity, task scenario evidence, and rendered acceptance; a pretty screenshot or decision brief is not enough to prove usability.
+- Forms need field anatomy, validation timing, input preservation, recovery, review/confirmation, and submit/server states before visual styling.

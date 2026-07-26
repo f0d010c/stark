@@ -1,11 +1,13 @@
-# Fluent Design 2 — Reference (Windows 11/12, May 2026)
+# Fluent Design 2 — Reference (Windows 11/12, verified July 2026)
 
 ## Stack
 
-- **Windows App SDK 1.8** (stable, serviced through Mar 2026)
+- **Windows App SDK 2.0** (current stable channel)
 - **WinUI 3** (decoupled from OS release)
-- **Windows App SDK 2.0** in preview, targeting .NET 10
-- **Native AOT** in preview
+- **Windows App SDK 1.8** is maintenance-only through September 2026
+
+Verify the current channel before generating project dependencies:
+https://learn.microsoft.com/windows/apps/windows-app-sdk/release-channels
 
 Sources:
 - https://learn.microsoft.com/windows/apps/winui/winui3

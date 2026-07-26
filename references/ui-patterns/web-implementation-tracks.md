@@ -45,6 +45,14 @@ Implementation track
 - Lockfile/audit plan:
 ```
 
+After choosing the track, read `stack-blueprints.md` for stack-specific file structure, component ownership, styling, motion, assets, state/data model, QA commands, and avoid list.
+
+Then read `frontend-technique-matrix.md` before adding libraries or coding advanced UI. Choose which behavior belongs to CSS Grid/subgrid, container queries, custom properties, native scroll CSS, View Transitions, Popover/anchor positioning, responsive media, performance containment, or a library.
+
+For complex app-like work, also read `frontend-component-standards.md` before implementation. Define app shell, feature modules, primitives, data/state owner, keyboard/focus model, responsive containment, and test/QA hooks.
+
+If third-party product libraries are needed, read `product-library-playbooks.md` before adding them. Name which behavior each library owns and which libraries were rejected.
+
 ## Dependency safety
 
 When installing dependencies, especially during active npm supply-chain incidents:
@@ -71,4 +79,6 @@ When installing dependencies, especially during active npm supply-chain incident
 - Did React buy real state/composition/animation value?
 - Could static CSS/JS have done the same job with less risk?
 - Are dependencies named, justified, and pinned/audited?
+- Did native browser primitives cover the behavior before adding dependencies?
 - Does the generated code still work if JavaScript loads slowly?
+- For complex frontends, is the architecture more than one giant component?

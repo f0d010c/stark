@@ -23,6 +23,18 @@ class DetectPlatformTests(unittest.TestCase):
     def test_web_dashboard_without_native_signal_routes_web(self) -> None:
         self.assertEqual(detect("Build a React dashboard"), "web")
 
+    def test_compose_as_plain_verb_does_not_route_android(self) -> None:
+        self.assertEqual(detect("Compose a landing page for a design studio"), "web")
+
+    def test_android_app_store_prompt_stays_android(self) -> None:
+        self.assertEqual(detect("Create an Android app store dashboard"), "android")
+
+    def test_pixel_as_measurement_does_not_route_android(self) -> None:
+        self.assertEqual(detect("Design a 12 pixel icon grid for the web"), "web")
+
+    def test_stronger_web_evidence_beats_weak_native_vocabulary(self) -> None:
+        self.assertEqual(detect("Make the copy fluent and build a React dashboard"), "web")
+
     def test_no_signal_is_ambiguous(self) -> None:
         self.assertEqual(detect("Make this easier to use"), "ambiguous")
 

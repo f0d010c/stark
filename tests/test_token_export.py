@@ -1,6 +1,7 @@
 import unittest
 
 from scripts.token_export import (
+    camel,
     export_compose,
     export_swiftui,
     export_tailwind,
@@ -28,6 +29,34 @@ class TokenExportTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "Circular token reference"):
             resolve(flat["a"]["$value"], flat)
+
+    def test_unresolved_reference_raises(self) -> None:
+        with self.assertRaisesRegex(ValueError, "Unresolved token reference: color.missing"):
+            resolve("{color.missing}", {})
+
+    def test_brace_wrapped_motion_literal_is_not_a_token_reference(self) -> None:
+        motion = "{ stiffness: 1400, damping: 0.9 }"
+
+        self.assertEqual(resolve(motion, {}), motion)
+
+    def test_valid_reference_inside_a_larger_string_is_resolved(self) -> None:
+        tokens = {
+            "color.brand.primary": {"$type": "color", "$value": "#ff0000"},
+        }
+
+        self.assertEqual(resolve("solid 1px {color.brand.primary}", tokens), "solid 1px #ff0000")
+
+    def test_generated_identifier_is_safe_for_numeric_and_reserved_names(self) -> None:
+        self.assertEqual(camel("12-column.grid"), "token12ColumnGrid")
+        self.assertEqual(camel("class"), "classToken")
+
+    def test_generated_identifier_collisions_raise(self) -> None:
+        tokens = {
+            "color.foo-bar": {"$type": "color", "$value": "#000000"},
+            "color.foo_bar": {"$type": "color", "$value": "#ffffff"},
+        }
+        with self.assertRaisesRegex(ValueError, "identifier collision"):
+            export_swiftui(tokens)
 
     def test_resolves_references_inside_composite_typography_values(self) -> None:
         flat = flatten({
